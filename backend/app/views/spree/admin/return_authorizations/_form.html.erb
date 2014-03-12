@@ -1,23 +1,23 @@
-<div data-hook="admin_return_authorization_form_fields">
+<!--POGEN,__pogen_456,f_dot_label__stock_location__Spree_dot_t__stock_location__,<%= f.label :stock_location, Spree.t(:stock_location) %>--><!--POGEN,__pogen_456,f_dot_text_area__reason____style_____height_100px_____class_____fullwidth___,<%= f.text_area :reason, {:style => 'height:100px;', :class => 'fullwidth'} %>--><!--POGEN,__pogen_456,f_dot_error_message_on__reason_,<%= f.error_message_on :reason %>--><!--POGEN,__pogen_456,f_dot_error_message_on__amount_,<%= f.error_message_on :amount %>--><!--POGEN,__pogen_456,f_dot_field_container__stock_location_do_,<%= f.field_container :stock_location do %>--><!--POGEN,__pogen_456,Spree_dot_t__rma_value__,<%= Spree.t(:rma_value) %>--><!--POGEN,__pogen_456,f_dot_field_container__reason_do_,<%= f.field_container :reason do %>--><!--POGEN,__pogen_456,f_dot_text_field__amount____style_____width_80px____,<%= f.text_field :amount, {:style => 'width:80px;'} %>--><!--POGEN,__pogen_456,f_dot_select__stock_location_id__Spree__StockLocation_dot_active_dot_to_a_dot_collect__l__l_dot_name__l_dot_id______style_____height_100px_____class_____fullwidth___,<%= f.select :stock_location_id, Spree::StockLocation.active.to_a.collect{|l|[l.name, l.id]}, {:style => 'height:100px;', :class => 'fullwidth'} %>--><!--POGEN,__pogen_456,f_dot_field_container__amount_do_,<%= f.field_container :amount do %>--><!--POGEN,__pogen_456,f_dot_label__reason__Spree_dot_t__reason__,<%= f.label :reason, Spree.t(:reason) %>--><!--POGEN,__pogen_456,_return_authorization_dot_display_amount_,<%= @return_authorization.display_amount %>--><!--POGEN,__pogen_456,f_dot_label__amount__Spree_dot_t__amount__,<%= f.label :amount, Spree.t(:amount) %>--><div data-hook="admin_return_authorization_form_fields" id="__pogen_456">
   <table class="index">
     <thead>
       <tr data-hook="rma_header">
-        <th><%= Spree.t(:product) %></th>
-        <th><%= Spree.t(:quantity_shipped) %></th>
-        <th><%= Spree.t(:quantity_returned) %></th>
-        <th><%= Spree.t(:return_quantity) %></th>
+        <!--POGEN,__pogen_457,Spree_dot_t__product__,<%= Spree.t(:product) %>--><th id="__pogen_457"><%= Spree.t(:product) %></th>
+        <!--POGEN,__pogen_458,Spree_dot_t__quantity_shipped__,<%= Spree.t(:quantity_shipped) %>--><th id="__pogen_458"><%= Spree.t(:quantity_shipped) %></th>
+        <!--POGEN,__pogen_459,Spree_dot_t__quantity_returned__,<%= Spree.t(:quantity_returned) %>--><th id="__pogen_459"><%= Spree.t(:quantity_returned) %></th>
+        <!--POGEN,__pogen_460,Spree_dot_t__return_quantity__,<%= Spree.t(:return_quantity) %>--><th id="__pogen_460"><%= Spree.t(:return_quantity) %></th>
       </tr>
     </thead>
     <tbody>
       <% @return_authorization.order.shipments.shipped.collect{|s| s.inventory_units.to_a}.flatten.group_by(&:variant).each do | variant, units| %>
-        <tr id="<%= dom_id(variant) %>" data-hook="rma_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,<%= dom_id(variant) %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= dom_id(variant) %>,dom_id_variant__,<%= dom_id(variant) %>--><tr id="<%= dom_id(variant) %>" data-hook="rma_row" class="<%= cycle('odd', 'even')%>">
           <td>
-            <div class="variant-name"><%= variant.name %></div>
-            <div class="variant-options"><%= variant.options_text %></div>
+            <!--POGEN,__pogen_461,variant_dot_name_,<%= variant.name %>--><div class="variant-name" id="__pogen_461"><%= variant.name %></div>
+            <!--POGEN,__pogen_462,variant_dot_options_text_,<%= variant.options_text %>--><div class="variant-options" id="__pogen_462"><%= variant.options_text %></div>
           </td>
-          <td class="align-center"><%= units.select(&:shipped?).size %></td>
-          <td class="align-center"><%= units.select(&:returned?).size %></td>
-          <td class="return_quantity align-center">
+          <!--POGEN,__pogen_463,units_dot_select___shipped___dot_size_,<%= units.select(&:shipped?).size %>--><td class="align-center" id="__pogen_463"><%= units.select(&:shipped?).size %></td>
+          <!--POGEN,__pogen_464,units_dot_select___returned___dot_size_,<%= units.select(&:returned?).size %>--><td class="align-center" id="__pogen_464"><%= units.select(&:returned?).size %></td>
+          <!--POGEN,__pogen_465,_return_authorization_dot_inventory_units_dot_group_by___variant__variant__dot_try__size_____0_,<%= @return_authorization.inventory_units.group_by(&:variant)[variant].try(:size) || 0 %>--><td class="return_quantity align-center" id="__pogen_465">
             <% if @return_authorization.received? %>
               <%= @return_authorization.inventory_units.group_by(&:variant)[variant].try(:size) || 0 %>
             <% elsif units.select(&:shipped?).empty? %>
@@ -55,7 +55,7 @@
   <% end %>
 </div>
 
-<script>
+<!--POGEN,__pogen_466,variant_dot_id_dot_to_s_,<%= variant.id.to_s %>--><!--POGEN,__pogen_466,items_dot_first_dot_price_,<%= items.first.price %>--><script id="__pogen_466">
   var line_item_prices = {};
   <% @return_authorization.order.line_items.group_by(&:variant).each do | variant, items| %>
     line_item_prices[<%= variant.id.to_s %>] = <%= items.first.price %>;

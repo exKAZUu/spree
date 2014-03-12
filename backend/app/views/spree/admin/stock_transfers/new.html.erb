@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_670,button_link_to_Spree_dot_t__back_to_stock_transfers_list___admin_stock_transfers_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_stock_transfers_list), admin_stock_transfers_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_670">
     <%= button_link_to Spree.t(:back_to_stock_transfers_list), admin_stock_transfers_path, :icon => 'icon-arrow-left' %>
   </li>
 <% end %>
@@ -27,31 +27,31 @@
 
 <%= form_tag admin_stock_transfers_path, :method => :post do %>
   <fieldset class="twelve columns alpha">
-    <legend align="center"><%= Spree.t(:transfer_stock) %></legend>
+    <!--POGEN,__pogen_671,Spree_dot_t__transfer_stock__,<%= Spree.t(:transfer_stock) %>--><legend align="center" id="__pogen_671"><%= Spree.t(:transfer_stock) %></legend>
 
     <div class="row" data-hook="admin_stock_movements_form_fields">
       <div class="alpha six columns">
-        <div class="field" id="stock_movement_reference_field">
+        <!--POGEN,stock_movement_reference_field,label_tag__reference___raw____Spree_dot_t__reference______Spree_dot_t__optional______,<%= label_tag 'reference', raw("#{Spree.t(:reference)} (#{Spree.t(:optional)})") %>--><!--POGEN,stock_movement_reference_field,text_field_tag__reference______class___fullwidth__,<%= text_field_tag :reference, '', class: 'fullwidth' %>--><div class="field" id="stock_movement_reference_field">
           <%= label_tag 'reference', raw("#{Spree.t(:reference)} (#{Spree.t(:optional)})") %>
           <%= text_field_tag :reference, '', class: 'fullwidth' %>
         </div>
       </div>
       <div class="six columns omega">
         <div class="field checkbox" id="receive_stock_field">
-          <label for="receive_stock">
+          <!--POGEN,__pogen_672,check_box_tag__transfer_receive_stock_,<%= check_box_tag :transfer_receive_stock %>--><!--POGEN,__pogen_672,Spree_dot_t__receive_stock___,<%= Spree.t('receive_stock') %>--><label for="receive_stock" id="__pogen_672">
             <%= check_box_tag :transfer_receive_stock %>
             <%= Spree.t('receive_stock') %>
           </label>
         </div>
       </div>
       <div class="alpha six columns">
-        <div class="field" id="transfer_source_location_id_field">
+        <!--POGEN,transfer_source_location_id_field,label_tag__transfer_source_location_id__Spree_dot_t__source__,<%= label_tag :transfer_source_location_id, Spree.t(:source) %>--><!--POGEN,transfer_source_location_id_field,select_tag__transfer_source_location_id______class___select2_fullwidth__,<%= select_tag :transfer_source_location_id, {}, class: 'select2 fullwidth' %>--><div class="field" id="transfer_source_location_id_field">
           <%= label_tag :transfer_source_location_id, Spree.t(:source) %>
           <%= select_tag :transfer_source_location_id, {}, class: 'select2 fullwidth' %>
         </div>
       </div>
       <div class="six columns omega">
-        <div class="field" id="transfer_destination_location_id_field">
+        <!--POGEN,transfer_destination_location_id_field,select_tag__transfer_destination_location_id______class___select2_fullwidth__,<%= select_tag :transfer_destination_location_id, {}, class: 'select2 fullwidth' %>--><!--POGEN,transfer_destination_location_id_field,label_tag__transfer_destination_location_id__Spree_dot_t__destination__,<%= label_tag :transfer_destination_location_id, Spree.t(:destination) %>--><div class="field" id="transfer_destination_location_id_field">
           <%= label_tag :transfer_destination_location_id, Spree.t(:destination) %>
           <%= select_tag :transfer_destination_location_id, {}, class: 'select2 fullwidth' %>
         </div>
@@ -59,29 +59,29 @@
     </div>
 
     <fieldset class="no-border-bottom" id="add-variant-to-transfer">
-      <legend><%= Spree.t(:add_variant) %></legend>
+      <!--POGEN,__pogen_673,Spree_dot_t__add_variant__,<%= Spree.t(:add_variant) %>--><legend id="__pogen_673"><%= Spree.t(:add_variant) %></legend>
 
       <div class="alpha eight columns">
-        <div class="field" id="stock_movement_variant_id_field">
+        <!--POGEN,stock_movement_variant_id_field,label_tag__variant_id___Spree_dot_t__variant__,<%= label_tag 'variant_id', Spree.t(:variant) %>--><!--POGEN,stock_movement_variant_id_field,select_tag__transfer_variant_______class___fullwidth__,<%= select_tag 'transfer_variant', {}, class: 'fullwidth' %>--><div class="field" id="stock_movement_variant_id_field">
           <%= label_tag 'variant_id', Spree.t(:variant) %>
           <%= select_tag 'transfer_variant', {}, class: 'fullwidth' %>
         </div>
       </div>
       <div class="two columns">
-        <div class="field" id="stock_movement_quantity_field">
+        <!--POGEN,stock_movement_quantity_field,number_field_tag__transfer_variant_quantity___1__class___fullwidth___min__0_,<%= number_field_tag 'transfer_variant_quantity', 1, class: 'fullwidth', min: 0 %>--><!--POGEN,stock_movement_quantity_field,label_tag__quantity___Spree_dot_t__quantity__,<%= label_tag 'quantity', Spree.t(:quantity) %>--><div class="field" id="stock_movement_quantity_field">
           <%= label_tag 'quantity', Spree.t(:quantity) %>
           <%= number_field_tag 'transfer_variant_quantity', 1, class: 'fullwidth', min: 0 %>
         </div>
       </div>
       <div class="two columns omega">
-        <div class="field" style="padding: 25px 0 0 0 !important">
+        <!--POGEN,__pogen_674,button_Spree_dot_t__add____icon_minus_plus_button_transfer_add_variant__,<%= button Spree.t(:add), 'icon-plus button transfer_add_variant' %>--><div class="field" style="padding: 25px 0 0 0 !important" id="__pogen_674">
           <%= button Spree.t(:add), 'icon-plus button transfer_add_variant' %>
         </div>
       </div>
 
     </fieldset>
 
-    <div class="alpha twelve columns no-objects-found">
+    <!--POGEN,__pogen_675,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_stock_transfer____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/stock_transfer')) %>--><!--POGEN,__pogen_675,link_to_Spree_dot_t__add_one___spree_dot_new_admin_tax_rate_path_,<%= link_to Spree.t(:add_one), spree.new_admin_tax_rate_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_675">
       <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/stock_transfer')) %>,
       <%= link_to Spree.t(:add_one), spree.new_admin_tax_rate_path %>!
     </div>
@@ -94,8 +94,8 @@
           <col style="width: 10%" />
         </colgroup>
         <thead data-hook="transfer_variants_header">
-          <th><%= Spree.t(:name) %></th>
-          <th><%= Spree.t(:quantity) %></th>
+          <!--POGEN,__pogen_676,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_676"><%= Spree.t(:name) %></th>
+          <!--POGEN,__pogen_677,Spree_dot_t__quantity__,<%= Spree.t(:quantity) %>--><th id="__pogen_677"><%= Spree.t(:quantity) %></th>
           <th class="actions"></th>
         </thead>
         <tbody id="transfer_variants_tbody">
@@ -104,7 +104,7 @@
       </table>
     </div>
 
-    <div class="filter-actions actions" data-hook="buttons">
+    <!--POGEN,__pogen_678,button_Spree_dot_t__transfer_stock____icon_minus_plus_transfer_transfer__,<%= button Spree.t(:transfer_stock), 'icon-plus transfer_transfer' %>--><div class="filter-actions actions" data-hook="buttons" id="__pogen_678">
       <%= button Spree.t(:transfer_stock), 'icon-plus transfer_transfer' %>
     </div>
   </fieldset>

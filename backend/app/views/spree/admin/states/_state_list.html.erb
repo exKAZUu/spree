@@ -8,24 +8,24 @@
   </colgroup>
   <thead>
     <tr data-hook="states_header">
-      <th><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:abbreviation) %></th>
+      <!--POGEN,__pogen_591,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_591"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_592,Spree_dot_t__abbreviation__,<%= Spree.t(:abbreviation) %>--><th id="__pogen_592"><%= Spree.t(:abbreviation) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @states.each do |state| %>
-      <tr id="<%= spree_dom_id state %>" data-hook="states_row" class="<%= cycle('odd', 'even')%>">
-        <td><%= state.name %></td>
-        <td class="align-center"><%= state.abbr %></td>
-        <td class="actions">
+      <!--POGEN,<%= spree_dom_id state %>,spree_dom_id_state_,<%= spree_dom_id state %>--><!--POGEN,<%= spree_dom_id state %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><tr id="<%= spree_dom_id state %>" data-hook="states_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_593,state_dot_name_,<%= state.name %>--><td id="__pogen_593"><%= state.name %></td>
+        <!--POGEN,__pogen_594,state_dot_abbr_,<%= state.abbr %>--><td class="align-center" id="__pogen_594"><%= state.abbr %></td>
+        <!--POGEN,__pogen_595,link_to_delete_state___no_text____true_,<%= link_to_delete state, :no_text => true %>--><!--POGEN,__pogen_595,link_to_with_icon__icon_minus_edit___Spree_dot_t__edit___edit_admin_country_state_url__country__state____no_text____true_,<%= link_to_with_icon 'icon-edit', Spree.t(:edit), edit_admin_country_state_url(@country, state), :no_text => true %>--><td class="actions" id="__pogen_595">
           <%= link_to_with_icon 'icon-edit', Spree.t(:edit), edit_admin_country_state_url(@country, state), :no_text => true %>
           <%= link_to_delete state, :no_text => true %>
         </td>
       </tr>
     <% end %>
     <% if @states.empty? %>
-      <tr><td colspan="3"><%= Spree.t(:none) %></td></tr>
+      <tr><!--POGEN,__pogen_596,Spree_dot_t__none__,<%= Spree.t(:none) %>--><td colspan="3" id="__pogen_596"><%= Spree.t(:none) %></td></tr>
     <% end %>
   </tbody>
 </table>

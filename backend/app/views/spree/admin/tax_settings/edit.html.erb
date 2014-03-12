@@ -5,14 +5,14 @@
 <% end %>
 
 <%= form_tag admin_tax_settings_path, :method => :put do %>
-  <div data-hook="shipment_vat" class="field align-center">
+  <!--POGEN,__pogen_735,hidden_field_tag__preferences_shipment_inc_vat_____0__,<%= hidden_field_tag 'preferences[shipment_inc_vat]', '0' %>--><!--POGEN,__pogen_735,label_tag_nil__Spree_dot_t__shipment_inc_vat__,<%= label_tag nil, Spree.t(:shipment_inc_vat) %>--><!--POGEN,__pogen_735,check_box_tag__preferences_shipment_inc_vat_____1____Spree__Config__shipment_inc_vat__,<%= check_box_tag 'preferences[shipment_inc_vat]', '1',  Spree::Config[:shipment_inc_vat] %>--><div data-hook="shipment_vat" class="field align-center" id="__pogen_735">
     <%= hidden_field_tag 'preferences[shipment_inc_vat]', '0' %>
     <%= check_box_tag 'preferences[shipment_inc_vat]', '1',  Spree::Config[:shipment_inc_vat] %>
     <%= label_tag nil, Spree.t(:shipment_inc_vat) %>    
 
   </div>
 
-  <div class="form-buttons" data-hook="buttons">
+  <!--POGEN,__pogen_736,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="form-buttons" data-hook="buttons" id="__pogen_736">
     <%= button Spree.t('actions.update'), 'icon-refresh' %>
   </div>
 <% end %>

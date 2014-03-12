@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_243,button_link_to_Spree_dot_t__new_payment_method___new_object_url___icon_____icon_minus_plus____id_____admin_new_payment_methods_link__,<%= button_link_to Spree.t(:new_payment_method), new_object_url, :icon => 'icon-plus', :id => 'admin_new_payment_methods_link' %>--><li id="__pogen_243">
     <%= button_link_to Spree.t(:new_payment_method), new_object_url, :icon => 'icon-plus', :id => 'admin_new_payment_methods_link' %>
   </li>
 <% end %>
@@ -22,23 +22,23 @@
     </colgroup>
     <thead>
       <tr data-hook="admin_payment_methods_index_headers">
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:provider) %></th>
-        <th><%= Spree.t(:environment) %></th>
-        <th><%= Spree.t(:display) %></th>
-        <th><%= Spree.t(:active) %></th>
+        <!--POGEN,__pogen_244,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_244"><%= Spree.t(:name) %></th>
+        <!--POGEN,__pogen_245,Spree_dot_t__provider__,<%= Spree.t(:provider) %>--><th id="__pogen_245"><%= Spree.t(:provider) %></th>
+        <!--POGEN,__pogen_246,Spree_dot_t__environment__,<%= Spree.t(:environment) %>--><th id="__pogen_246"><%= Spree.t(:environment) %></th>
+        <!--POGEN,__pogen_247,Spree_dot_t__display__,<%= Spree.t(:display) %>--><th id="__pogen_247"><%= Spree.t(:display) %></th>
+        <!--POGEN,__pogen_248,Spree_dot_t__active__,<%= Spree.t(:active) %>--><th id="__pogen_248"><%= Spree.t(:active) %></th>
         <th data-hook="admin_payment_methods_index_header_actions" class="actions"></th>
       </tr>
     </thead>
     <tbody>
       <% @payment_methods.each do |method|%>
-        <tr id="<%= spree_dom_id method %>" data-hook="admin_payment_methods_index_rows" class="<%= cycle('odd', 'even')%>">
-          <td class="align-center"><%= method.name %></td>
-          <td class="align-center"><%= method.type %></td>
-          <td class="align-center"><%= method.environment.to_s.titleize %></td>
-          <td class="align-center"><%= method.display_on.blank? ? Spree.t(:both) : Spree.t(method.display_on) %></td>
-          <td class="align-center"><%= method.active ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-          <td data-hook="admin_payment_methods_index_row_actions" class="actions">
+        <!--POGEN,<%= spree_dom_id method %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id method %>,spree_dom_id_method_,<%= spree_dom_id method %>--><tr id="<%= spree_dom_id method %>" data-hook="admin_payment_methods_index_rows" class="<%= cycle('odd', 'even')%>">
+          <!--POGEN,__pogen_249,method_dot_name_,<%= method.name %>--><td class="align-center" id="__pogen_249"><%= method.name %></td>
+          <!--POGEN,__pogen_250,method_dot_type_,<%= method.type %>--><td class="align-center" id="__pogen_250"><%= method.type %></td>
+          <!--POGEN,__pogen_251,method_dot_environment_dot_to_s_dot_titleize_,<%= method.environment.to_s.titleize %>--><td class="align-center" id="__pogen_251"><%= method.environment.to_s.titleize %></td>
+          <!--POGEN,__pogen_252,method_dot_display_on_dot_blank____Spree_dot_t__both____Spree_dot_t_method_dot_display_on__,<%= method.display_on.blank? ? Spree.t(:both) : Spree.t(method.display_on) %>--><td class="align-center" id="__pogen_252"><%= method.display_on.blank? ? Spree.t(:both) : Spree.t(method.display_on) %></td>
+          <!--POGEN,__pogen_253,method_dot_active___Spree_dot_t__say_yes____Spree_dot_t__say_no__,<%= method.active ? Spree.t(:say_yes) : Spree.t(:say_no) %>--><td class="align-center" id="__pogen_253"><%= method.active ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+          <!--POGEN,__pogen_254,link_to_delete_method___no_text____true__,<%= link_to_delete method, :no_text => true  %>--><!--POGEN,__pogen_254,link_to_edit_method___no_text____true_,<%= link_to_edit method, :no_text => true %>--><td data-hook="admin_payment_methods_index_row_actions" class="actions" id="__pogen_254">
             <%= link_to_edit method, :no_text => true %>
             <%= link_to_delete method, :no_text => true  %>
           </td>
@@ -47,7 +47,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_255,link_to_Spree_dot_t__add_one___spree_dot_new_admin_payment_method_path_,<%= link_to Spree.t(:add_one), spree.new_admin_payment_method_path %>--><!--POGEN,__pogen_255,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_payment_method____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/payment_method')) %>--><div class="alpha twelve columns no-objects-found" id="__pogen_255">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/payment_method')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_payment_method_path %>!
   </div>

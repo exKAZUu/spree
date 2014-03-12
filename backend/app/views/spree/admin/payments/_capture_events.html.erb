@@ -1,17 +1,17 @@
 <% if @payment.capture_events.exists? %>
-  <h3><%= Spree.t(:capture_events) %></h3>
+  <!--POGEN,__pogen_259,Spree_dot_t__capture_events__,<%= Spree.t(:capture_events) %>--><h3 id="__pogen_259"><%= Spree.t(:capture_events) %></h3>
   <table class="index" id="capture_events">
     <thead>
       <tr data-hook="payments_header">
-        <th><%= "#{Spree.t('date')}/#{Spree.t('time')}" %></th>
-        <th><%= Spree.t(:amount) %></th>
+        <!--POGEN,__pogen_260,___Spree_dot_t__date____divide___Spree_dot_t__time_____,<%= "#{Spree.t('date')}/#{Spree.t('time')}" %>--><th id="__pogen_260"><%= "#{Spree.t('date')}/#{Spree.t('time')}" %></th>
+        <!--POGEN,__pogen_261,Spree_dot_t__amount__,<%= Spree.t(:amount) %>--><th id="__pogen_261"><%= Spree.t(:amount) %></th>
       </tr>
     </thead>
     <tbody>
       <% @payment.capture_events.each do |capture_event| %>
-        <tr id="<%= dom_id(capture_event) %>" data-hook="capture_events_row" class="<%= cycle('odd', 'even')%>">
-          <td><%= pretty_time(capture_event.created_at) %></td>
-          <td><%= capture_event.display_amount %></td>
+        <!--POGEN,<%= dom_id(capture_event) %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= dom_id(capture_event) %>,dom_id_capture_event__,<%= dom_id(capture_event) %>--><tr id="<%= dom_id(capture_event) %>" data-hook="capture_events_row" class="<%= cycle('odd', 'even')%>">
+          <!--POGEN,__pogen_262,pretty_time_capture_event_dot_created_at__,<%= pretty_time(capture_event.created_at) %>--><td id="__pogen_262"><%= pretty_time(capture_event.created_at) %></td>
+          <!--POGEN,__pogen_263,capture_event_dot_display_amount_,<%= capture_event.display_amount %>--><td id="__pogen_263"><%= capture_event.display_amount %></td>
         </tr>
       <% end %>
     </tbody>

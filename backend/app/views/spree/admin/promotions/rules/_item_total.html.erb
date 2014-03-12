@@ -1,6 +1,6 @@
-<div class="field alpha four columns">
+<!--POGEN,__pogen_405,select_tag____param_prefix__preferred_operator____options_for_select_Spree__Promotion__Rules__ItemTotal__OPERATORS_dot_map__o___Spree_dot_t__item_total_rule_dot_operators_dot___o____o____promotion_rule_dot_preferred_operator_____class_____select2_select_item_total_fullwidth___,<%= select_tag "#{param_prefix}[preferred_operator]", options_for_select(Spree::Promotion::Rules::ItemTotal::OPERATORS.map{|o| [Spree.t("item_total_rule.operators.#{o}"),o]}, promotion_rule.preferred_operator), {:class => 'select2 select_item_total fullwidth'} %>--><div class="field alpha four columns" id="__pogen_405">
   <%= select_tag "#{param_prefix}[preferred_operator]", options_for_select(Spree::Promotion::Rules::ItemTotal::OPERATORS.map{|o| [Spree.t("item_total_rule.operators.#{o}"),o]}, promotion_rule.preferred_operator), {:class => 'select2 select_item_total fullwidth'} %>
 </div>
-<div class="field omega four columns">
+<!--POGEN,__pogen_406,text_field_tag____param_prefix__preferred_amount____promotion_rule_dot_preferred_amount___class_____fullwidth__,<%= text_field_tag "#{param_prefix}[preferred_amount]", promotion_rule.preferred_amount, :class => 'fullwidth' %>--><div class="field omega four columns" id="__pogen_406">
   <%= text_field_tag "#{param_prefix}[preferred_amount]", promotion_rule.preferred_amount, :class => 'fullwidth' %>
 </div>

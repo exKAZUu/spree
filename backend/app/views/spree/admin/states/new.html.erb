@@ -7,8 +7,8 @@
 <% end %>
 
 <%= form_for [:admin, @country, @state] do |f| %>
-  <fieldset>
-    <legend><%= Spree.t(:new_state) %></legend>
+  <!--POGEN,__pogen_600,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><!--POGEN,__pogen_600,render__partial_____spree_divide_admin_divide_shared_divide_new_resource_links__,<%= render :partial => 'spree/admin/shared/new_resource_links' %>--><fieldset id="__pogen_600">
+    <!--POGEN,__pogen_601,Spree_dot_t__new_state__,<%= Spree.t(:new_state) %>--><legend id="__pogen_601"><%= Spree.t(:new_state) %></legend>
     <%= render :partial => 'form', :locals => { :f => f } %>
     <%= render :partial => 'spree/admin/shared/new_resource_links' %>
   </fieldset>

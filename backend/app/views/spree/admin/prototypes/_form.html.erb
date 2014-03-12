@@ -1,5 +1,5 @@
 <div data-hook="admin_prototype_form_fields" class="row">
-  <div class="alpha four columns">
+  <!--POGEN,__pogen_427,f_dot_text_field__name___class_____fullwidth__,<%= f.text_field :name, :class => 'fullwidth' %>--><!--POGEN,__pogen_427,f_dot_error_message_on__name_,<%= f.error_message_on :name %>--><!--POGEN,__pogen_427,f_dot_label__name__Spree_dot_t__name__,<%= f.label :name, Spree.t(:name) %>--><!--POGEN,__pogen_427,f_dot_field_container__name_do_,<%= f.field_container :name do %>--><div class="alpha four columns" id="__pogen_427">
     <%= f.field_container :name do %>
       <%= f.label :name, Spree.t(:name) %> <span class="required">*</span><br />
       <%= f.text_field :name, :class => 'fullwidth' %>
@@ -8,7 +8,7 @@
   </div>
 
   <div class="six columns">
-    <div id='properties' data-hook>
+    <!--POGEN,properties,f_dot_select__property_ids__Spree__Property_dot_all_dot_map____p___p_dot_presentation__p_dot_id____________multiple____true___class_____select2_fullwidth____,<%= f.select :property_ids, Spree::Property.all.map { |p| [p.presentation, p.id] }, {}, { :multiple => true, :class => "select2 fullwidth" } %>--><!--POGEN,properties,f_dot_label__property_ids__Spree_dot_t__properties__,<%= f.label :property_ids, Spree.t(:properties) %>--><!--POGEN,properties,f_dot_field_container__property_ids_do_,<%= f.field_container :property_ids do %>--><div id='properties' data-hook>
       <%= f.field_container :property_ids do %>
         <%= f.label :property_ids, Spree.t(:properties) %><br>
         <%= f.select :property_ids, Spree::Property.all.map { |p| [p.presentation, p.id] }, {}, { :multiple => true, :class => "select2 fullwidth" } %>
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="six columns omega">
+  <!--POGEN,__pogen_428,f_dot_label__option_type_ids__Spree_dot_t__option_types__,<%= f.label :option_type_ids, Spree.t(:option_types) %>--><!--POGEN,__pogen_428,f_dot_field_container__option_type_ids_do_,<%= f.field_container :option_type_ids do %>--><!--POGEN,__pogen_428,f_dot_select__option_type_ids__Spree__OptionType_dot_all_dot_map____ot___ot_dot_presentation__ot_dot_id____________multiple____true___class_____select2_fullwidth____,<%= f.select :option_type_ids, Spree::OptionType.all.map { |ot| [ot.presentation, ot.id] }, {}, { :multiple => true, :class => "select2 fullwidth" } %>--><div class="six columns omega" id="__pogen_428">
     <%= f.field_container :option_type_ids do %>
       <%= f.label :option_type_ids, Spree.t(:option_types) %><br>
       <%= f.select :option_type_ids, Spree::OptionType.all.map { |ot| [ot.presentation, ot.id] }, {}, { :multiple => true, :class => "select2 fullwidth" } %>

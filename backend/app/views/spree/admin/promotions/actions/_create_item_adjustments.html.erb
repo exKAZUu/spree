@@ -1,18 +1,18 @@
 <div class="calculator-fields row">
 
-  <div class="field alpha four columns">
+  <!--POGEN,__pogen_380,label_tag_field_name__Spree_dot_t__calculator__,<%= label_tag field_name, Spree.t(:calculator) %>--><div class="field alpha four columns" id="__pogen_380">
     <% field_name = "#{param_prefix}[calculator_type]" %>
     <%= label_tag field_name, Spree.t(:calculator) %>
     <%= select_tag field_name,
                    options_from_collection_for_select(Spree::Promotion::Actions::CreateItemAdjustments.calculators, :to_s, :description, promotion_action.calculator.type),
                    :class => 'type-select select2 fullwidth' %>
     <% if promotion_action.calculator.respond_to?(:preferences) %>
-      <span class="warning info"><%= Spree.t(:calculator_settings_warning) %></span>
+      <!--POGEN,__pogen_381,Spree_dot_t__calculator_settings_warning__,<%= Spree.t(:calculator_settings_warning) %>--><span class="warning info" id="__pogen_381"><%= Spree.t(:calculator_settings_warning) %></span>
     <% end %>
   </div>
 
   <% unless promotion_action.new_record? %>
-    <div class="settings field omega four columns">
+    <!--POGEN,__pogen_382,label_tag_field_name__Spree_dot_t_key_dot_to_s__,<%= label_tag field_name, Spree.t(key.to_s) %>--><!--POGEN,__pogen_382,hidden_field_tag____param_prefix__calculator_attributes__id____promotion_action_dot_calculator_dot_id_,<%= hidden_field_tag "#{param_prefix}[calculator_attributes][id]", promotion_action.calculator.id %>--><div class="settings field omega four columns" id="__pogen_382">
       <% promotion_action.calculator.preferences.keys.map do |key| %>
         <% field_name = "#{param_prefix}[calculator_attributes][preferred_#{key}]" %>
         <%= label_tag field_name, Spree.t(key.to_s) %>

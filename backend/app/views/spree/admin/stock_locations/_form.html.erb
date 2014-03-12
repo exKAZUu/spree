@@ -1,6 +1,6 @@
 <div data-hook="admin_stock_locations_form_fields" class="row">
   <div class="row">
-    <div class="alpha twelve columns">
+    <!--POGEN,__pogen_602,f_dot_text_field__name___class_____fullwidth__,<%= f.text_field :name, :class => 'fullwidth' %>--><!--POGEN,__pogen_602,f_dot_label__name__Spree_dot_t__name__,<%= f.label :name, Spree.t(:name) %>--><!--POGEN,__pogen_602,f_dot_text_field__admin_name___class_____fullwidth____label____false_,<%= f.text_field :admin_name, :class => 'fullwidth', :label => false %>--><!--POGEN,__pogen_602,f_dot_field_container__admin_name_do_,<%= f.field_container :admin_name do %>--><!--POGEN,__pogen_602,f_dot_label__admin_name__Spree_dot_t__internal_name__,<%= f.label :admin_name, Spree.t(:internal_name) %>--><!--POGEN,__pogen_602,f_dot_field_container__name_do_,<%= f.field_container :name do %>--><div class="alpha twelve columns" id="__pogen_602">
       <%= f.field_container :name do %>
         <%= f.label :name, Spree.t(:name) %> <span class="required">*</span><br />
         <%= f.text_field :name, :class => 'fullwidth' %>
@@ -10,19 +10,19 @@
         <%= f.text_field :admin_name, :class => 'fullwidth', :label => false %>
       <% end %>
     </div>
-    <div class="omega four columns">
+    <!--POGEN,__pogen_603,f_dot_field_container__active_do_,<%= f.field_container :active do %>--><div class="omega four columns" id="__pogen_603">
       <%= f.field_container :active do %>
-        <label for="active"><%= Spree.t(:state) %></label>
+        <!--POGEN,__pogen_604,Spree_dot_t__state__,<%= Spree.t(:state) %>--><label for="active" id="__pogen_604"><%= Spree.t(:state) %></label>
         <ul>
-          <li>
+          <!--POGEN,__pogen_605,f_dot_check_box__active_,<%= f.check_box :active %>--><!--POGEN,__pogen_605,f_dot_label__active__Spree_dot_t__active__,<%= f.label :active, Spree.t(:active) %>--><li id="__pogen_605">
             <%= f.label :active, Spree.t(:active) %>
             <%= f.check_box :active %>
           </li>
-          <li>
+          <!--POGEN,__pogen_606,f_dot_check_box__backorderable_default_,<%= f.check_box :backorderable_default %>--><!--POGEN,__pogen_606,f_dot_label__active__Spree_dot_t__backorderable_default__,<%= f.label :active, Spree.t(:backorderable_default) %>--><li id="__pogen_606">
             <%= f.label :active, Spree.t(:backorderable_default) %>
             <%= f.check_box :backorderable_default %>
           </li>
-          <li>
+          <!--POGEN,__pogen_607,f_dot_label__active__Spree_dot_t__propagate_all_variants__,<%= f.label :active, Spree.t(:propagate_all_variants) %>--><!--POGEN,__pogen_607,f_dot_check_box__propagate_all_variants_,<%= f.check_box :propagate_all_variants %>--><li id="__pogen_607">
             <%= f.label :active, Spree.t(:propagate_all_variants) %>
             <%= f.check_box :propagate_all_variants %>
           </li>
@@ -33,27 +33,27 @@
 
   <div class="row">
     <div class="alpha four columns">
-      <div class="field ">
+      <!--POGEN,__pogen_608,f_dot_text_field__address1___class_____fullwidth__,<%= f.text_field :address1, :class => 'fullwidth' %>--><!--POGEN,__pogen_608,f_dot_label__address1__Spree_dot_t__street_address__,<%= f.label :address1, Spree.t(:street_address) %>--><div class="field " id="__pogen_608">
         <%= f.label :address1, Spree.t(:street_address) %>
         <%= f.text_field :address1, :class => 'fullwidth' %>
       </div>
     </div>
 
     <div class="four columns">
-      <div class="field ">
+      <!--POGEN,__pogen_609,f_dot_label__address2__Spree_dot_t__street_address_2__,<%= f.label :address2, Spree.t(:street_address_2) %>--><!--POGEN,__pogen_609,f_dot_text_field__address2___class_____fullwidth__,<%= f.text_field :address2, :class => 'fullwidth' %>--><div class="field " id="__pogen_609">
         <%= f.label :address2, Spree.t(:street_address_2) %>
         <%= f.text_field :address2, :class => 'fullwidth' %>
       </div>
     </div>
     <div class="four columns">
-      <div class="field ">
+      <!--POGEN,__pogen_610,f_dot_text_field__city___class_____fullwidth__,<%= f.text_field :city, :class => 'fullwidth' %>--><!--POGEN,__pogen_610,f_dot_label__city__Spree_dot_t__city__,<%= f.label :city, Spree.t(:city) %>--><div class="field " id="__pogen_610">
         <%= f.label :city, Spree.t(:city) %>
         <%= f.text_field :city, :class => 'fullwidth' %>
       </div>
     </div>
 
     <div class="omega four columns">
-      <div class="field ">
+      <!--POGEN,__pogen_611,f_dot_label__zipcode__Spree_dot_t__zip__,<%= f.label :zipcode, Spree.t(:zip) %>--><!--POGEN,__pogen_611,f_dot_text_field__zipcode___class_____fullwidth__,<%= f.text_field :zipcode, :class => 'fullwidth' %>--><div class="field " id="__pogen_611">
         <%= f.label :zipcode, Spree.t(:zip) %>
         <%= f.text_field :zipcode, :class => 'fullwidth' %>
       </div>
@@ -62,17 +62,17 @@
 
   <div class="row">
     <div class="alpha eight columns">
-      <div class="field ">
+      <!--POGEN,__pogen_612,f_dot_label__country_id__Spree_dot_t__country__,<%= f.label :country_id, Spree.t(:country) %>--><div class="field " id="__pogen_612">
         <%= f.label :country_id, Spree.t(:country) %>
-        <span id="country"><%= f.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'select2 fullwidth'} %></span>
+        <!--POGEN,country,f_dot_collection_select__country_id__available_countries___id___name________class_____select2_fullwidth___,<%= f.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'select2 fullwidth'} %>--><span id="country"><%= f.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'select2 fullwidth'} %></span>
       </div>
     </div>
 
     <div class="four columns">
-      <div class="field ">
+      <!--POGEN,__pogen_613,f_dot_label__state_id__Spree_dot_t__state__,<%= f.label :state_id, Spree.t(:state) %>--><div class="field " id="__pogen_613">
         <% if f.object.country %>
           <%= f.label :state_id, Spree.t(:state) %>
-          <span id="state" class="region">
+          <!--POGEN,state,f_dot_collection_select__state_id__f_dot_object_dot_country_dot_states_dot_sort___id___name____include_blank____true_____class_____select2_fullwidth____style_____display____f_dot_object_dot_country_dot_states_dot_empty_____none_____block________disabled____f_dot_object_dot_country_dot_states_dot_empty___,<%= f.collection_select :state_id, f.object.country.states.sort, :id, :name, {:include_blank => true}, {:class => 'select2 fullwidth', :style => "display: #{f.object.country.states.empty? ? 'none' : 'block' };", :disabled => f.object.country.states.empty?} %>--><!--POGEN,state,f_dot_text_field__state_name___style_____display____f_dot_object_dot_country_dot_states_dot_empty_____block_____none________disabled_____f_dot_object_dot_country_dot_states_dot_empty____class_____fullwidth_state_name__,<%= f.text_field :state_name, :style => "display: #{f.object.country.states.empty? ? 'block' : 'none' };", :disabled => !f.object.country.states.empty?, :class => 'fullwidth state_name' %>--><span id="state" class="region">
             <%= f.text_field :state_name, :style => "display: #{f.object.country.states.empty? ? 'block' : 'none' };", :disabled => !f.object.country.states.empty?, :class => 'fullwidth state_name' %>
             <%= f.collection_select :state_id, f.object.country.states.sort, :id, :name, {:include_blank => true}, {:class => 'select2 fullwidth', :style => "display: #{f.object.country.states.empty? ? 'none' : 'block' };", :disabled => f.object.country.states.empty?} %>
           </span>
@@ -81,7 +81,7 @@
     </div>
 
     <div class="omega four columns">
-      <div class="field ">
+      <!--POGEN,__pogen_614,f_dot_phone_field__phone___class_____fullwidth__,<%= f.phone_field :phone, :class => 'fullwidth' %>--><!--POGEN,__pogen_614,f_dot_label__phone__Spree_dot_t__phone__,<%= f.label :phone, Spree.t(:phone) %>--><div class="field " id="__pogen_614">
         <%= f.label :phone, Spree.t(:phone) %>
         <%= f.phone_field :phone, :class => 'fullwidth' %>
       </div>

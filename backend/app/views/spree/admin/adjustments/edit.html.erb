@@ -5,17 +5,17 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:back_to_adjustments_list), spree.admin_order_adjustments_url(@order), :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_15,button_link_to_Spree_dot_t__back_to_adjustments_list___spree_dot_admin_order_adjustments_url__order____icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_adjustments_list), spree.admin_order_adjustments_url(@order), :icon => 'icon-arrow-left' %>--><li id="__pogen_15"><%= button_link_to Spree.t(:back_to_adjustments_list), spree.admin_order_adjustments_url(@order), :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @adjustment } %>
 <%= form_for @adjustment, :url => admin_order_adjustment_path(@order, @adjustment), :method => :put do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_16,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset class="no-border-top" id="__pogen_16">
     <%= render :partial => 'form', :locals => { :f => f } %>
 
-    <div class="filter-actions actions" data-hook="buttons">
+    <!--POGEN,__pogen_17,link_to_with_icon__icon_minus_remove___Spree_dot_t__actions_dot_cancel____admin_order_adjustments_url__order____class_____button__,<%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), admin_order_adjustments_url(@order), :class => 'button' %>--><!--POGEN,__pogen_17,button_Spree_dot_t__continue____icon_minus_arrow_minus_right__,<%= button Spree.t(:continue), 'icon-arrow-right' %>--><div class="filter-actions actions" data-hook="buttons" id="__pogen_17">
       <%= button Spree.t(:continue), 'icon-arrow-right' %>
-      <span class="or"><%= Spree.t(:or) %></span>
+      <!--POGEN,__pogen_18,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_18"><%= Spree.t(:or) %></span>
       <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), admin_order_adjustments_url(@order), :class => 'button' %>
     </div>
   </fieldset>

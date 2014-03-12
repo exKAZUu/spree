@@ -3,13 +3,13 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= link_to_with_icon 'icon-arrow-left', Spree.t(:back_to_stock_locations_list), admin_stock_locations_path, :class => 'button' %></li>
+  <!--POGEN,__pogen_630,link_to_with_icon__icon_minus_arrow_minus_left___Spree_dot_t__back_to_stock_locations_list___admin_stock_locations_path___class_____button__,<%= link_to_with_icon 'icon-arrow-left', Spree.t(:back_to_stock_locations_list), admin_stock_locations_path, :class => 'button' %>--><li id="__pogen_630"><%= link_to_with_icon 'icon-arrow-left', Spree.t(:back_to_stock_locations_list), admin_stock_locations_path, :class => 'button' %></li>
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @stock_locations } %>
 
 <%= form_for [:admin, @stock_location] do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_631,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><!--POGEN,__pogen_631,render__partial_____spree_divide_admin_divide_shared_divide_new_resource_links__,<%= render :partial => 'spree/admin/shared/new_resource_links' %>--><fieldset class="no-border-top" id="__pogen_631">
     <%= render :partial => 'form', :locals => { :f => f } %>
     <%= render :partial => 'spree/admin/shared/new_resource_links' %>
   </fieldset>

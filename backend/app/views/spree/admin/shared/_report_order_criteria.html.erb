@@ -1,5 +1,5 @@
 <%= search_form_for @search, :url => spree.sales_total_admin_reports_path  do |s| %>
-    <div class="date-range-filter field align-center">
+    <!--POGEN,__pogen_539,s_dot_text_field__completed_at_lt___class_____datepicker_datepicker_minus_to____value____datepicker_field_value_params__q___completed_at_lt___,<%= s.text_field :completed_at_lt, :class => 'datepicker datepicker-to', :value => datepicker_field_value(params[:q][:completed_at_lt]) %>--><!--POGEN,__pogen_539,label_tag_nil__Spree_dot_t__start____class_____inline__,<%= label_tag nil, Spree.t(:start), :class => 'inline' %>--><!--POGEN,__pogen_539,s_dot_text_field__completed_at_gt___class_____datepicker_datepicker_minus_from____value____datepicker_field_value_params__q___completed_at_gt___,<%= s.text_field :completed_at_gt, :class => 'datepicker datepicker-from', :value => datepicker_field_value(params[:q][:completed_at_gt]) %>--><!--POGEN,__pogen_539,label_tag_nil__Spree_dot_t__end____class_____inline__,<%= label_tag nil, Spree.t(:end), :class => 'inline' %>--><div class="date-range-filter field align-center" id="__pogen_539">
         <%= label_tag nil, Spree.t(:start), :class => 'inline' %>
         <%= s.text_field :completed_at_gt, :class => 'datepicker datepicker-from', :value => datepicker_field_value(params[:q][:completed_at_gt]) %>
         
@@ -11,7 +11,7 @@
         <%= label_tag nil, Spree.t(:end), :class => 'inline' %>
     </div>
 
-    <div class="actions filter-actions">
+    <!--POGEN,__pogen_540,button_Spree_dot_t__search____icon_minus_search___,<%= button Spree.t(:search), 'icon-search'  %>--><div class="actions filter-actions" id="__pogen_540">
       <%= button Spree.t(:search), 'icon-search'  %>
     </div>
 <% end %>

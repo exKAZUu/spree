@@ -1,8 +1,8 @@
 <% if content_for?(:sidebar) %>
-  <aside id="sidebar" data-hook class="four columns">
+  <!--POGEN,sidebar,yield__sidebar_,<%= yield :sidebar %>--><aside id="sidebar" data-hook class="four columns">
 
     <% if content_for?(:sidebar_title) %>
-      <h5 class="sidebar-title"><span><%= yield :sidebar_title %></span></h5>
+      <h5 class="sidebar-title"><!--POGEN,__pogen_543,yield__sidebar_title_,<%= yield :sidebar_title %>--><span id="__pogen_543"><%= yield :sidebar_title %></span></h5>
     <% end %>
 
     <%= yield :sidebar %>

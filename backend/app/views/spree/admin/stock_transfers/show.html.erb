@@ -5,34 +5,34 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_679,button_link_to_Spree_dot_t__back_to_stock_transfers_list___admin_stock_transfers_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_stock_transfers_list), admin_stock_transfers_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_679">
     <%= button_link_to Spree.t(:back_to_stock_transfers_list), admin_stock_transfers_path, :icon => 'icon-arrow-left' %>
   </li>
-  <li>
+  <!--POGEN,__pogen_680,button_link_to_Spree_dot_t__new_stock_transfer___new_admin_stock_transfer_path_____icon_____icon_minus_forward____,<%= button_link_to Spree.t(:new_stock_transfer), new_admin_stock_transfer_path, { :icon => 'icon-forward' } %>--><li id="__pogen_680">
     <%= button_link_to Spree.t(:new_stock_transfer), new_admin_stock_transfer_path, { :icon => 'icon-forward' } %>
   </li>
 <% end %>
 
 <fieldset class="no-border-bottom">
-  <legend align="center"><%= Spree.t(:stock_transfer) %></legend>
+  <!--POGEN,__pogen_681,Spree_dot_t__stock_transfer__,<%= Spree.t(:stock_transfer) %>--><legend align="center" id="__pogen_681"><%= Spree.t(:stock_transfer) %></legend>
 
   <div class="alpha six columns">
     <div class="field">
-      <label><%= Spree.t(:reference) %></label>
-      <div class="value"><%= @stock_transfer.reference %></div>
+      <!--POGEN,__pogen_682,Spree_dot_t__reference__,<%= Spree.t(:reference) %>--><label id="__pogen_682"><%= Spree.t(:reference) %></label>
+      <!--POGEN,__pogen_683,_stock_transfer_dot_reference_,<%= @stock_transfer.reference %>--><div class="value" id="__pogen_683"><%= @stock_transfer.reference %></div>
     </div>
   </div>
 
   <div class="omega six columns">
     <div class="field">
-      <label><%= Spree.t(:created_at) %></label>
-      <div class="value"><%= @stock_transfer.created_at %></div>
+      <!--POGEN,__pogen_684,Spree_dot_t__created_at__,<%= Spree.t(:created_at) %>--><label id="__pogen_684"><%= Spree.t(:created_at) %></label>
+      <!--POGEN,__pogen_685,_stock_transfer_dot_created_at_,<%= @stock_transfer.created_at %>--><div class="value" id="__pogen_685"><%= @stock_transfer.created_at %></div>
     </div>
   </div>
 
   <% if @stock_transfer.source_movements.present? %>
-    <fieldset class="no-border-bottom">
-      <legend id="stock-location-source">
+    <!--POGEN,__pogen_686,render__partial_____stock_movements____object_____stock_transfer_dot_source_movements_,<%= render :partial => 'stock_movements', :object => @stock_transfer.source_movements %>--><fieldset class="no-border-bottom" id="__pogen_686">
+      <!--POGEN,stock-location-source,_stock_transfer_dot_source_location_dot_name_,<%= @stock_transfer.source_location.name %>--><!--POGEN,stock-location-source,Spree_dot_t__source__,<%= Spree.t(:source) %>--><legend id="stock-location-source">
         <%= Spree.t(:source) %> <i class="icon-arrow-right"></i> <%= @stock_transfer.source_location.name %>
       </legend>
       <%= render :partial => 'stock_movements', :object => @stock_transfer.source_movements %>
@@ -40,8 +40,8 @@
   <% end %>
 
   <% if @stock_transfer.destination_movements.present? %>
-    <fieldset class="no-border-bottom">
-      <legend id="stock-location-destination">
+    <!--POGEN,__pogen_687,render__partial_____stock_movements____object_____stock_transfer_dot_destination_movements_,<%= render :partial => 'stock_movements', :object => @stock_transfer.destination_movements %>--><fieldset class="no-border-bottom" id="__pogen_687">
+      <!--POGEN,stock-location-destination,_stock_transfer_dot_destination_location_dot_name_,<%= @stock_transfer.destination_location.name %>--><!--POGEN,stock-location-destination,Spree_dot_t__destination__,<%= Spree.t(:destination) %>--><legend id="stock-location-destination">
         <%= Spree.t(:destination) %> <i class="icon-arrow-right"></i> <%= @stock_transfer.destination_location.name %>
       </legend>
       <%= render :partial => 'stock_movements', :object => @stock_transfer.destination_movements %>

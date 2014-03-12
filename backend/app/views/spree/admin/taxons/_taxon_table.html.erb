@@ -1,23 +1,23 @@
 <table class="index">
   <thead>
     <tr data-hook="taxons_header">
-      <th><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:path) %></th>
+      <!--POGEN,__pogen_756,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_756"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_757,Spree_dot_t__path__,<%= Spree.t(:path) %>--><th id="__pogen_757"><%= Spree.t(:path) %></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <% taxons.each do |taxon| %>
-      <tr id="<%= spree_dom_id(taxon) %>" data-hook="taxons_row" class="<%= cycle('odd', 'even')%>">
-        <td><%= taxon.name %></td>
-        <td><%= taxon_path taxon %></td>
-        <td class="actions">
+      <!--POGEN,<%= spree_dom_id(taxon) %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id(taxon) %>,spree_dom_id_taxon__,<%= spree_dom_id(taxon) %>--><tr id="<%= spree_dom_id(taxon) %>" data-hook="taxons_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_758,taxon_dot_name_,<%= taxon.name %>--><td id="__pogen_758"><%= taxon.name %></td>
+        <!--POGEN,__pogen_759,taxon_path_taxon_,<%= taxon_path taxon %>--><td id="__pogen_759"><%= taxon_path taxon %></td>
+        <!--POGEN,__pogen_760,link_to_delete_taxon___url____remove_admin_product_taxon_url__product__taxon____name____icon__delete____plus_______plus__Spree_dot_t__remove__,<%= link_to_delete taxon, :url => remove_admin_product_taxon_url(@product, taxon), :name => icon('delete') + ' ' + Spree.t(:remove) %>--><td class="actions" id="__pogen_760">
           <%= link_to_delete taxon, :url => remove_admin_product_taxon_url(@product, taxon), :name => icon('delete') + ' ' + Spree.t(:remove) %>
         </td>
       </tr>
     <% end %>
     <% if taxons.empty? %>
-      <tr data-hook="taxons_none"><td colspan="3"><%= Spree.t(:none) %>.</td></tr>
+      <tr data-hook="taxons_none"><!--POGEN,__pogen_761,Spree_dot_t__none__,<%= Spree.t(:none) %>--><td colspan="3" id="__pogen_761"><%= Spree.t(:none) %>.</td></tr>
     <% end %>
   </tbody>
 </table>

@@ -1,16 +1,16 @@
 <% if adjustments.eligible.exists? %>
   <fieldset class="no-border-bottom">
-    <legend><%= title %></legend>
+    <!--POGEN,__pogen_129,title_,<%= title %>--><legend id="__pogen_129"><%= title %></legend>
     <table>
       <thead>
-        <th><%= Spree.t('name')%></th>
-        <th><%= Spree.t('amount')%></th>
+        <!--POGEN,__pogen_130,Spree_dot_t__name__,<%= Spree.t('name')%>--><th id="__pogen_130"><%= Spree.t('name')%></th>
+        <!--POGEN,__pogen_131,Spree_dot_t__amount__,<%= Spree.t('amount')%>--><th id="__pogen_131"><%= Spree.t('amount')%></th>
       </thead>
       <tbody id="order-charges" data-hook="order_details_adjustments"  class="with-border">
         <% adjustments.eligible.group_by(&:label).each do |label, adjustments| %>
           <tr class="total">
-            <td><strong><%= label %>:</strong></td>
-            <td class="total align-center"><span><%= Spree::Money.new(adjustments.sum(&:amount)) %></span></td>
+            <td><!--POGEN,__pogen_132,label_,<%= label %>--><strong id="__pogen_132"><%= label %>:</strong></td>
+            <td class="total align-center"><!--POGEN,__pogen_133,Spree__Money_dot_new_adjustments_dot_sum___amount___,<%= Spree::Money.new(adjustments.sum(&:amount)) %>--><span id="__pogen_133"><%= Spree::Money.new(adjustments.sum(&:amount)) %></span></td>
           </tr>
         <% end %>
       </tbody>

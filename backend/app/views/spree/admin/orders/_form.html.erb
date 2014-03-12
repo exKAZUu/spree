@@ -1,4 +1,4 @@
- <div data-hook="admin_order_form_fields">
+ <!--POGEN,__pogen_134,javascript_tag_do__minus_,<%= javascript_tag do -%>--><!--POGEN,__pogen_134,render__partial_____spree_divide_shared_divide_error_messages____locals_______target_____line_item___,<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @line_item } %>--><!--POGEN,__pogen_134,render__partial_____spree_divide_admin_divide_shared_divide_update_order_state____handlers______js__,<%= render :partial => 'spree/admin/shared/update_order_state', :handlers => [:js] %>--><!--POGEN,__pogen_134,render__partial_____spree_divide_admin_divide_orders_divide_line_items____locals_______order____order___,<%= render :partial => "spree/admin/orders/line_items", :locals => { :order => order } %>--><!--POGEN,__pogen_134,__shipment_dot_to_json__root____false___include______inventory_units___stock_location___,<%== shipment.to_json(:root => false, :include => [:inventory_units, :stock_location]) %>--><!--POGEN,__pogen_134,_order_dot_number_,<%= @order.number %>--><!--POGEN,__pogen_134,render__partial_____spree_divide_admin_divide_orders_divide_shipment____collection_____order_dot_shipments___locals_______order____order___,<%= render :partial => "spree/admin/orders/shipment", :collection => @order.shipments, :locals => { :order => order } %>--><div data-hook="admin_order_form_fields" id="__pogen_134">
   <% if @line_item.try(:errors).present? %>
     <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @line_item } %>
   <% end %>
@@ -26,8 +26,8 @@
 
   <% if order.line_items.exists? %>
     <fieldset class="no-border-bottom" id="order-total" data-hook="order_details_total">
-      <legend><%= Spree.t(:order_total) %></legend>
-      <span class="order-total"><%= order.display_total %></span>
+      <!--POGEN,__pogen_135,Spree_dot_t__order_total__,<%= Spree.t(:order_total) %>--><legend id="__pogen_135"><%= Spree.t(:order_total) %></legend>
+      <!--POGEN,__pogen_136,order_dot_display_total_,<%= order.display_total %>--><span class="order-total" id="__pogen_136"><%= order.display_total %></span>
     </fieldset>
   <% end %>
 

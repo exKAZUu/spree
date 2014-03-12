@@ -1,9 +1,9 @@
-<div class="field alpha omega eight columns products_rule_products">
+<!--POGEN,__pogen_410,hidden_field_tag____param_prefix__product_ids_string____promotion_rule_dot_product_ids_dot_join________class_____product_picker_fullwidth__,<%= hidden_field_tag "#{param_prefix}[product_ids_string]", promotion_rule.product_ids.join(","), :class => "product_picker fullwidth" %>--><!--POGEN,__pogen_410,label_tag____param_prefix__product_ids_string___Spree_dot_t__product_rule_dot_choose_products___,<%= label_tag "#{param_prefix}_product_ids_string", Spree.t('product_rule.choose_products') %>--><div class="field alpha omega eight columns products_rule_products" id="__pogen_410">
   <%= label_tag "#{param_prefix}_product_ids_string", Spree.t('product_rule.choose_products') %>
   <%= hidden_field_tag "#{param_prefix}[product_ids_string]", promotion_rule.product_ids.join(","), :class => "product_picker fullwidth" %>
 </div>
 <div class="field alpha omega eight columns">
-  <label>
+  <!--POGEN,__pogen_411,Spree_dot_t__product_rule_dot_label____select____select_tag____param_prefix__preferred_match_policy____options_for_select_Spree__Promotion__Rules__Product__MATCH_POLICIES_dot_map__s___Spree_dot_t__product_rule_dot_match___s____s_____promotion_rule_dot_preferred_match_policy_____class_____select_product_select2_____dot_html_safe_,<%= Spree.t('product_rule.label', :select => select_tag("#{param_prefix}[preferred_match_policy]", options_for_select(Spree::Promotion::Rules::Product::MATCH_POLICIES.map{|s| [Spree.t("product_rule.match_#{s}"),s] }, promotion_rule.preferred_match_policy), {:class => 'select_product select2'})).html_safe %>--><label id="__pogen_411">
     <%= Spree.t('product_rule.label', :select => select_tag("#{param_prefix}[preferred_match_policy]", options_for_select(Spree::Promotion::Rules::Product::MATCH_POLICIES.map{|s| [Spree.t("product_rule.match_#{s}"),s] }, promotion_rule.preferred_match_policy), {:class => 'select_product select2'})).html_safe %>
   </label>
 </div>

@@ -1,12 +1,12 @@
 <%= form_for [:admin, @product, @image], :html => { :multipart => true } do |f| %>
-  <fieldset data-hook="new_image">
-    <legend align="center"><%= Spree.t(:new_image) %></legend>
+  <!--POGEN,__pogen_73,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset data-hook="new_image" id="__pogen_73">
+    <!--POGEN,__pogen_74,Spree_dot_t__new_image__,<%= Spree.t(:new_image) %>--><legend align="center" id="__pogen_74"><%= Spree.t(:new_image) %></legend>
 
       <%= render :partial => 'form', :locals => { :f => f } %>
     
-      <div class="form-buttons filter-actions actions" data-hook="buttons">
+      <!--POGEN,__pogen_75,link_to_with_icon__icon_minus_remove___Spree_dot_t__actions_dot_cancel____admin_product_images_url__product____id_____cancel_link____class_____button__,<%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), admin_product_images_url(@product), :id => 'cancel_link', :class => 'button' %>--><!--POGEN,__pogen_75,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_75">
         <%= button Spree.t('actions.update'), 'icon-refresh' %>
-        <span class="or"><%= Spree.t(:or) %></span>
+        <!--POGEN,__pogen_76,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_76"><%= Spree.t(:or) %></span>
         <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), admin_product_images_url(@product), :id => 'cancel_link', :class => 'button' %>
       </div>
   </fieldset>

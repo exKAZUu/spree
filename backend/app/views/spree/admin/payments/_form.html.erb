@@ -1,24 +1,24 @@
 <div data-hook="admin_payment_form_fields" class="row">
   <div class="alpha three columns">
-    <div class="field">
+    <!--POGEN,__pogen_264,f_dot_text_field__amount___value_____order_dot_outstanding_balance___class_____fullwidth__,<%= f.text_field :amount, :value => @order.outstanding_balance, :class => 'fullwidth' %>--><!--POGEN,__pogen_264,f_dot_label__amount__Spree_dot_t__amount__,<%= f.label :amount, Spree.t(:amount) %>--><div class="field" id="__pogen_264">
       <%= f.label :amount, Spree.t(:amount) %>
       <%= f.text_field :amount, :value => @order.outstanding_balance, :class => 'fullwidth' %>
     </div>
   </div>
   <div class="omega nine columns">
     <div class="field">
-      <label><%= Spree.t(:payment_method) %></label>
+      <!--POGEN,__pogen_265,Spree_dot_t__payment_method__,<%= Spree.t(:payment_method) %>--><label id="__pogen_265"><%= Spree.t(:payment_method) %></label>
       <ul>
         <% @payment_methods.each do |method| %>
           <li>
-            <label data-hook="payment_method_field">
+            <!--POGEN,__pogen_266,Spree_dot_t_method_dot_name___scope_____payment_methods___default____method_dot_name__,<%= Spree.t(method.name, :scope => :payment_methods, :default => method.name) %>--><!--POGEN,__pogen_266,radio_button_tag__payment_payment_method_id____method_dot_id__method_____payment_method_,<%= radio_button_tag 'payment[payment_method_id]', method.id, method == @payment_method %>--><label data-hook="payment_method_field" id="__pogen_266">
               <%= radio_button_tag 'payment[payment_method_id]', method.id, method == @payment_method %>
               <%= Spree.t(method.name, :scope => :payment_methods, :default => method.name) %>
             </label>
           </li>
         <% end %>
       </ul>
-      <div class="payment-method-settings">
+      <!--POGEN,__pogen_267,render__partial_____spree_divide_admin_divide_payments_divide_source_forms_divide___method_dot_method_type_____locals_______payment_method____method___,<%= render :partial => "spree/admin/payments/source_forms/#{method.method_type}", :locals => { :payment_method => method } %>--><div class="payment-method-settings" id="__pogen_267">
         <% @payment_methods.each do |method| %>
           <% if method.source_required? %>
             <%= render :partial => "spree/admin/payments/source_forms/#{method.method_type}", :locals => { :payment_method => method } %>

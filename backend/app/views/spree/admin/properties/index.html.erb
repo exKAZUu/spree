@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li id="new_property_link">
+  <!--POGEN,new_property_link,button_link_to_Spree_dot_t__new_property___new_admin_property_url_____remote____true___icon_____icon_minus_plus____data_minus_update______new_property____id_____new_property_link____,<%= button_link_to Spree.t(:new_property), new_admin_property_url, { :remote => true, :icon => 'icon-plus', 'data-update' => 'new_property', :id => 'new_property_link' } %>--><li id="new_property_link">
     <%= button_link_to Spree.t(:new_property), new_admin_property_url, { :remote => true, :icon => 'icon-plus', 'data-update' => 'new_property', :id => 'new_property_link' } %>
   </li>
 <% end %>
@@ -21,17 +21,17 @@
   </colgroup>
   <thead>
     <tr data-hook="listing_properties_header">
-      <th><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:presentation) %></th>
+      <!--POGEN,__pogen_418,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_418"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_419,Spree_dot_t__presentation__,<%= Spree.t(:presentation) %>--><th id="__pogen_419"><%= Spree.t(:presentation) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @properties.each do |property| %>
-      <tr id="<%= spree_dom_id property %>" data-hook="listing_properties_row" class="<%= cycle('odd', 'even')%>">
-        <td style="padding-left:1em"><%= property.name %></td>
-        <td style="padding-left:1em"><%= property.presentation %></td>
-        <td class="actions">
+      <!--POGEN,<%= spree_dom_id property %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id property %>,spree_dom_id_property_,<%= spree_dom_id property %>--><tr id="<%= spree_dom_id property %>" data-hook="listing_properties_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_420,property_dot_name_,<%= property.name %>--><td style="padding-left:1em" id="__pogen_420"><%= property.name %></td>
+        <!--POGEN,__pogen_421,property_dot_presentation_,<%= property.presentation %>--><td style="padding-left:1em" id="__pogen_421"><%= property.presentation %></td>
+        <!--POGEN,__pogen_422,link_to_delete_property___no_text____true__,<%= link_to_delete(property, :no_text => true) %>--><!--POGEN,__pogen_422,link_to_edit_property___no_text____true__,<%= link_to_edit(property, :no_text => true) %>--><td class="actions" id="__pogen_422">
           <%= link_to_edit(property, :no_text => true) %>
           <%= link_to_delete(property, :no_text => true) %>
         </td>
@@ -40,7 +40,7 @@
   </tbody>
 </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_423,link_to_Spree_dot_t__add_one___spree_dot_new_admin_property_path_,<%= link_to Spree.t(:add_one), spree.new_admin_property_path %>--><!--POGEN,__pogen_423,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_property____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/property')) %>--><div class="alpha twelve columns no-objects-found" id="__pogen_423">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/property')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_property_path %>!
   </div>

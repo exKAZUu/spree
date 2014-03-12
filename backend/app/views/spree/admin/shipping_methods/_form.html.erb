@@ -1,5 +1,5 @@
 <div data-hook="admin_shipping_method_form_fields" class="alpha twelve columns">
-  <div class="alpha six columns">
+  <!--POGEN,__pogen_557,f_dot_text_field__name___class_____fullwidth__,<%= f.text_field :name, :class => 'fullwidth' %>--><!--POGEN,__pogen_557,f_dot_label__name__Spree_dot_t__name__,<%= f.label :name, Spree.t(:name) %>--><!--POGEN,__pogen_557,error_message_on__shipping_method___name_,<%= error_message_on :shipping_method, :name %>--><!--POGEN,__pogen_557,f_dot_field_container__name_do_,<%= f.field_container :name do %>--><div class="alpha six columns" id="__pogen_557">
     <%= f.field_container :name do %>
       <%= f.label :name, Spree.t(:name) %><br />
       <%= f.text_field :name, :class => 'fullwidth' %>
@@ -7,7 +7,7 @@
     <% end %>
   </div>
 
-  <div class="omega six columns">
+  <!--POGEN,__pogen_558,f_dot_field_container__display_on_do_,<%= f.field_container :display_on do %>--><!--POGEN,__pogen_558,error_message_on__shipping_method___display_on_,<%= error_message_on :shipping_method, :display_on %>--><!--POGEN,__pogen_558,f_dot_label__display_on__Spree_dot_t__display__,<%= f.label :display_on, Spree.t(:display) %>--><!--POGEN,__pogen_558,select__shipping_method___display_on__Spree__ShippingMethod__DISPLAY_dot_collect____display___Spree_dot_t_display___display_____both___nil___display_dot_to_s___________class_____select2_fullwidth____,<%= select(:shipping_method, :display_on, Spree::ShippingMethod::DISPLAY.collect { |display| [Spree.t(display), display == :both ? nil : display.to_s] }, {}, {:class => 'select2 fullwidth'}) %>--><div class="omega six columns" id="__pogen_558">
     <%= f.field_container :display_on do %>
       <%= f.label :display_on, Spree.t(:display) %><br />
       <%= select(:shipping_method, :display_on, Spree::ShippingMethod::DISPLAY.collect { |display| [Spree.t(display), display == :both ? nil : display.to_s] }, {}, {:class => 'select2 fullwidth'}) %>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="alpha omega twelve columns">
-    <div class="alpha six columns">
+    <!--POGEN,__pogen_559,f_dot_text_field__admin_name___class_____fullwidth____label____false__,<%= f.text_field :admin_name, :class => 'fullwidth', :label => false  %>--><!--POGEN,__pogen_559,f_dot_field_container__admin_name_do_,<%= f.field_container :admin_name do %>--><!--POGEN,__pogen_559,error_message_on__shipping_method___admin_name_,<%= error_message_on :shipping_method, :admin_name %>--><!--POGEN,__pogen_559,f_dot_label__admin_name__Spree_dot_t__internal_name__,<%= f.label :admin_name, Spree.t(:internal_name) %>--><div class="alpha six columns" id="__pogen_559">
       <%= f.field_container :admin_name do %>
         <%= f.label :admin_name, Spree.t(:internal_name) %><br />
         <%= f.text_field :admin_name, :class => 'fullwidth', :label => false  %>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="alpha twelve columns">
+  <!--POGEN,__pogen_560,f_dot_text_field__tracking_url___class_____fullwidth____placeholder____Spree_dot_t__tracking_url_placeholder__,<%= f.text_field :tracking_url, :class => 'fullwidth', :placeholder => Spree.t(:tracking_url_placeholder) %>--><!--POGEN,__pogen_560,error_message_on__shipping_method___tracking_url_,<%= error_message_on :shipping_method, :tracking_url %>--><!--POGEN,__pogen_560,f_dot_label__tracking_url__Spree_dot_t__tracking_url__,<%= f.label :tracking_url, Spree.t(:tracking_url) %>--><!--POGEN,__pogen_560,f_dot_field_container__tracking_url_do_,<%= f.field_container :tracking_url do %>--><div class="alpha twelve columns" id="__pogen_560">
     <%= f.field_container :tracking_url do %>
       <%= f.label :tracking_url, Spree.t(:tracking_url) %><br />
       <%= f.text_field :tracking_url, :class => 'fullwidth', :placeholder => Spree.t(:tracking_url_placeholder) %>
@@ -36,8 +36,8 @@
 
 <div class="alpha six columns">
   <div data-hook="admin_shipping_method_form_availability_fields" class="alpha six columns">
-    <fieldset class="categories no-border-bottom">
-      <legend align="center"><%= Spree.t(:shipping_categories) %></legend>
+    <!--POGEN,__pogen_561,category_dot_name_,<%= category.name %>--><!--POGEN,__pogen_561,error_message_on__shipping_method___shipping_category_id_,<%= error_message_on :shipping_method, :shipping_category_id %>--><!--POGEN,__pogen_561,label_tag_do_,<%= label_tag do %>--><!--POGEN,__pogen_561,check_box_tag__shipping_method_shipping_categories______category_dot_id___shipping_method_dot_shipping_categories_dot_include__category___,<%= check_box_tag('shipping_method[shipping_categories][]', category.id, @shipping_method.shipping_categories.include?(category)) %>--><!--POGEN,__pogen_561,f_dot_field_container__categories_do_,<%= f.field_container :categories do %>--><fieldset class="categories no-border-bottom" id="__pogen_561">
+      <!--POGEN,__pogen_562,Spree_dot_t__shipping_categories__,<%= Spree.t(:shipping_categories) %>--><legend align="center" id="__pogen_562"><%= Spree.t(:shipping_categories) %></legend>
           <%= f.field_container :categories do %>
         <% Spree::ShippingCategory.all.each do |category| %>
           <%= label_tag do %>
@@ -51,8 +51,8 @@
   </div>
 
   <div class="alpha six columns">
-    <fieldset class="no-border-bottom">
-      <legend align="center"><%= Spree.t(:zones) %></legend>
+    <!--POGEN,__pogen_563,f_dot_field_container__zones_do_,<%= f.field_container :zones do %>--><!--POGEN,__pogen_563,error_message_on__shipping_method___zone_id_,<%= error_message_on :shipping_method, :zone_id %>--><!--POGEN,__pogen_563,label_tag_do_,<%= label_tag do %>--><!--POGEN,__pogen_563,check_box_tag__shipping_method_zones______zone_dot_id___shipping_method_dot_zones_dot_include__zone___,<%= check_box_tag('shipping_method[zones][]', zone.id, @shipping_method.zones.include?(zone)) %>--><!--POGEN,__pogen_563,zone_dot_name_,<%= zone.name %>--><fieldset class="no-border-bottom" id="__pogen_563">
+      <!--POGEN,__pogen_564,Spree_dot_t__zones__,<%= Spree.t(:zones) %>--><legend align="center" id="__pogen_564"><%= Spree.t(:zones) %></legend>
       <%= f.field_container :zones do %>
         <% Spree::Zone.all.each do |zone| %>
           <%= label_tag do %>
@@ -67,14 +67,14 @@
   </div>
 </div>
 
-<div data-hook="admin_shipping_method_form_calculator_fields" class="omega six columns">
+<!--POGEN,__pogen_565,render__partial_____spree_divide_admin_divide_shared_divide_calculator_fields____locals_______f____f___,<%= render :partial => 'spree/admin/shared/calculator_fields', :locals => { :f => f } %>--><div data-hook="admin_shipping_method_form_calculator_fields" class="omega six columns" id="__pogen_565">
   <%= render :partial => 'spree/admin/shared/calculator_fields', :locals => { :f => f } %>
 </div>
 
 <div class="alpha six columns">
   <div class="alpha six columns">
-    <fieldset class="tax_categories no-border-bottom">
-      <legend align="center"><%= Spree.t(:tax_category) %></legend>
+    <!--POGEN,__pogen_566,error_message_on__shipping_method___tax_category_id_,<%= error_message_on :shipping_method, :tax_category_id %>--><!--POGEN,__pogen_566,f_dot_select__tax_category_id___tax_categories_dot_map____tc___tc_dot_name__tc_dot_id__________class_____select2_fullwidth__,<%= f.select :tax_category_id, @tax_categories.map { |tc| [tc.name, tc.id] }, {}, :class => "select2 fullwidth" %>--><!--POGEN,__pogen_566,f_dot_field_container__categories_do_,<%= f.field_container :categories do %>--><fieldset class="tax_categories no-border-bottom" id="__pogen_566">
+      <!--POGEN,__pogen_567,Spree_dot_t__tax_category__,<%= Spree.t(:tax_category) %>--><legend align="center" id="__pogen_567"><%= Spree.t(:tax_category) %></legend>
         <%= f.field_container :categories do %>
           <%= f.select :tax_category_id, @tax_categories.map { |tc| [tc.name, tc.id] }, {}, :class => "select2 fullwidth" %>
           <%= error_message_on :shipping_method, :tax_category_id %>

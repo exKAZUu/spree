@@ -1,20 +1,20 @@
 <fieldset id="calculator_fields" data-hook class="no-border-bottom">
-  <legend align="center"><%= Spree.t(:calculator) %></legend>
+  <!--POGEN,__pogen_500,Spree_dot_t__calculator__,<%= Spree.t(:calculator) %>--><legend align="center" id="__pogen_500"><%= Spree.t(:calculator) %></legend>
 
   <div id="preference-settings" data-hook>
-    <div class="field">
+    <!--POGEN,__pogen_501,f_dot_select__calculator_type___calculators_dot_map____c___c_dot_description__c_dot_name___________id_____calc_type____class_____select2_fullwidth____,<%= f.select(:calculator_type, @calculators.map { |c| [c.description, c.name] }, {}, {:id => 'calc_type', :class => 'select2 fullwidth'}) %>--><!--POGEN,__pogen_501,f_dot_label__calculator_type__Spree_dot_t__calculator____for_____calc_type___,<%= f.label(:calculator_type, Spree.t(:calculator), :for => 'calc_type') %>--><div class="field" id="__pogen_501">
       <%= f.label(:calculator_type, Spree.t(:calculator), :for => 'calc_type') %>
       <%= f.select(:calculator_type, @calculators.map { |c| [c.description, c.name] }, {}, {:id => 'calc_type', :class => 'select2 fullwidth'}) %>
     </div>
     <% if !@object.new_record? %>
       <div class="field">
-        <div class="calculator-settings">
+        <!--POGEN,__pogen_502,preference_fields__object_dot_calculator__calculator_form__,<%= preference_fields(@object.calculator, calculator_form) %>--><!--POGEN,__pogen_502,f_dot_fields_for__calculator_do__calculator_form__,<%= f.fields_for :calculator do |calculator_form| %>--><div class="calculator-settings" id="__pogen_502">
           <%= f.fields_for :calculator do |calculator_form| %>
             <%= preference_fields(@object.calculator, calculator_form) %>
           <% end %>
         </div>
         <% if @object.calculator.respond_to?(:preferences) %>
-          <span class="calculator-settings-warning info warning"><%= Spree.t(:calculator_settings_warning) %></span>
+          <!--POGEN,__pogen_503,Spree_dot_t__calculator_settings_warning__,<%= Spree.t(:calculator_settings_warning) %>--><span class="calculator-settings-warning info warning" id="__pogen_503"><%= Spree.t(:calculator_settings_warning) %></span>
         <% end %>
       </div>
     <% end %>

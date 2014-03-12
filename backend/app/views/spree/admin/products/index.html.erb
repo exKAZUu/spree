@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li id="new_product_link">
+  <!--POGEN,new_product_link,button_link_to_Spree_dot_t__new_product___new_object_url_____remote____true___icon_____icon_minus_plus____id_____admin_new_product____,<%= button_link_to Spree.t(:new_product), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_product' } %>--><li id="new_product_link">
     <%= button_link_to Spree.t(:new_product), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_product' } %>
   </li>
 <% end if can?(:create, Spree::Product) %>
@@ -15,7 +15,7 @@
 <% end %>
 
 <% content_for :table_filter do %>
-  <div data-hook="admin_products_sidebar">
+  <!--POGEN,__pogen_328,search_form_for___admin___search__do__f__,<%= search_form_for [:admin, @search] do |f| %>--><div data-hook="admin_products_sidebar" id="__pogen_328">
 
     <%= search_form_for [:admin, @search] do |f| %>
 
@@ -23,20 +23,20 @@
 
         <div data-hook="admin_products_index_search">
           <div class="alpha nine columns">
-            <div class="field">
+            <!--POGEN,__pogen_329,f_dot_label__name_cont__Spree_dot_t__name__,<%= f.label :name_cont, Spree.t(:name) %>--><!--POGEN,__pogen_329,f_dot_text_field__name_cont___size____15_,<%= f.text_field :name_cont, :size => 15 %>--><div class="field" id="__pogen_329">
               <%= f.label :name_cont, Spree.t(:name) %>
               <%= f.text_field :name_cont, :size => 15 %>
             </div>
           </div>
           <div class="four columns">
-            <div class="field">
+            <!--POGEN,__pogen_330,f_dot_label__variants_including_master_sku_cont__Spree_dot_t__sku__,<%= f.label :variants_including_master_sku_cont, Spree.t(:sku) %>--><!--POGEN,__pogen_330,f_dot_text_field__variants_including_master_sku_cont___size____15_,<%= f.text_field :variants_including_master_sku_cont, :size => 15 %>--><div class="field" id="__pogen_330">
               <%= f.label :variants_including_master_sku_cont, Spree.t(:sku) %>
               <%= f.text_field :variants_including_master_sku_cont, :size => 15 %>
             </div>
           </div>
           <div class="three columns omega">
             <div class="field checkbox">
-              <label>
+              <!--POGEN,__pogen_331,Spree_dot_t__show_deleted__,<%= Spree.t(:show_deleted) %>--><!--POGEN,__pogen_331,f_dot_check_box__deleted_at_null____checked____params__q___deleted_at_null__dot_blank_________1__,<%= f.check_box :deleted_at_null, {:checked => params[:q][:deleted_at_null].blank?}, '', '1' %>--><label id="__pogen_331">
                 <%= f.check_box :deleted_at_null, {:checked => params[:q][:deleted_at_null].blank?}, '', '1' %>
                 <%= Spree.t(:show_deleted) %>
               </label>
@@ -46,7 +46,7 @@
 
         <div class="clear"></div>
 
-        <div class="form-buttons actions filter-actions" data-hook="admin_products_index_search_buttons">
+        <!--POGEN,__pogen_332,button_Spree_dot_t__search____icon_minus_search__,<%= button Spree.t(:search), 'icon-search' %>--><div class="form-buttons actions filter-actions" data-hook="admin_products_index_search_buttons" id="__pogen_332">
           <%= button Spree.t(:search), 'icon-search' %>
         </div>
     <% end %>
@@ -68,20 +68,20 @@
     </colgroup>
     <thead>
       <tr data-hook="admin_products_index_headers">
-        <th><%= Spree.t(:sku) %></th>
-        <th colspan="2"><%= sort_link @search,:name, Spree.t(:name), { :default_order => "desc" }, {:title => 'admin_products_listing_name_title'} %></th>
-        <th><%= sort_link @search,:master_default_price_amount, Spree.t(:master_price), {}, {:title => 'admin_products_listing_price_title'} %></th>
+        <!--POGEN,__pogen_333,Spree_dot_t__sku__,<%= Spree.t(:sku) %>--><th id="__pogen_333"><%= Spree.t(:sku) %></th>
+        <!--POGEN,__pogen_334,sort_link__search__name__Spree_dot_t__name______default_order_____desc_______title_____admin_products_listing_name_title___,<%= sort_link @search,:name, Spree.t(:name), { :default_order => "desc" }, {:title => 'admin_products_listing_name_title'} %>--><th colspan="2" id="__pogen_334"><%= sort_link @search,:name, Spree.t(:name), { :default_order => "desc" }, {:title => 'admin_products_listing_name_title'} %></th>
+        <!--POGEN,__pogen_335,sort_link__search__master_default_price_amount__Spree_dot_t__master_price_________title_____admin_products_listing_price_title___,<%= sort_link @search,:master_default_price_amount, Spree.t(:master_price), {}, {:title => 'admin_products_listing_price_title'} %>--><th id="__pogen_335"><%= sort_link @search,:master_default_price_amount, Spree.t(:master_price), {}, {:title => 'admin_products_listing_price_title'} %></th>
         <th data-hook="admin_products_index_header_actions" class="actions"></th>
       </tr>
     </thead>
     <tbody>
       <% @collection.each do |product| %>
-          <tr <%== "style='color: red;'" if product.deleted? %> id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows" class="<%= cycle('odd', 'even') %>">
-            <td class="align-center"><%= product.sku rescue '' %></td>
-            <td class="align-center"><%= mini_image(product) %></td>
-            <td><%= link_to product.try(:name), edit_admin_product_path(product) %></td>
-            <td class="align-center"><%= product.display_price.to_html rescue '' %></td>
-            <td class="actions" data-hook="admin_products_index_row_actions">
+          <!--POGEN,__pogen_336,cycle__odd____even___,<%= cycle('odd', 'even') %>--><!--POGEN,__pogen_336,___style__color__red____if_product_dot_deleted__,<%== "style='color: red;'" if product.deleted? %>--><!--POGEN,__pogen_336,spree_dom_id_product_,<%= spree_dom_id product %>--><tr id="__pogen_336"><%== "style='color: red;'" if product.deleted? %> id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows" class="<%= cycle('odd', 'even') %>">
+            <!--POGEN,__pogen_337,product_dot_sku_rescue____,<%= product.sku rescue '' %>--><td class="align-center" id="__pogen_337"><%= product.sku rescue '' %></td>
+            <!--POGEN,__pogen_338,mini_image_product__,<%= mini_image(product) %>--><td class="align-center" id="__pogen_338"><%= mini_image(product) %></td>
+            <!--POGEN,__pogen_339,link_to_product_dot_try__name___edit_admin_product_path_product__,<%= link_to product.try(:name), edit_admin_product_path(product) %>--><td id="__pogen_339"><%= link_to product.try(:name), edit_admin_product_path(product) %></td>
+            <!--POGEN,__pogen_340,product_dot_display_price_dot_to_html_rescue____,<%= product.display_price.to_html rescue '' %>--><td class="align-center" id="__pogen_340"><%= product.display_price.to_html rescue '' %></td>
+            <!--POGEN,__pogen_341,link_to_clone_product___no_text____true___class_____clone__if_can___clone__product__,<%= link_to_clone product, :no_text => true, :class => 'clone' if can?(:clone, product) %>--><!--POGEN,__pogen_341,link_to_delete_product___no_text____true_if_can___delete__product______product_dot_deleted__,<%= link_to_delete product, :no_text => true if can?(:delete, product) && !product.deleted? %>--><!--POGEN,__pogen_341,link_to_edit_product___no_text____true___class_____edit__if_can___edit__product______product_dot_deleted__,<%= link_to_edit product, :no_text => true, :class => 'edit' if can?(:edit, product) && !product.deleted? %>--><td class="actions" data-hook="admin_products_index_row_actions" id="__pogen_341">
               <%= link_to_edit product, :no_text => true, :class => 'edit' if can?(:edit, product) && !product.deleted? %>
               &nbsp;
               <%= link_to_clone product, :no_text => true, :class => 'clone' if can?(:clone, product) %>
@@ -93,7 +93,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_342,link_to_Spree_dot_t__add_one___spree_dot_new_admin_product_path_,<%= link_to Spree.t(:add_one), spree.new_admin_product_path %>--><!--POGEN,__pogen_342,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_product____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/product')) %>--><div class="alpha twelve columns no-objects-found" id="__pogen_342">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/product')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_product_path %>!
   </div>

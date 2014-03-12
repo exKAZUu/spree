@@ -1,41 +1,41 @@
 <header id="order_tab_summary" data-hook>
   <dl class="additional-info">
-    <dt id="order_status" data-hook><%= Spree.t(:status) %>:</dt>
-    <dd><span class="state <%= @order.state %>"><%= Spree.t(@order.state, :scope => :order_state) %></span></dd>
-    <dt data-hook><%= Spree.t(:subtotal) %>:</dt>
-    <dd id='item_total'><%= @order.display_item_total.to_html %></dd>
+    <!--POGEN,order_status,Spree_dot_t__status__,<%= Spree.t(:status) %>--><dt id="order_status" data-hook><%= Spree.t(:status) %>:</dt>
+    <dd><!--POGEN,__pogen_520,Spree_dot_t__order_dot_state___scope_____order_state__,<%= Spree.t(@order.state, :scope => :order_state) %>--><!--POGEN,__pogen_520,_order_dot_state_,<%= @order.state %>--><span class="state <%= @order.state %>" id="__pogen_520"><%= Spree.t(@order.state, :scope => :order_state) %></span></dd>
+    <!--POGEN,__pogen_521,Spree_dot_t__subtotal__,<%= Spree.t(:subtotal) %>--><dt data-hook id="__pogen_521"><%= Spree.t(:subtotal) %>:</dt>
+    <!--POGEN,item_total,_order_dot_display_item_total_dot_to_html_,<%= @order.display_item_total.to_html %>--><dd id='item_total'><%= @order.display_item_total.to_html %></dd>
     <% if checkout_steps.include?("delivery") && @order.ship_total > 0 %>
-      <dt data-hook><%= Spree.t(:ship_total) %>:</dt>
-      <dd id='item_total'><%= @order.display_ship_total.to_html %></dd>
+      <!--POGEN,__pogen_522,Spree_dot_t__ship_total__,<%= Spree.t(:ship_total) %>--><dt data-hook id="__pogen_522"><%= Spree.t(:ship_total) %>:</dt>
+      <!--POGEN,item_total,_order_dot_display_ship_total_dot_to_html_,<%= @order.display_ship_total.to_html %>--><dd id='item_total'><%= @order.display_ship_total.to_html %></dd>
     <% end %>
 
     <% if @order.included_tax_total != 0 %>
-      <dt data-hook><%= Spree.t(:tax_included) %>:</dt>
-      <dd id='included_tax_total'><%= @order.display_included_tax_total.to_html %></dd>
+      <!--POGEN,__pogen_523,Spree_dot_t__tax_included__,<%= Spree.t(:tax_included) %>--><dt data-hook id="__pogen_523"><%= Spree.t(:tax_included) %>:</dt>
+      <!--POGEN,included_tax_total,_order_dot_display_included_tax_total_dot_to_html_,<%= @order.display_included_tax_total.to_html %>--><dd id='included_tax_total'><%= @order.display_included_tax_total.to_html %></dd>
     <% end %>
 
     <% if @order.additional_tax_total != 0 %>
-      <dt data-hook><%= Spree.t(:tax) %>:</dt>
-      <dd id='item_total'><%= @order.display_additional_tax_total.to_html %></dd>
+      <!--POGEN,__pogen_524,Spree_dot_t__tax__,<%= Spree.t(:tax) %>--><dt data-hook id="__pogen_524"><%= Spree.t(:tax) %>:</dt>
+      <!--POGEN,item_total,_order_dot_display_additional_tax_total_dot_to_html_,<%= @order.display_additional_tax_total.to_html %>--><dd id='item_total'><%= @order.display_additional_tax_total.to_html %></dd>
     <% end %>
 
-    <dt data-hook><%= Spree.t(:total) %>:</dt>
-    <dd id='order_total'><%= @order.display_total.to_html %></dd>
+    <!--POGEN,__pogen_525,Spree_dot_t__total__,<%= Spree.t(:total) %>--><dt data-hook id="__pogen_525"><%= Spree.t(:total) %>:</dt>
+    <!--POGEN,order_total,_order_dot_display_total_dot_to_html_,<%= @order.display_total.to_html %>--><dd id='order_total'><%= @order.display_total.to_html %></dd>
 
     <% if @order.completed? %>
-      <dt><%= Spree.t(:shipment) %>: </dt>
-      <dd id='shipment_status'><span class="state <%= @order.shipment_state %>"><%= Spree.t(@order.shipment_state, :scope => :shipment_states, :default => [:missing, "none"]) %></span></dd>
-      <dt><%= Spree.t(:payment) %>: </dt>
-      <dd id='payment_status'><span class="state <%= @order.payment_state %>"><%= Spree.t(@order.payment_state, :scope => :payment_states, :default => [:missing, "none"]) %></span></dd>
-      <dt data-hook><%= Spree.t(:date_completed) %>:</dt>
-      <dd id='date_complete'><%= pretty_time(@order.completed_at) %></dd>
+      <!--POGEN,__pogen_526,Spree_dot_t__shipment__,<%= Spree.t(:shipment) %>--><dt id="__pogen_526"><%= Spree.t(:shipment) %>: </dt>
+      <dd id='shipment_status'><!--POGEN,__pogen_527,_order_dot_shipment_state_,<%= @order.shipment_state %>--><!--POGEN,__pogen_527,Spree_dot_t__order_dot_shipment_state___scope_____shipment_states___default______missing___none____,<%= Spree.t(@order.shipment_state, :scope => :shipment_states, :default => [:missing, "none"]) %>--><span class="state <%= @order.shipment_state %>" id="__pogen_527"><%= Spree.t(@order.shipment_state, :scope => :shipment_states, :default => [:missing, "none"]) %></span></dd>
+      <!--POGEN,__pogen_528,Spree_dot_t__payment__,<%= Spree.t(:payment) %>--><dt id="__pogen_528"><%= Spree.t(:payment) %>: </dt>
+      <dd id='payment_status'><!--POGEN,__pogen_529,_order_dot_payment_state_,<%= @order.payment_state %>--><!--POGEN,__pogen_529,Spree_dot_t__order_dot_payment_state___scope_____payment_states___default______missing___none____,<%= Spree.t(@order.payment_state, :scope => :payment_states, :default => [:missing, "none"]) %>--><span class="state <%= @order.payment_state %>" id="__pogen_529"><%= Spree.t(@order.payment_state, :scope => :payment_states, :default => [:missing, "none"]) %></span></dd>
+      <!--POGEN,__pogen_530,Spree_dot_t__date_completed__,<%= Spree.t(:date_completed) %>--><dt data-hook id="__pogen_530"><%= Spree.t(:date_completed) %>:</dt>
+      <!--POGEN,date_complete,pretty_time__order_dot_completed_at__,<%= pretty_time(@order.completed_at) %>--><dd id='date_complete'><%= pretty_time(@order.completed_at) %></dd>
     <% end %>
 
     <% if @order.approved? %>
-      <dt><%= Spree.t(:approver) %></dt>
-      <dd><%= @order.approver.email %></dd>
-      <dt><%= Spree.t(:approved_at) %></dt>
-      <dd><%= pretty_time(@order.approved_at) %></dd>
+      <!--POGEN,__pogen_531,Spree_dot_t__approver__,<%= Spree.t(:approver) %>--><dt id="__pogen_531"><%= Spree.t(:approver) %></dt>
+      <!--POGEN,__pogen_532,_order_dot_approver_dot_email_,<%= @order.approver.email %>--><dd id="__pogen_532"><%= @order.approver.email %></dd>
+      <!--POGEN,__pogen_533,Spree_dot_t__approved_at__,<%= Spree.t(:approved_at) %>--><dt id="__pogen_533"><%= Spree.t(:approved_at) %></dt>
+      <!--POGEN,__pogen_534,pretty_time__order_dot_approved_at__,<%= pretty_time(@order.approved_at) %>--><dd id="__pogen_534"><%= pretty_time(@order.approved_at) %></dd>
     <% end %>
   </dl>
 </header>

@@ -1,7 +1,7 @@
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:back_to_products_list), session[:return_to] || admin_products_url, :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_326,button_link_to_Spree_dot_t__back_to_products_list___session__return_to_____admin_products_url___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_products_list), session[:return_to] || admin_products_url, :icon => 'icon-arrow-left' %>--><li id="__pogen_326"><%= button_link_to Spree.t(:back_to_products_list), session[:return_to] || admin_products_url, :icon => 'icon-arrow-left' %></li>
   <% if can?(:create, Spree::Product) %>
-    <li id="new_product_link">
+    <!--POGEN,new_product_link,button_link_to_Spree_dot_t__new_product___new_object_url_____icon_____icon_minus_plus____id_____admin_new_product____,<%= button_link_to Spree.t(:new_product), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_product' } %>--><li id="new_product_link">
       <%= button_link_to Spree.t(:new_product), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_product' } %>
     </li>
   <% end %>
@@ -13,7 +13,7 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @product } %>
 
 <%= form_for [:admin, @product], :method => :put, :html => { :multipart => true } do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_327,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><!--POGEN,__pogen_327,render__partial_____spree_divide_admin_divide_shared_divide_edit_resource_links__,<%= render :partial => 'spree/admin/shared/edit_resource_links' %>--><fieldset class="no-border-top" id="__pogen_327">
     <%= render :partial => 'form', :locals => { :f => f } %>
     <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
   </fieldset>

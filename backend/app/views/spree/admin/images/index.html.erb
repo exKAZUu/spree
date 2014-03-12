@@ -3,17 +3,17 @@
 <%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => 'Images'} %>
 
 <% content_for :page_actions do %>
-  <li><%= link_to_with_icon('icon-plus', Spree.t(:new_image), new_admin_product_image_url(@product), :id => 'new_image_link', :class => 'button') %></li>
+  <!--POGEN,__pogen_63,link_to_with_icon__icon_minus_plus___Spree_dot_t__new_image___new_admin_product_image_url__product____id_____new_image_link____class_____button___,<%= link_to_with_icon('icon-plus', Spree.t(:new_image), new_admin_product_image_url(@product), :id => 'new_image_link', :class => 'button') %>--><li id="__pogen_63"><%= link_to_with_icon('icon-plus', Spree.t(:new_image), new_admin_product_image_url(@product), :id => 'new_image_link', :class => 'button') %></li>
 <% end %>
 
 <div id="images" data-hook></div>
 
 <% unless @product.images.any? || @product.variant_images.any? %>
-  <div class="no-objects-found">
+  <!--POGEN,__pogen_64,Spree_dot_t__no_images_found__,<%= Spree.t(:no_images_found) %>--><div class="no-objects-found" id="__pogen_64">
     <%= Spree.t(:no_images_found) %>.
   </div>
 <% else %>
-  <table class="index sortable" data-hook="images_table" data-sortable-link="<%= update_positions_admin_product_images_url(@product) %>">
+  <!--POGEN,__pogen_65,update_positions_admin_product_images_url__product__,<%= update_positions_admin_product_images_url(@product) %>--><table class="index sortable" data-hook="images_table" data-sortable-link="<%= update_positions_admin_product_images_url(@product) %>" id="__pogen_65">
     <colgroup>
       <col style="width: 5%">
       <col style="width: 10%">
@@ -25,29 +25,29 @@
     </colgroup>
     <thead>
       <tr data-hook="images_header">
-        <th colspan="2"><%= Spree.t(:thumbnail) %></th>
+        <!--POGEN,__pogen_66,Spree_dot_t__thumbnail__,<%= Spree.t(:thumbnail) %>--><th colspan="2" id="__pogen_66"><%= Spree.t(:thumbnail) %></th>
         <% if @product.has_variants? %>
-          <th><%= Spree::Variant.model_name.human %></th>
+          <!--POGEN,__pogen_67,Spree__Variant_dot_model_name_dot_human_,<%= Spree::Variant.model_name.human %>--><th id="__pogen_67"><%= Spree::Variant.model_name.human %></th>
         <% end %>
-        <th><%= Spree.t(:alt_text) %></th>
+        <!--POGEN,__pogen_68,Spree_dot_t__alt_text__,<%= Spree.t(:alt_text) %>--><th id="__pogen_68"><%= Spree.t(:alt_text) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
 
     <tbody>
       <% (@product.variant_images).each do |image| %>
-        <tr id="<%= spree_dom_id image %>" data-hook="images_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,<%= spree_dom_id image %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id image %>,spree_dom_id_image_,<%= spree_dom_id image %>--><tr id="<%= spree_dom_id image %>" data-hook="images_row" class="<%= cycle('odd', 'even')%>">
           <td class="no-border">
             <span class="handle"></span>
           </td>
-          <td>
+          <!--POGEN,__pogen_69,link_to_image_tag_image_dot_attachment_dot_url__mini____image_dot_attachment_dot_url__product__,<%= link_to image_tag(image.attachment.url(:mini)), image.attachment.url(:product) %>--><td id="__pogen_69">
             <%= link_to image_tag(image.attachment.url(:mini)), image.attachment.url(:product) %>
           </td>
           <% if @product.has_variants? %>
-            <td><%= options_text_for(image) %></td>
+            <!--POGEN,__pogen_70,options_text_for_image__,<%= options_text_for(image) %>--><td id="__pogen_70"><%= options_text_for(image) %></td>
           <% end %>
-          <td><%= image.alt %></td>
-          <td class="actions">
+          <!--POGEN,__pogen_71,image_dot_alt_,<%= image.alt %>--><td id="__pogen_71"><%= image.alt %></td>
+          <!--POGEN,__pogen_72,link_to_with_icon__icon_minus_edit___Spree_dot_t__edit___edit_admin_product_image_url__product__image____no_text____true___data______action_____edit___,<%= link_to_with_icon 'icon-edit', Spree.t(:edit), edit_admin_product_image_url(@product, image), :no_text => true, :data => {:action => 'edit'} %>--><!--POGEN,__pogen_72,link_to_delete_image_____url____admin_product_image_url__product__image____no_text____true___,<%= link_to_delete image, { :url => admin_product_image_url(@product, image), :no_text => true } %>--><td class="actions" id="__pogen_72">
             <%= link_to_with_icon 'icon-edit', Spree.t(:edit), edit_admin_product_image_url(@product, image), :no_text => true, :data => {:action => 'edit'} %>
             <%= link_to_delete image, { :url => admin_product_image_url(@product, image), :no_text => true } %>
           </td>

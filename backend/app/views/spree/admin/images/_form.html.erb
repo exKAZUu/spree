@@ -1,15 +1,15 @@
 <div data-hook="admin_image_form_fields">
   <div class="four columns alpha">
-    <div data-hook="file" class="field">
+    <!--POGEN,__pogen_54,f_dot_file_field__attachment_,<%= f.file_field :attachment %>--><!--POGEN,__pogen_54,f_dot_label_Spree_dot_t__filename__,<%= f.label Spree.t(:filename) %>--><div data-hook="file" class="field" id="__pogen_54">
       <%= f.label Spree.t(:filename) %><br>
       <%= f.file_field :attachment %>
     </div>
-    <div data-hook="variant" class="field">
+    <!--POGEN,__pogen_55,f_dot_select__viewable_id___variants________class_____select2_fullwidth___,<%= f.select :viewable_id, @variants, {}, {:class => 'select2 fullwidth'} %>--><!--POGEN,__pogen_55,f_dot_label_Spree__Variant_dot_model_name_dot_human_,<%= f.label Spree::Variant.model_name.human %>--><div data-hook="variant" class="field" id="__pogen_55">
       <%= f.label Spree::Variant.model_name.human %><br>
       <%= f.select :viewable_id, @variants, {}, {:class => 'select2 fullwidth'} %>
     </div>
   </div>
-  <div data-hook="alt_text" class="field omega five columns">
+  <!--POGEN,__pogen_56,f_dot_label_Spree_dot_t__alt_text__,<%= f.label Spree.t(:alt_text) %>--><!--POGEN,__pogen_56,f_dot_text_area__alt___rows____4___class_____fullwidth__,<%= f.text_area :alt, :rows => 4, :class => 'fullwidth' %>--><div data-hook="alt_text" class="field omega five columns" id="__pogen_56">
     <%= f.label Spree.t(:alt_text) %><br>
     <%= f.text_area :alt, :rows => 4, :class => 'fullwidth' %>
   </div>

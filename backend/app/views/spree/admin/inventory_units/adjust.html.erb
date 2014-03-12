@@ -3,23 +3,23 @@
 <%= form_tag do %>
 <br /><br />
 
-<h1><%= Spree.t(:inventory_adjustment) %></h1>
+<!--POGEN,__pogen_77,Spree_dot_t__inventory_adjustment__,<%= Spree.t(:inventory_adjustment) %>--><h1 id="__pogen_77"><%= Spree.t(:inventory_adjustment) %></h1>
 
 <table class="basic-table">
   <thead data-hook="inventory_header">
     <tr>
-      <th><%= Spree.t(:sku) %></th>
-      <th><%= Spree.t(:product) %></th>
-      <th><%= Spree.t(:options) %></th>
-      <th><%= Spree.t(:adjustment) %></th>
+      <!--POGEN,__pogen_78,Spree_dot_t__sku__,<%= Spree.t(:sku) %>--><th id="__pogen_78"><%= Spree.t(:sku) %></th>
+      <!--POGEN,__pogen_79,Spree_dot_t__product__,<%= Spree.t(:product) %>--><th id="__pogen_79"><%= Spree.t(:product) %></th>
+      <!--POGEN,__pogen_80,Spree_dot_t__options__,<%= Spree.t(:options) %>--><th id="__pogen_80"><%= Spree.t(:options) %></th>
+      <!--POGEN,__pogen_81,Spree_dot_t__adjustment__,<%= Spree.t(:adjustment) %>--><th id="__pogen_81"><%= Spree.t(:adjustment) %></th>
     </tr>
   </thead>
   <tbody>
     <tr data-hook="inventory_row">
-      <td><%= @variant.sku %></td>
-      <td><%= @variant.product.name %></td>
-      <td><%= variant_options @variant %></td>
-      <td>
+      <!--POGEN,__pogen_82,_variant_dot_sku_,<%= @variant.sku %>--><td id="__pogen_82"><%= @variant.sku %></td>
+      <!--POGEN,__pogen_83,_variant_dot_product_dot_name_,<%= @variant.product.name %>--><td id="__pogen_83"><%= @variant.product.name %></td>
+      <!--POGEN,__pogen_84,variant_options__variant_,<%= variant_options @variant %>--><td id="__pogen_84"><%= variant_options @variant %></td>
+      <!--POGEN,__pogen_85,text_field__level___adjustment___class_____quantity__,<%= text_field :level, :adjustment, :class => 'quantity' %>--><td id="__pogen_85">
         <%= text_field :level, :adjustment, :class => 'quantity' %>
       </td>
     </tr>

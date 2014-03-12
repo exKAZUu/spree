@@ -7,12 +7,12 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_194,button_link_to_Spree_dot_t__back_to_orders_list___admin_orders_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_194"><%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <div id="select-customer" data-hook>
-  <fieldset class="no-border-bottom">
-    <legend align="center"><%= Spree.t(:customer_search) %></legend>
+  <!--POGEN,__pogen_195,render__partial_____spree_divide_admin_divide_orders_divide_customer_details_divide_autocomplete____formats_____js_,<%= render :partial => "spree/admin/orders/customer_details/autocomplete", :formats => :js %>--><!--POGEN,__pogen_195,hidden_field_tag__customer_search___nil___class_____fullwidth_title__,<%= hidden_field_tag :customer_search,  nil, :class => 'fullwidth title' %>--><fieldset class="no-border-bottom" id="__pogen_195">
+    <!--POGEN,__pogen_196,Spree_dot_t__customer_search__,<%= Spree.t(:customer_search) %>--><legend align="center" id="__pogen_196"><%= Spree.t(:customer_search) %></legend>
     <%= hidden_field_tag :customer_search,  nil, :class => 'fullwidth title' %>
     <%= render :partial => "spree/admin/orders/customer_details/autocomplete", :formats => :js %>
   </fieldset>

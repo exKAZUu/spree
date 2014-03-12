@@ -3,7 +3,7 @@
 <% end %>
 
 <% f.fields_for :product_properties do |properties_form| %>
-    <div data-hook="value">
+    <!--POGEN,__pogen_325,properties_form_dot_label__value__properties_form_dot_object_dot_property_dot_presentation_,<%= properties_form.label :value, properties_form.object.property.presentation %>--><!--POGEN,__pogen_325,properties_form_dot_text_field__value_,<%= properties_form.text_field :value %>--><div data-hook="value" id="__pogen_325">
       <%= properties_form.label :value, properties_form.object.property.presentation %><br />
       <%= properties_form.text_field :value %>
     </div>

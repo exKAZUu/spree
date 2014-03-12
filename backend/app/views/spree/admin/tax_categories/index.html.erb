@@ -6,7 +6,7 @@
 
 <% content_for :page_actions do %>
   <ul class="actions inline-menu">
-    <li>
+    <!--POGEN,__pogen_694,button_link_to_Spree_dot_t__new_tax_category___new_object_url___icon_____icon_minus_plus____id_____admin_new_tax_categories_link__,<%= button_link_to Spree.t(:new_tax_category), new_object_url, :icon => 'icon-plus', :id => 'admin_new_tax_categories_link' %>--><li id="__pogen_694">
       <%= button_link_to Spree.t(:new_tax_category), new_object_url, :icon => 'icon-plus', :id => 'admin_new_tax_categories_link' %>
     </li>
   </ul>
@@ -22,9 +22,9 @@
   </colgroup>
   <thead>
     <tr data-hook="tax_header">
-      <th><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:description) %></th>
-      <th><%= Spree.t(:default) %></th>
+      <!--POGEN,__pogen_695,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_695"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_696,Spree_dot_t__description__,<%= Spree.t(:description) %>--><th id="__pogen_696"><%= Spree.t(:description) %></th>
+      <!--POGEN,__pogen_697,Spree_dot_t__default__,<%= Spree.t(:default) %>--><th id="__pogen_697"><%= Spree.t(:default) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
@@ -33,11 +33,11 @@
          @edit_url = edit_admin_tax_category_path(tax_category)
          @delete_url = admin_tax_category_path(tax_category)
     %>
-      <tr id="<%= spree_dom_id tax_category %>" data-hook="tax_row" class="<%= cycle('odd', 'even')%>">
-        <td class="align-center"><%= tax_category.name %></td>
-        <td class="align-center"><%= tax_category.description %></td>
-        <td class="align-center"><%= tax_category.is_default? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-        <td class="actions">
+      <!--POGEN,<%= spree_dom_id tax_category %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id tax_category %>,spree_dom_id_tax_category_,<%= spree_dom_id tax_category %>--><tr id="<%= spree_dom_id tax_category %>" data-hook="tax_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_698,tax_category_dot_name_,<%= tax_category.name %>--><td class="align-center" id="__pogen_698"><%= tax_category.name %></td>
+        <!--POGEN,__pogen_699,tax_category_dot_description_,<%= tax_category.description %>--><td class="align-center" id="__pogen_699"><%= tax_category.description %></td>
+        <!--POGEN,__pogen_700,tax_category_dot_is_default____Spree_dot_t__say_yes____Spree_dot_t__say_no__,<%= tax_category.is_default? ? Spree.t(:say_yes) : Spree.t(:say_no) %>--><td class="align-center" id="__pogen_700"><%= tax_category.is_default? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+        <!--POGEN,__pogen_701,link_to_delete_tax_category___no_text____true_,<%= link_to_delete tax_category, :no_text => true %>--><!--POGEN,__pogen_701,link_to_edit_tax_category___no_text____true_,<%= link_to_edit tax_category, :no_text => true %>--><td class="actions" id="__pogen_701">
           <%= link_to_edit tax_category, :no_text => true %>
           <%= link_to_delete tax_category, :no_text => true %>
       </tr>
@@ -45,7 +45,7 @@
   </tbody>
 </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_702,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_tax_category____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/tax_category')) %>--><!--POGEN,__pogen_702,link_to_Spree_dot_t__add_one___spree_dot_new_admin_tax_category_path_,<%= link_to Spree.t(:add_one), spree.new_admin_tax_category_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_702">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/tax_category')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_tax_category_path %>!
   </div>

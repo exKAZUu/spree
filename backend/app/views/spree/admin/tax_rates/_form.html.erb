@@ -1,34 +1,34 @@
-<div data-hook="admin_tax_rate_form_fields">
+<!--POGEN,__pogen_705,render__spree_divide_admin_divide_shared_divide_calculator_fields____f____f_,<%= render 'spree/admin/shared/calculator_fields', :f => f %>--><div data-hook="admin_tax_rate_form_fields" id="__pogen_705">
   <div class="alpha twelve columns">
     <fieldset data-hook="tax_rates" class=" no-border-bottom">
-      <legend align="center"><%= Spree.t(:general_settings) %></legend>
+      <!--POGEN,__pogen_706,Spree_dot_t__general_settings__,<%= Spree.t(:general_settings) %>--><legend align="center" id="__pogen_706"><%= Spree.t(:general_settings) %></legend>
 
       <div class="alpha six columns">
-        <div data-hook="name" class="field">
+        <!--POGEN,__pogen_707,f_dot_text_field__name___class_____fullwidth__,<%= f.text_field :name, :class => 'fullwidth' %>--><!--POGEN,__pogen_707,f_dot_label__name__Spree_dot_t__name__,<%= f.label :name, Spree.t(:name) %>--><div data-hook="name" class="field" id="__pogen_707">
           <%= f.label :name, Spree.t(:name) %>
           <%= f.text_field :name, :class => 'fullwidth' %>
         </div>
-        <div data-hook="rate" class="field">
+        <!--POGEN,__pogen_708,f_dot_label__amount__Spree_dot_t__rate__,<%= f.label :amount, Spree.t(:rate) %>--><!--POGEN,__pogen_708,f_dot_text_field__amount___class_____fullwidth__,<%= f.text_field :amount, :class => 'fullwidth' %>--><div data-hook="rate" class="field" id="__pogen_708">
           <%= f.label :amount, Spree.t(:rate) %>
           <%= f.text_field :amount, :class => 'fullwidth' %>
-          <br/><span class="info"><%= Spree.t(:tax_rate_amount_explanation) %></span>
+          <br/><!--POGEN,__pogen_709,Spree_dot_t__tax_rate_amount_explanation__,<%= Spree.t(:tax_rate_amount_explanation) %>--><span class="info" id="__pogen_709"><%= Spree.t(:tax_rate_amount_explanation) %></span>
         </div>
-        <div data-hook="included" class="field">
+        <!--POGEN,__pogen_710,f_dot_label__included_in_price__Spree_dot_t__included_in_price__,<%= f.label :included_in_price, Spree.t(:included_in_price) %>--><!--POGEN,__pogen_710,f_dot_check_box__included_in_price_,<%= f.check_box :included_in_price %>--><div data-hook="included" class="field" id="__pogen_710">
           <%= f.check_box :included_in_price %>
           <%= f.label :included_in_price, Spree.t(:included_in_price) %>
         </div>
       </div>
 
       <div class="omega six columns">
-        <div data-hook="zone" class="field">
+        <!--POGEN,__pogen_711,f_dot_label__zone__Spree_dot_t__zone__,<%= f.label :zone, Spree.t(:zone) %>--><!--POGEN,__pogen_711,f_dot_collection_select__zone_id___available_zones___id___name________class_____select2_fullwidth____,<%= f.collection_select(:zone_id, @available_zones, :id, :name, {}, {:class => 'select2 fullwidth'}) %>--><div data-hook="zone" class="field" id="__pogen_711">
           <%= f.label :zone, Spree.t(:zone) %>
           <%= f.collection_select(:zone_id, @available_zones, :id, :name, {}, {:class => 'select2 fullwidth'}) %>
         </div>
-        <div data-hook="category" class="field">
+        <!--POGEN,__pogen_712,f_dot_collection_select__tax_category_id___available_categories__id___name________class_____select2_fullwidth____,<%= f.collection_select(:tax_category_id, @available_categories,:id, :name, {}, {:class => 'select2 fullwidth'}) %>--><!--POGEN,__pogen_712,f_dot_label__tax_category_id__Spree_dot_t__tax_category__,<%= f.label :tax_category_id, Spree.t(:tax_category) %>--><div data-hook="category" class="field" id="__pogen_712">
           <%= f.label :tax_category_id, Spree.t(:tax_category) %>
           <%= f.collection_select(:tax_category_id, @available_categories,:id, :name, {}, {:class => 'select2 fullwidth'}) %>
         </div>
-        <div data-hook="show_rate" class="field">
+        <!--POGEN,__pogen_713,f_dot_check_box__show_rate_in_label_,<%= f.check_box :show_rate_in_label %>--><!--POGEN,__pogen_713,f_dot_label__show_rate_in_label__Spree_dot_t__show_rate_in_label__,<%= f.label :show_rate_in_label, Spree.t(:show_rate_in_label) %>--><div data-hook="show_rate" class="field" id="__pogen_713">
           <%= f.check_box :show_rate_in_label %>
           <%= f.label :show_rate_in_label, Spree.t(:show_rate_in_label) %>
         </div>

@@ -2,11 +2,11 @@
 
 <% content_for :page_actions do %>
   <% if @order.shipments.any? &:shipped? %>
-    <li>
+    <!--POGEN,__pogen_472,button_link_to_Spree_dot_t__new_return_authorization___new_admin_order_return_authorization_url__order____icon_____icon_minus_plus__,<%= button_link_to Spree.t(:new_return_authorization), new_admin_order_return_authorization_url(@order), :icon => 'icon-plus' %>--><li id="__pogen_472">
       <%= button_link_to Spree.t(:new_return_authorization), new_admin_order_return_authorization_url(@order), :icon => 'icon-plus' %>
     </li>
   <% end %>
-  <li><%= button_link_to Spree.t(:back_to_orders_list), spree.admin_orders_path, :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_473,button_link_to_Spree_dot_t__back_to_orders_list___spree_dot_admin_orders_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_orders_list), spree.admin_orders_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_473"><%= button_link_to Spree.t(:back_to_orders_list), spree.admin_orders_path, :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <% content_for :page_title do %>
@@ -17,21 +17,21 @@
   <table class="index">
     <thead data-hook="rma_header">
       <tr>
-        <th><%= Spree.t(:rma_number) %></th>
-        <th><%= Spree.t(:status) %></th>
-        <th><%= Spree.t(:amount) %></th>
-        <th><%= "#{Spree.t('date')}/#{Spree.t('time')}" %></th>
+        <!--POGEN,__pogen_474,Spree_dot_t__rma_number__,<%= Spree.t(:rma_number) %>--><th id="__pogen_474"><%= Spree.t(:rma_number) %></th>
+        <!--POGEN,__pogen_475,Spree_dot_t__status__,<%= Spree.t(:status) %>--><th id="__pogen_475"><%= Spree.t(:status) %></th>
+        <!--POGEN,__pogen_476,Spree_dot_t__amount__,<%= Spree.t(:amount) %>--><th id="__pogen_476"><%= Spree.t(:amount) %></th>
+        <!--POGEN,__pogen_477,___Spree_dot_t__date____divide___Spree_dot_t__time_____,<%= "#{Spree.t('date')}/#{Spree.t('time')}" %>--><th id="__pogen_477"><%= "#{Spree.t('date')}/#{Spree.t('time')}" %></th>
         <th class="actions"></th>
       </tr>
     </thead>
     <tbody>
       <% @return_authorizations.each do |return_authorization| %>
-        <tr id="<%= spree_dom_id(return_authorization) %>" data-hook="rma_row" class="<%= cycle('odd', 'even')%>">
-          <td><%= return_authorization.number %></td>
-          <td><%= Spree.t(return_authorization.state.downcase) %></td>
-          <td><%= return_authorization.display_amount.to_html %></td>
-          <td><%= pretty_time(return_authorization.created_at) %></td>
-          <td class="actions">
+        <!--POGEN,<%= spree_dom_id(return_authorization) %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id(return_authorization) %>,spree_dom_id_return_authorization__,<%= spree_dom_id(return_authorization) %>--><tr id="<%= spree_dom_id(return_authorization) %>" data-hook="rma_row" class="<%= cycle('odd', 'even')%>">
+          <!--POGEN,__pogen_478,return_authorization_dot_number_,<%= return_authorization.number %>--><td id="__pogen_478"><%= return_authorization.number %></td>
+          <!--POGEN,__pogen_479,Spree_dot_t_return_authorization_dot_state_dot_downcase__,<%= Spree.t(return_authorization.state.downcase) %>--><td id="__pogen_479"><%= Spree.t(return_authorization.state.downcase) %></td>
+          <!--POGEN,__pogen_480,return_authorization_dot_display_amount_dot_to_html_,<%= return_authorization.display_amount.to_html %>--><td id="__pogen_480"><%= return_authorization.display_amount.to_html %></td>
+          <!--POGEN,__pogen_481,pretty_time_return_authorization_dot_created_at__,<%= pretty_time(return_authorization.created_at) %>--><td id="__pogen_481"><%= pretty_time(return_authorization.created_at) %></td>
+          <!--POGEN,__pogen_482,link_to_edit_return_authorization___no_text____true___class_____edit__,<%= link_to_edit return_authorization, :no_text => true, :class => 'edit' %>--><!--POGEN,__pogen_482,link_to_delete_return_authorization___no_text____true_,<%= link_to_delete return_authorization, :no_text => true %>--><td class="actions" id="__pogen_482">
             <%= link_to_edit return_authorization, :no_text => true, :class => 'edit' %>
             <% unless return_authorization.received? %>
               &nbsp;
@@ -44,7 +44,7 @@
     </tbody>
   </table>
 <% else %>
-  <div data-hook="rma_cannont_create" class="no-objects-found">
+  <!--POGEN,__pogen_483,Spree_dot_t__cannot_create_returns__,<%= Spree.t(:cannot_create_returns) %>--><div data-hook="rma_cannont_create" class="no-objects-found" id="__pogen_483">
     <%= Spree.t(:cannot_create_returns) %>
   </div>
 <% end %>

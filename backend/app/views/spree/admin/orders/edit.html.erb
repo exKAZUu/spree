@@ -1,19 +1,19 @@
 <%= csrf_meta_tags %>
 <% content_for :page_actions do %>
   <% if can?(:fire, @order) %>
-    <li><%= event_links %></li>
+    <!--POGEN,__pogen_197,event_links_,<%= event_links %>--><li id="__pogen_197"><%= event_links %></li>
   <% end %>
   <% if can?(:resend, @order) %>
-    <li><%= button_link_to Spree.t(:resend), resend_admin_order_url(@order), :method => :post, :icon => 'icon-email' %></li>
+    <!--POGEN,__pogen_198,button_link_to_Spree_dot_t__resend___resend_admin_order_url__order____method_____post___icon_____icon_minus_email__,<%= button_link_to Spree.t(:resend), resend_admin_order_url(@order), :method => :post, :icon => 'icon-email' %>--><li id="__pogen_198"><%= button_link_to Spree.t(:resend), resend_admin_order_url(@order), :method => :post, :icon => 'icon-email' %></li>
   <% end %>
   <% if can?(:admin, Spree::Order) %>
-    <li><%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %></li>
+    <!--POGEN,__pogen_199,button_link_to_Spree_dot_t__back_to_orders_list___admin_orders_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_199"><%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %></li>
   <% end %>
 <% end %>
 
 <%= render :partial => 'spree/admin/shared/order_tabs', :locals => { :current => 'Order Details' } %>
 
-<div data-hook="admin_order_edit_header">
+<!--POGEN,__pogen_200,render__partial_____spree_divide_shared_divide_error_messages____locals_______target_____order___,<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>--><div data-hook="admin_order_edit_header" id="__pogen_200">
   <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
 </div>
 
@@ -24,13 +24,13 @@
 <%= render :partial => 'add_product' if can?(:update, @order) %>
 
 <% if @order.line_items.empty? %>
-  <div class="no-objects-found">
+  <!--POGEN,__pogen_201,Spree_dot_t__your_order_is_empty_add_product_,<%= Spree.t(:your_order_is_empty_add_product)%>--><div class="no-objects-found" id="__pogen_201">
     <%= Spree.t(:your_order_is_empty_add_product)%>
   </div>
 <% end %>
 
 <div data-hook="admin_order_edit_form">
-  <div id="order-form-wrapper">
+  <!--POGEN,order-form-wrapper,render__partial_____form____locals_______order_____order___,<%= render :partial => 'form', :locals => { :order => @order } %>--><div id="order-form-wrapper">
     <%= render :partial => 'form', :locals => { :order => @order } %>
   </div>
 </div>

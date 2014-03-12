@@ -3,8 +3,8 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @option_type } %>
 
 <%= form_for [:admin, @option_type] do |f| %>
-  <fieldset>
-    <legend align="center"><%= Spree.t(:new_option_type) %></legend>
+  <!--POGEN,__pogen_125,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><!--POGEN,__pogen_125,render__partial_____spree_divide_admin_divide_shared_divide_new_resource_links__,<%= render :partial => 'spree/admin/shared/new_resource_links' %>--><fieldset id="__pogen_125">
+    <!--POGEN,__pogen_126,Spree_dot_t__new_option_type__,<%= Spree.t(:new_option_type) %>--><legend align="center" id="__pogen_126"><%= Spree.t(:new_option_type) %></legend>
     <%= render :partial => 'form', :locals => { :f => f } %>
     <%= render :partial => 'spree/admin/shared/new_resource_links' %>
   </fieldset>

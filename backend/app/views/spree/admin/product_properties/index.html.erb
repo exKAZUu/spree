@@ -4,11 +4,11 @@
 
 <% content_for :page_actions do %>
   <ul class="tollbar inline-menu">
-    <li>
+    <!--POGEN,__pogen_308,link_to_add_fields_Spree_dot_t__add_product_properties____tbody_product_properties____class_____icon_minus_plus_button__,<%= link_to_add_fields Spree.t(:add_product_properties), 'tbody#product_properties', :class => 'icon-plus button' %>--><li id="__pogen_308">
       <%= link_to_add_fields Spree.t(:add_product_properties), 'tbody#product_properties', :class => 'icon-plus button' %>
     </li>
     <li>
-      <span id="new_ptype_link">
+      <!--POGEN,new_ptype_link,link_to_Spree_dot_t__select_from_prototype___available_admin_prototypes_url___remote____true___data_minus_update______prototypes____class_____button_icon_minus_copy__,<%= link_to Spree.t(:select_from_prototype), available_admin_prototypes_url, :remote => true, 'data-update' => 'prototypes', :class => 'button icon-copy' %>--><span id="new_ptype_link">
         <%= link_to Spree.t(:select_from_prototype), available_admin_prototypes_url, :remote => true, 'data-update' => 'prototypes', :class => 'button icon-copy' %>
       </span>
     </li>
@@ -16,21 +16,21 @@
 <% end %>
 
 <%= form_for @product, :url => admin_product_url(@product), :method => :put do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_309,image_tag__select2_minus_spinner_dot_gif____plugin_____spree____style_____display_none_____id_____busy_indicator__,<%= image_tag 'select2-spinner.gif', :plugin => 'spree', :style => 'display:none;', :id => 'busy_indicator' %>--><!--POGEN,__pogen_309,hidden_field_tag__clear_product_properties____true__,<%= hidden_field_tag 'clear_product_properties', 'true' %>--><!--POGEN,__pogen_309,render__spree_divide_admin_divide_shared_divide_edit_resource_links__,<%= render 'spree/admin/shared/edit_resource_links' %>--><fieldset class="no-border-top" id="__pogen_309">
     <div class="add_product_properties" data-hook="add_product_properties"></div>
 
     <div id="prototypes" data-hook></div>
     <%= image_tag 'select2-spinner.gif', :plugin => 'spree', :style => 'display:none;', :id => 'busy_indicator' %>
 
-    <table class="index sortable" data-hook data-sortable-link="<%= update_positions_admin_product_product_properties_url %>">
+    <!--POGEN,__pogen_310,update_positions_admin_product_product_properties_url_,<%= update_positions_admin_product_product_properties_url %>--><table class="index sortable" data-hook data-sortable-link="<%= update_positions_admin_product_product_properties_url %>" id="__pogen_310">
       <thead>
         <tr data-hook="product_properties_header">
-          <th colspan="2"><%= Spree.t(:property) %></th>
-          <th><%= Spree.t(:value) %></th>
+          <!--POGEN,__pogen_311,Spree_dot_t__property__,<%= Spree.t(:property) %>--><th colspan="2" id="__pogen_311"><%= Spree.t(:property) %></th>
+          <!--POGEN,__pogen_312,Spree_dot_t__value__,<%= Spree.t(:value) %>--><th id="__pogen_312"><%= Spree.t(:value) %></th>
           <th class="actions"></th>
         </tr>
       </thead>
-      <tbody id="product_properties" data-hook>
+      <!--POGEN,product_properties,render__product_property_fields____f____pp_form_,<%= render 'product_property_fields', :f => pp_form %>--><!--POGEN,product_properties,f_dot_fields_for__product_properties_do__pp_form__,<%= f.fields_for :product_properties do |pp_form| %>--><tbody id="product_properties" data-hook>
         <%= f.fields_for :product_properties do |pp_form| %>
           <%= render 'product_property_fields', :f => pp_form %>
         <% end %>

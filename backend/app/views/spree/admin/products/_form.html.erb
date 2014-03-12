@@ -1,6 +1,6 @@
 <div data-hook="admin_product_form_fields">
   
-  <div class="left eight columns alpha" data-hook="admin_product_form_left">    
+  <!--POGEN,__pogen_319,f_dot_label__description__Spree_dot_t__description__,<%= f.label :description, Spree.t(:description) %>--><!--POGEN,__pogen_319,f_dot_error_message_on__name_,<%= f.error_message_on :name %>--><!--POGEN,__pogen_319,f_dot_label__name__raw_Spree_dot_t__name___plus__content_tag__span_____multiply_____class_____required____,<%= f.label :name, raw(Spree.t(:name) + content_tag(:span, ' *', :class => 'required')) %>--><!--POGEN,__pogen_319,f_dot_label__slug__raw_Spree_dot_t__slug___plus__content_tag__span_____multiply______class_____required____,<%= f.label :slug, raw(Spree.t(:slug) + content_tag(:span, ' *',  :class => "required")) %>--><!--POGEN,__pogen_319,f_dot_text_area__description____rows_______unless__product_dot_has_variants__then__20__else__13__end_____class_____fullwidth___,<%= f.text_area :description, {:rows => "#{unless @product.has_variants? then '20' else '13' end}", :class => 'fullwidth'} %>--><!--POGEN,__pogen_319,f_dot_text_field__slug___class_____fullwidth_title__,<%= f.text_field :slug, :class => 'fullwidth title' %>--><!--POGEN,__pogen_319,f_dot_error_message_on__slug_,<%= f.error_message_on :slug %>--><!--POGEN,__pogen_319,f_dot_text_field__name___class_____fullwidth_title__,<%= f.text_field :name, :class => 'fullwidth title' %>--><!--POGEN,__pogen_319,f_dot_error_message_on__description_,<%= f.error_message_on :description %>--><!--POGEN,__pogen_319,f_dot_field_container__description_do_,<%= f.field_container :description do %>--><!--POGEN,__pogen_319,f_dot_field_container__slug_do_,<%= f.field_container :slug do %>--><!--POGEN,__pogen_319,f_dot_field_container__name_do_,<%= f.field_container :name do %>--><div class="left eight columns alpha" data-hook="admin_product_form_left" id="__pogen_319">    
     <%= f.field_container :name do %>
       <%= f.label :name, raw(Spree.t(:name) + content_tag(:span, ' *', :class => 'required')) %>
       <%= f.text_field :name, :class => 'fullwidth title' %>
@@ -20,21 +20,21 @@
     <% end %>
   </div>
 
-  <div class="right four columns omega" data-hook="admin_product_form_right">
+  <!--POGEN,__pogen_320,f_dot_error_message_on__shipping_category_,<%= f.error_message_on :shipping_category %>--><!--POGEN,__pogen_320,f_dot_field_container__tax_category_do_,<%= f.field_container :tax_category do %>--><!--POGEN,__pogen_320,f_dot_error_message_on__tax_category_,<%= f.error_message_on :tax_category %>--><!--POGEN,__pogen_320,f_dot_label__available_on__Spree_dot_t__available_on__,<%= f.label :available_on, Spree.t(:available_on) %>--><!--POGEN,__pogen_320,f_dot_field_container__sku_do_,<%= f.field_container :sku do %>--><!--POGEN,__pogen_320,f_dot_collection_select__tax_category_id___tax_categories___id___name_____include_blank____Spree_dot_t__match_choices_dot_none_________class_____select2_____,<%= f.collection_select(:tax_category_id, @tax_categories, :id, :name, { :include_blank => Spree.t('match_choices.none') }, { :class => 'select2' }) %>--><!--POGEN,__pogen_320,f_dot_label__tax_category_id__Spree_dot_t__tax_category__,<%= f.label :tax_category_id, Spree.t(:tax_category) %>--><!--POGEN,__pogen_320,f_dot_label__shipping_category_id__Spree_dot_t__shipping_categories__,<%= f.label :shipping_category_id, Spree.t(:shipping_categories) %>--><!--POGEN,__pogen_320,f_dot_text_field__sku___size____16_,<%= f.text_field :sku, :size => 16 %>--><!--POGEN,__pogen_320,f_dot_field_container__shipping_categories_do_,<%= f.field_container :shipping_categories do %>--><!--POGEN,__pogen_320,f_dot_label__price__raw_Spree_dot_t__master_price___plus__content_tag__span_____multiply_____class_____required____,<%= f.label :price, raw(Spree.t(:master_price) + content_tag(:span, ' *', :class => "required")) %>--><!--POGEN,__pogen_320,f_dot_field_container__available_on_do_,<%= f.field_container :available_on do %>--><!--POGEN,__pogen_320,f_dot_collection_select__shipping_category_id___shipping_categories___id___name_____include_blank____Spree_dot_t__match_choices_dot_none_________class_____select2_____,<%= f.collection_select(:shipping_category_id, @shipping_categories, :id, :name, { :include_blank => Spree.t('match_choices.none') }, { :class => 'select2' }) %>--><!--POGEN,__pogen_320,f_dot_field_container__price_do_,<%= f.field_container :price do %>--><!--POGEN,__pogen_320,f_dot_text_field__available_on___value____datepicker_field_value__product_dot_available_on____class_____datepicker__,<%= f.text_field :available_on, :value => datepicker_field_value(@product.available_on), :class => 'datepicker' %>--><!--POGEN,__pogen_320,f_dot_error_message_on__price_,<%= f.error_message_on :price %>--><!--POGEN,__pogen_320,f_dot_error_message_on__available_on_,<%= f.error_message_on :available_on %>--><!--POGEN,__pogen_320,f_dot_text_field__price___value____number_to_currency__product_dot_price___unit________,<%= f.text_field :price, :value => number_to_currency(@product.price, :unit => '') %>--><!--POGEN,__pogen_320,f_dot_label__sku__Spree_dot_t__sku__,<%= f.label :sku, Spree.t(:sku) %>--><div class="right four columns omega" data-hook="admin_product_form_right" id="__pogen_320">
     <%= f.field_container :price do %>
       <%= f.label :price, raw(Spree.t(:master_price) + content_tag(:span, ' *', :class => "required")) %>
       <%= f.text_field :price, :value => number_to_currency(@product.price, :unit => '') %>
       <%= f.error_message_on :price %>
     <% end %>
 
-    <div class="alpha two columns">
+    <!--POGEN,__pogen_321,f_dot_text_field__cost_price___value____number_to_currency__product_dot_cost_price___unit________,<%= f.text_field :cost_price, :value => number_to_currency(@product.cost_price, :unit => '') %>--><!--POGEN,__pogen_321,f_dot_label__cost_price__Spree_dot_t__cost_price__,<%= f.label :cost_price, Spree.t(:cost_price) %>--><!--POGEN,__pogen_321,f_dot_error_message_on__cost_price_,<%= f.error_message_on :cost_price %>--><!--POGEN,__pogen_321,f_dot_field_container__cost_price_do_,<%= f.field_container :cost_price do %>--><div class="alpha two columns" id="__pogen_321">
       <%= f.field_container :cost_price do %>
         <%= f.label :cost_price, Spree.t(:cost_price) %>
         <%= f.text_field :cost_price, :value => number_to_currency(@product.cost_price, :unit => '') %>
         <%= f.error_message_on :cost_price %>
       <% end %>
     </div>
-    <div class="omega two columns">
+    <!--POGEN,__pogen_322,f_dot_error_message_on__cost_currency_,<%= f.error_message_on :cost_currency %>--><!--POGEN,__pogen_322,f_dot_label__cost_currency__Spree_dot_t__cost_currency__,<%= f.label :cost_currency, Spree.t(:cost_currency) %>--><!--POGEN,__pogen_322,f_dot_text_field__cost_currency_,<%= f.text_field :cost_currency %>--><!--POGEN,__pogen_322,f_dot_field_container__cost_currency_do_,<%= f.field_container :cost_currency do %>--><div class="omega two columns" id="__pogen_322">
       <%= f.field_container :cost_currency do %>
         <%= f.label :cost_currency, Spree.t(:cost_currency) %>
         <%= f.text_field :cost_currency %>
@@ -57,19 +57,19 @@
       <% end %>
 
       <ul id="shipping_specs">
-        <li id="shipping_specs_weight_field" class="field alpha two columns">
+        <!--POGEN,shipping_specs_weight_field,f_dot_label__weight__Spree_dot_t__weight__,<%= f.label :weight, Spree.t(:weight) %>--><!--POGEN,shipping_specs_weight_field,f_dot_text_field__weight___size____4_,<%= f.text_field :weight, :size => 4 %>--><li id="shipping_specs_weight_field" class="field alpha two columns">
           <%= f.label :weight, Spree.t(:weight) %>
           <%= f.text_field :weight, :size => 4 %>
         </li>
-        <li id="shipping_specs_height_field" class="field omega two columns">
+        <!--POGEN,shipping_specs_height_field,f_dot_text_field__height___size____4_,<%= f.text_field :height, :size => 4 %>--><!--POGEN,shipping_specs_height_field,f_dot_label__height__Spree_dot_t__height__,<%= f.label :height, Spree.t(:height) %>--><li id="shipping_specs_height_field" class="field omega two columns">
           <%= f.label :height, Spree.t(:height) %>
           <%= f.text_field :height, :size => 4 %>
         </li>
-        <li id="shipping_specs_width_field" class="field alpha two columns">
+        <!--POGEN,shipping_specs_width_field,f_dot_label__width__Spree_dot_t__width__,<%= f.label :width, Spree.t(:width) %>--><!--POGEN,shipping_specs_width_field,f_dot_text_field__width___size____4_,<%= f.text_field :width, :size => 4 %>--><li id="shipping_specs_width_field" class="field alpha two columns">
           <%= f.label :width, Spree.t(:width) %>
           <%= f.text_field :width, :size => 4 %>
         </li>
-        <li id="shipping_specs_depth_field" class="field omega two columns">
+        <!--POGEN,shipping_specs_depth_field,f_dot_text_field__depth___size____4_,<%= f.text_field :depth, :size => 4 %>--><!--POGEN,shipping_specs_depth_field,f_dot_label__depth__Spree_dot_t__depth__,<%= f.label :depth, Spree.t(:depth) %>--><li id="shipping_specs_depth_field" class="field omega two columns">
           <%= f.label :depth, Spree.t(:depth) %>
           <%= f.text_field :depth, :size => 4 %>
         </li>
@@ -89,7 +89,7 @@
     <% end %>
   </div>
 
-  <div class="twelve columns alpha omega">
+  <!--POGEN,__pogen_323,f_dot_hidden_field__option_type_ids___value_____product_dot_option_type_ids_dot_join______,<%= f.hidden_field :option_type_ids, :value => @product.option_type_ids.join(',') %>--><!--POGEN,__pogen_323,f_dot_label__taxon_ids__Spree_dot_t__taxons__,<%= f.label :taxon_ids, Spree.t(:taxons) %>--><!--POGEN,__pogen_323,f_dot_label__option_type_ids__Spree_dot_t__option_types__,<%= f.label :option_type_ids, Spree.t(:option_types) %>--><!--POGEN,__pogen_323,f_dot_hidden_field__taxon_ids___value_____product_dot_taxon_ids_dot_join______,<%= f.hidden_field :taxon_ids, :value => @product.taxon_ids.join(',') %>--><!--POGEN,__pogen_323,f_dot_field_container__option_types_do_,<%= f.field_container :option_types do %>--><!--POGEN,__pogen_323,f_dot_field_container__taxons_do_,<%= f.field_container :taxons do %>--><div class="twelve columns alpha omega" id="__pogen_323">
     <%= f.field_container :taxons do %>
       <%= f.label :taxon_ids, Spree.t(:taxons) %><br />
       <%= f.hidden_field :taxon_ids, :value => @product.taxon_ids.join(',') %>
@@ -101,7 +101,7 @@
     <% end %>
   </div>
 
-  <div data-hook="admin_product_form_meta" class="alpha omega twelve columns">
+  <!--POGEN,__pogen_324,f_dot_text_field__meta_description___class_____fullwidth__,<%= f.text_field :meta_description, :class => 'fullwidth' %>--><!--POGEN,__pogen_324,f_dot_field_container__meta_description_do_,<%= f.field_container :meta_description do %>--><!--POGEN,__pogen_324,f_dot_field_container__meta_keywords_do_,<%= f.field_container :meta_keywords do %>--><!--POGEN,__pogen_324,f_dot_label__meta_description__Spree_dot_t__meta_description__,<%= f.label :meta_description, Spree.t(:meta_description) %>--><!--POGEN,__pogen_324,f_dot_text_field__meta_keywords___class_____fullwidth__,<%= f.text_field :meta_keywords, :class => 'fullwidth' %>--><!--POGEN,__pogen_324,f_dot_label__meta_keywords__Spree_dot_t__meta_keywords__,<%= f.label :meta_keywords, Spree.t(:meta_keywords) %>--><div data-hook="admin_product_form_meta" class="alpha omega twelve columns" id="__pogen_324">
     <%= f.field_container :meta_keywords do %>
       <%= f.label :meta_keywords, Spree.t(:meta_keywords) %>
       <%= f.text_field :meta_keywords, :class => 'fullwidth' %>

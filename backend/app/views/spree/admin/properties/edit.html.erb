@@ -5,13 +5,13 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:back_to_properties_list), admin_properties_url, :icon => 'icon-arrow-left'%></li>
+  <!--POGEN,__pogen_416,button_link_to_Spree_dot_t__back_to_properties_list___admin_properties_url___icon_____icon_minus_arrow_minus_left_,<%= button_link_to Spree.t(:back_to_properties_list), admin_properties_url, :icon => 'icon-arrow-left'%>--><li id="__pogen_416"><%= button_link_to Spree.t(:back_to_properties_list), admin_properties_url, :icon => 'icon-arrow-left'%></li>
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @property } %>
 
 <%= form_for [:admin, @property] do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_417,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><!--POGEN,__pogen_417,render__partial_____spree_divide_admin_divide_shared_divide_edit_resource_links__,<%= render :partial => 'spree/admin/shared/edit_resource_links' %>--><fieldset class="no-border-top" id="__pogen_417">
     <%= render :partial => 'form', :locals => { :f => f } %>
     <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
   </fieldset>

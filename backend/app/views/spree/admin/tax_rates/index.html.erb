@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_716,button_link_to_Spree_dot_t__new_tax_rate___new_object_url___icon_____icon_minus_plus__,<%= button_link_to Spree.t(:new_tax_rate), new_object_url, :icon => 'icon-plus' %>--><li id="__pogen_716">
     <%= button_link_to Spree.t(:new_tax_rate), new_object_url, :icon => 'icon-plus' %>
   </li>
 <% end %>
@@ -24,27 +24,27 @@
     </colgroup>
     <thead>
       <tr data-hook="rate_header">
-        <th><%= Spree.t(:zone) %></th>
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:category) %></th>
-        <th><%= Spree.t(:amount) %></th>
-        <th><%= Spree.t(:included_in_price) %></th>
-        <th><%= Spree.t(:show_rate_in_label) %></th>
-        <th><%= Spree.t(:calculator) %></th>
+        <!--POGEN,__pogen_717,Spree_dot_t__zone__,<%= Spree.t(:zone) %>--><th id="__pogen_717"><%= Spree.t(:zone) %></th>
+        <!--POGEN,__pogen_718,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_718"><%= Spree.t(:name) %></th>
+        <!--POGEN,__pogen_719,Spree_dot_t__category__,<%= Spree.t(:category) %>--><th id="__pogen_719"><%= Spree.t(:category) %></th>
+        <!--POGEN,__pogen_720,Spree_dot_t__amount__,<%= Spree.t(:amount) %>--><th id="__pogen_720"><%= Spree.t(:amount) %></th>
+        <!--POGEN,__pogen_721,Spree_dot_t__included_in_price__,<%= Spree.t(:included_in_price) %>--><th id="__pogen_721"><%= Spree.t(:included_in_price) %></th>
+        <!--POGEN,__pogen_722,Spree_dot_t__show_rate_in_label__,<%= Spree.t(:show_rate_in_label) %>--><th id="__pogen_722"><%= Spree.t(:show_rate_in_label) %></th>
+        <!--POGEN,__pogen_723,Spree_dot_t__calculator__,<%= Spree.t(:calculator) %>--><th id="__pogen_723"><%= Spree.t(:calculator) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
     <tbody>
       <% @tax_rates.each do |tax_rate|%>
-      <tr id="<%= spree_dom_id tax_rate %>" data-hook="rate_row" class="<%= cycle('odd', 'even')%>">
-        <td class="align-center"><%=tax_rate.zone.try(:name) || Spree.t(:not_available) %></td>
-        <td class="align-center"><%=tax_rate.name %></td>
-        <td class="align-center"><%=tax_rate.tax_category.try(:name) || Spree.t(:not_available) %></td>
-        <td class="align-center"><%=tax_rate.amount %></td>
-        <td class="align-center"><%=tax_rate.included_in_price? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-        <td class="align-center"><%=tax_rate.show_rate_in_label? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-        <td class="align-center"><%=tax_rate.calculator.to_s %></td>
-        <td class="actions">
+      <!--POGEN,<%= spree_dom_id tax_rate %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id tax_rate %>,spree_dom_id_tax_rate_,<%= spree_dom_id tax_rate %>--><tr id="<%= spree_dom_id tax_rate %>" data-hook="rate_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_724,tax_rate_dot_zone_dot_try__name_____Spree_dot_t__not_available__,<%=tax_rate.zone.try(:name) || Spree.t(:not_available) %>--><td class="align-center" id="__pogen_724"><%=tax_rate.zone.try(:name) || Spree.t(:not_available) %></td>
+        <!--POGEN,__pogen_725,tax_rate_dot_name_,<%=tax_rate.name %>--><td class="align-center" id="__pogen_725"><%=tax_rate.name %></td>
+        <!--POGEN,__pogen_726,tax_rate_dot_tax_category_dot_try__name_____Spree_dot_t__not_available__,<%=tax_rate.tax_category.try(:name) || Spree.t(:not_available) %>--><td class="align-center" id="__pogen_726"><%=tax_rate.tax_category.try(:name) || Spree.t(:not_available) %></td>
+        <!--POGEN,__pogen_727,tax_rate_dot_amount_,<%=tax_rate.amount %>--><td class="align-center" id="__pogen_727"><%=tax_rate.amount %></td>
+        <!--POGEN,__pogen_728,tax_rate_dot_included_in_price____Spree_dot_t__say_yes____Spree_dot_t__say_no__,<%=tax_rate.included_in_price? ? Spree.t(:say_yes) : Spree.t(:say_no) %>--><td class="align-center" id="__pogen_728"><%=tax_rate.included_in_price? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+        <!--POGEN,__pogen_729,tax_rate_dot_show_rate_in_label____Spree_dot_t__say_yes____Spree_dot_t__say_no__,<%=tax_rate.show_rate_in_label? ? Spree.t(:say_yes) : Spree.t(:say_no) %>--><td class="align-center" id="__pogen_729"><%=tax_rate.show_rate_in_label? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+        <!--POGEN,__pogen_730,tax_rate_dot_calculator_dot_to_s_,<%=tax_rate.calculator.to_s %>--><td class="align-center" id="__pogen_730"><%=tax_rate.calculator.to_s %></td>
+        <!--POGEN,__pogen_731,link_to_delete_tax_rate___no_text____true_,<%= link_to_delete tax_rate, :no_text => true %>--><!--POGEN,__pogen_731,link_to_edit_tax_rate___no_text____true_,<%= link_to_edit tax_rate, :no_text => true %>--><td class="actions" id="__pogen_731">
           <%= link_to_edit tax_rate, :no_text => true %>
           <%= link_to_delete tax_rate, :no_text => true %>
         </td>
@@ -53,7 +53,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_732,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_tax_rate____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/tax_rate')) %>--><!--POGEN,__pogen_732,link_to_Spree_dot_t__add_one___spree_dot_new_admin_tax_rate_path_,<%= link_to Spree.t(:add_one), spree.new_admin_tax_rate_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_732">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/tax_rate')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_tax_rate_path %>!
   </div>

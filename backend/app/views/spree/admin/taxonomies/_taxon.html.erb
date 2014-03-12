@@ -1,8 +1,8 @@
 <% if taxon.children.length != 0 %>
   <ul>
     <% taxon.children.each do |child| %>
-      <li id="<%= child.id %>" rel="taxon">
-        <a style="background-image: url(<%= child.icon.url %>);" href="#"><%= child.name %></a>
+      <!--POGEN,<%= child.id %>,child_dot_id_,<%= child.id %>--><!--POGEN,<%= child.id %>,render__partial_____taxon____locals_______taxon____child___,<%= render :partial => 'taxon', :locals => { :taxon => child } %>--><li id="<%= child.id %>" rel="taxon">
+        <!--POGEN,__pogen_741,child_dot_name_,<%= child.name %>--><!--POGEN,__pogen_741,child_dot_icon_dot_url_,<%= child.icon.url %>--><a style="background-image: url(<%= child.icon.url %>);" href="#" id="__pogen_741"><%= child.name %></a>
         <% if child.children.length > 0 %>
           <%= render :partial => 'taxon', :locals => { :taxon => child } %>
         <% end %>

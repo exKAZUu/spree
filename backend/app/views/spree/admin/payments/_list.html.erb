@@ -1,21 +1,21 @@
 <table class="index">
   <thead>
     <tr data-hook="payments_header">
-      <th><%= "#{Spree.t('date')}/#{Spree.t('time')}" %></th>
-      <th><%= Spree.t(:amount) %></th>
-      <th><%= Spree.t(:payment_method) %></th>
-      <th><%= Spree.t(:payment_state) %></th>
+      <!--POGEN,__pogen_268,___Spree_dot_t__date____divide___Spree_dot_t__time_____,<%= "#{Spree.t('date')}/#{Spree.t('time')}" %>--><th id="__pogen_268"><%= "#{Spree.t('date')}/#{Spree.t('time')}" %></th>
+      <!--POGEN,__pogen_269,Spree_dot_t__amount__,<%= Spree.t(:amount) %>--><th id="__pogen_269"><%= Spree.t(:amount) %></th>
+      <!--POGEN,__pogen_270,Spree_dot_t__payment_method__,<%= Spree.t(:payment_method) %>--><th id="__pogen_270"><%= Spree.t(:payment_method) %></th>
+      <!--POGEN,__pogen_271,Spree_dot_t__payment_state__,<%= Spree.t(:payment_state) %>--><th id="__pogen_271"><%= Spree.t(:payment_state) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% payments.each do |payment| %>
-      <tr id="<%= dom_id(payment) %>" data-hook="payments_row" class="<%= cycle('odd', 'even')%>">
-        <td><%= link_to pretty_time(payment.created_at), spree.admin_order_payment_path(@order, payment) %></td>
-        <td class="align-center amount"><%= payment.display_amount.to_html %></td>
-        <td class="align-center"><%= payment_method_name(payment) %></td>
-        <td class="align-center"> <span class="state <%= payment.state %>"><%= Spree.t(payment.state, :scope => :payment_states, :default => payment.state.capitalize) %></span></td>
-        <td class="actions">
+      <!--POGEN,<%= dom_id(payment) %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= dom_id(payment) %>,dom_id_payment__,<%= dom_id(payment) %>--><tr id="<%= dom_id(payment) %>" data-hook="payments_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_272,link_to_pretty_time_payment_dot_created_at___spree_dot_admin_order_payment_path__order__payment__,<%= link_to pretty_time(payment.created_at), spree.admin_order_payment_path(@order, payment) %>--><td id="__pogen_272"><%= link_to pretty_time(payment.created_at), spree.admin_order_payment_path(@order, payment) %></td>
+        <!--POGEN,__pogen_273,payment_dot_display_amount_dot_to_html_,<%= payment.display_amount.to_html %>--><td class="align-center amount" id="__pogen_273"><%= payment.display_amount.to_html %></td>
+        <!--POGEN,__pogen_274,payment_method_name_payment__,<%= payment_method_name(payment) %>--><td class="align-center" id="__pogen_274"><%= payment_method_name(payment) %></td>
+        <td class="align-center"> <!--POGEN,__pogen_275,Spree_dot_t_payment_dot_state___scope_____payment_states___default____payment_dot_state_dot_capitalize__,<%= Spree.t(payment.state, :scope => :payment_states, :default => payment.state.capitalize) %>--><!--POGEN,__pogen_275,payment_dot_state_,<%= payment.state %>--><span class="state <%= payment.state %>" id="__pogen_275"><%= Spree.t(payment.state, :scope => :payment_states, :default => payment.state.capitalize) %></span></td>
+        <!--POGEN,__pogen_276,link_to_with_icon__icon_minus___action____Spree_dot_t_action___fire_admin_order_payment_path__order__payment___e____action____method_____put___no_text____true___data______action____action__,<%= link_to_with_icon "icon-#{action}", Spree.t(action), fire_admin_order_payment_path(@order, payment, :e => action), :method => :put, :no_text => true, :data => {:action => action} %>--><td class="actions" id="__pogen_276">
           <% payment.actions.each do |action| %>
             <%= link_to_with_icon "icon-#{action}", Spree.t(action), fire_admin_order_payment_path(@order, payment, :e => action), :method => :put, :no_text => true, :data => {:action => action} %>
           <% end %>

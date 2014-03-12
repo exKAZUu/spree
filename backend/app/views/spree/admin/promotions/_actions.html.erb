@@ -1,30 +1,30 @@
-<fieldset id="action_fields" class="eight columns omega no-border-top">
+<!--POGEN,action_fields,form_tag_spree_dot_admin_promotion_promotion_actions_path__promotion____remote____true___id_____new_promotion_action_form__do_,<%= form_tag spree.admin_promotion_promotion_actions_path(@promotion), :remote => true, :id => 'new_promotion_action_form' do %>--><!--POGEN,action_fields,form_for__promotion___url____spree_dot_admin_promotion_path__promotion____method_____put_do__f__,<%= form_for @promotion, :url => spree.admin_promotion_path(@promotion), :method => :put do |f| %>--><fieldset id="action_fields" class="eight columns omega no-border-top">
 
   <%= form_tag spree.admin_promotion_promotion_actions_path(@promotion), :remote => true, :id => 'new_promotion_action_form' do %>
     <% options = options_for_select(  Rails.application.config.spree.promotions.actions.map(&:name).map {|name| [ Spree.t("promotion_action_types.#{name.demodulize.underscore}.name"), name] } ) %>
     <fieldset>
-      <legend align="center"><%= Spree.t(:promotion_actions) %></legend>
-      <div class="field">
+      <!--POGEN,__pogen_361,Spree_dot_t__promotion_actions__,<%= Spree.t(:promotion_actions) %>--><legend align="center" id="__pogen_361"><%= Spree.t(:promotion_actions) %></legend>
+      <!--POGEN,__pogen_362,label_tag__action_type__Spree_dot_t__add_action_of_type_,<%= label_tag :action_type, Spree.t(:add_action_of_type)%>--><!--POGEN,__pogen_362,select_tag__action_type___options___class_____select2_fullwidth__,<%= select_tag 'action_type', options, :class => 'select2 fullwidth' %>--><div class="field" id="__pogen_362">
         <%= label_tag :action_type, Spree.t(:add_action_of_type)%>
         <%= select_tag 'action_type', options, :class => 'select2 fullwidth' %>  
       </div>
-      <div class="filter-actions actions">
+      <!--POGEN,__pogen_363,button_Spree_dot_t__add____icon_minus_plus____class_____fullwidth__,<%= button Spree.t(:add), 'icon-plus', :class => 'fullwidth' %>--><div class="filter-actions actions" id="__pogen_363">
         <%= button Spree.t(:add), 'icon-plus', :class => 'fullwidth' %>
       </div>
     </fieldset>
   <% end %>
 
   <%= form_for @promotion, :url => spree.admin_promotion_path(@promotion), :method => :put do |f| %>
-    <div id="actions" class="filter_list">
+    <!--POGEN,actions,render__partial_____promotion_action_____collection_____promotion_dot_actions_,<%= render :partial => 'promotion_action',  :collection => @promotion.actions %>--><div id="actions" class="filter_list">
       <% if @promotion.actions.any? %>
         <%= render :partial => 'promotion_action',  :collection => @promotion.actions %>
       <% else %>
-        <div class="no-objects-found">
+        <!--POGEN,__pogen_364,Spree_dot_t__no_actions_added__,<%= Spree.t(:no_actions_added) %>--><div class="no-objects-found" id="__pogen_364">
           <%= Spree.t(:no_actions_added) %>
         </div>
       <% end %>
     </div>
-    <div class="filter-actions actions promotion-update">
+    <!--POGEN,__pogen_365,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="filter-actions actions promotion-update" id="__pogen_365">
       <%= button Spree.t('actions.update'), 'icon-refresh' %>
     </div>
   <% end %>

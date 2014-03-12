@@ -8,30 +8,30 @@
     </colgroup>
 
     <thead>
-      <th colspan="2"><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:price) %></th>
-      <th><%= Spree.t(:quantity) %></th>
-      <th><%= Spree.t(:total_price) %></th>
+      <!--POGEN,__pogen_137,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th colspan="2" id="__pogen_137"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_138,Spree_dot_t__price__,<%= Spree.t(:price) %>--><th id="__pogen_138"><%= Spree.t(:price) %></th>
+      <!--POGEN,__pogen_139,Spree_dot_t__quantity__,<%= Spree.t(:quantity) %>--><th id="__pogen_139"><%= Spree.t(:quantity) %></th>
+      <!--POGEN,__pogen_140,Spree_dot_t__total_price__,<%= Spree.t(:total_price) %>--><th id="__pogen_140"><%= Spree.t(:total_price) %></th>
       <th class="orders-actions actions" data-hook="admin_order_form_line_items_header_actions">&nbsp;</th>
     </thead>
 
     <tbody>
       <% order.line_items.each do |item| %>
         
-        <tr class="line-item" id="line-item-<%= item.id %>">
-          <td class="line-item-image"><%= mini_image(item.variant) %></td>
-          <td class="line-item-name">
+        <!--POGEN,line-item-<%= item.id %>,item_dot_id_,<%= item.id %>--><tr class="line-item" id="line-item-<%= item.id %>">
+          <!--POGEN,__pogen_141,mini_image_item_dot_variant__,<%= mini_image(item.variant) %>--><td class="line-item-image" id="__pogen_141"><%= mini_image(item.variant) %></td>
+          <!--POGEN,__pogen_142,item_dot_variant_dot_product_dot_name_,<%= item.variant.product.name %>--><!--POGEN,__pogen_142,_____plus__variant_options_item_dot_variant___plus______unless_item_dot_variant_dot_option_values_dot_empty__,<%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>--><td class="line-item-name" id="__pogen_142">
             <%= item.variant.product.name %><br><%= "(" + variant_options(item.variant) + ")" unless item.variant.option_values.empty? %>
           </td>
-          <td class="line-item-price align-center"><%= item.single_money.to_html %></td>
-          <td class="line-item-qty-show align-center">
+          <!--POGEN,__pogen_143,item_dot_single_money_dot_to_html_,<%= item.single_money.to_html %>--><td class="line-item-price align-center" id="__pogen_143"><%= item.single_money.to_html %></td>
+          <!--POGEN,__pogen_144,item_dot_quantity_,<%= item.quantity %>--><td class="line-item-qty-show align-center" id="__pogen_144">
             <%= item.quantity %>
           </td>
-          <td class="line-item-qty-edit hidden">
+          <!--POGEN,__pogen_145,number_field_tag__quantity__item_dot_quantity___min____0___class_____line_item_quantity____size____5_,<%= number_field_tag :quantity, item.quantity, :min => 0, :class => "line_item_quantity", :size => 5 %>--><td class="line-item-qty-edit hidden" id="__pogen_145">
             <%= number_field_tag :quantity, item.quantity, :min => 0, :class => "line_item_quantity", :size => 5 %>
           </td>
-          <td class="line-item-total align-center"><%= line_item_shipment_price(item, item.quantity) %></td>
-          <td class="cart-line-item-delete actions" data-hook="cart_line_item_delete">
+          <!--POGEN,__pogen_146,line_item_shipment_price_item__item_dot_quantity__,<%= line_item_shipment_price(item, item.quantity) %>--><td class="line-item-total align-center" id="__pogen_146"><%= line_item_shipment_price(item, item.quantity) %></td>
+          <!--POGEN,__pogen_147,link_to___________class_____cancel_minus_line_minus_item_icon_link_icon_minus_cancel_no_minus_text_with_minus_tip____data______action_____cancel_____title____Spree_dot_t__actions_dot_cancel_____style_____display__none__,<%= link_to '', '#', :class => 'cancel-line-item icon_link icon-cancel no-text with-tip', :data => {:action => 'cancel'}, :title => Spree.t('actions.cancel'), :style => 'display: none' %>--><!--POGEN,__pogen_147,link_to___________class_____save_minus_line_minus_item_icon_link_icon_minus_ok_no_minus_text_with_minus_tip____data_______line_minus_item_minus_id_____item_dot_id___action_____save_____title____Spree_dot_t__actions_dot_save_____style_____display__none__,<%= link_to '', '#', :class => 'save-line-item icon_link icon-ok no-text with-tip', :data => { 'line-item-id' => item.id, :action => 'save'}, :title => Spree.t('actions.save'), :style => 'display: none' %>--><!--POGEN,__pogen_147,link_to___________class_____delete_minus_line_minus_item_icon_minus_trash_no_minus_text_with_minus_tip____data_______line_minus_item_minus_id_____item_dot_id___action_____remove_____title____Spree_dot_t__delete___,<%= link_to '', '#', :class => 'delete-line-item icon-trash no-text with-tip', :data => { 'line-item-id' => item.id, :action => 'remove'}, :title => Spree.t('delete') %>--><!--POGEN,__pogen_147,link_to___________class_____edit_minus_line_minus_item_icon_link_icon_minus_edit_no_minus_text_with_minus_tip____data______action_____edit_____title____Spree_dot_t__edit___,<%= link_to '', '#', :class => 'edit-line-item icon_link icon-edit no-text with-tip', :data => {:action => 'edit'}, :title => Spree.t('edit') %>--><td class="cart-line-item-delete actions" data-hook="cart_line_item_delete" id="__pogen_147">
             <% if can? :update, item %>
               <%= link_to '', '#', :class => 'save-line-item icon_link icon-ok no-text with-tip', :data => { 'line-item-id' => item.id, :action => 'save'}, :title => Spree.t('actions.save'), :style => 'display: none' %>
               <%= link_to '', '#', :class => 'cancel-line-item icon_link icon-cancel no-text with-tip', :data => {:action => 'cancel'}, :title => Spree.t('actions.cancel'), :style => 'display: none' %>

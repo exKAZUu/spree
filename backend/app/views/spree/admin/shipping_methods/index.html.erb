@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_573,button_link_to_Spree_dot_t__new_shipping_method___new_object_url____icon_____icon_minus_plus____id_____admin_new_shipping_method_link__,<%= button_link_to Spree.t(:new_shipping_method), new_object_url,  :icon => 'icon-plus', :id => 'admin_new_shipping_method_link' %>--><li id="__pogen_573">
     <%= button_link_to Spree.t(:new_shipping_method), new_object_url,  :icon => 'icon-plus', :id => 'admin_new_shipping_method_link' %>
   </li>
 <% end %>
@@ -21,21 +21,21 @@
     </colgroup>
     <thead>
       <tr data-hook="admin_shipping_methods_index_headers">
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:zone) %></th>
-        <th><%= Spree.t(:calculator) %></th>
-        <th><%= Spree.t(:display) %></th>
+        <!--POGEN,__pogen_574,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_574"><%= Spree.t(:name) %></th>
+        <!--POGEN,__pogen_575,Spree_dot_t__zone__,<%= Spree.t(:zone) %>--><th id="__pogen_575"><%= Spree.t(:zone) %></th>
+        <!--POGEN,__pogen_576,Spree_dot_t__calculator__,<%= Spree.t(:calculator) %>--><th id="__pogen_576"><%= Spree.t(:calculator) %></th>
+        <!--POGEN,__pogen_577,Spree_dot_t__display__,<%= Spree.t(:display) %>--><th id="__pogen_577"><%= Spree.t(:display) %></th>
         <th data-hook="admin_shipping_methods_index_header_actions" class="actions"></th>
       </tr>
     </thead>
     <tbody>
       <% @shipping_methods.each do |shipping_method|%>
-        <tr id="<%= spree_dom_id shipping_method %>" data-hook="admin_shipping_methods_index_rows" class="<%= cycle('odd', 'even')%>">
-          <td class="align-center"><%= shipping_method.admin_name + ' / ' if shipping_method.admin_name.present? %><%= shipping_method.name %></td>
-          <td class="align-center"><%= shipping_method.zones.collect(&:name).join(", ") if shipping_method.zones %></td>
-          <td class="align-center"><%= shipping_method.calculator.description %></td>
-          <td class="align-center"><%= shipping_method.display_on.blank? ? Spree.t(:both) : Spree.t(shipping_method.display_on) %></td>
-          <td data-hook="admin_shipping_methods_index_row_actions" class="actions">
+        <!--POGEN,<%= spree_dom_id shipping_method %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id shipping_method %>,spree_dom_id_shipping_method_,<%= spree_dom_id shipping_method %>--><tr id="<%= spree_dom_id shipping_method %>" data-hook="admin_shipping_methods_index_rows" class="<%= cycle('odd', 'even')%>">
+          <!--POGEN,__pogen_578,shipping_method_dot_admin_name__plus_____divide____if_shipping_method_dot_admin_name_dot_present__,<%= shipping_method.admin_name + ' / ' if shipping_method.admin_name.present? %>--><!--POGEN,__pogen_578,shipping_method_dot_name_,<%= shipping_method.name %>--><td class="align-center" id="__pogen_578"><%= shipping_method.admin_name + ' / ' if shipping_method.admin_name.present? %><%= shipping_method.name %></td>
+          <!--POGEN,__pogen_579,shipping_method_dot_zones_dot_collect___name__dot_join_______if_shipping_method_dot_zones_,<%= shipping_method.zones.collect(&:name).join(", ") if shipping_method.zones %>--><td class="align-center" id="__pogen_579"><%= shipping_method.zones.collect(&:name).join(", ") if shipping_method.zones %></td>
+          <!--POGEN,__pogen_580,shipping_method_dot_calculator_dot_description_,<%= shipping_method.calculator.description %>--><td class="align-center" id="__pogen_580"><%= shipping_method.calculator.description %></td>
+          <!--POGEN,__pogen_581,shipping_method_dot_display_on_dot_blank____Spree_dot_t__both____Spree_dot_t_shipping_method_dot_display_on__,<%= shipping_method.display_on.blank? ? Spree.t(:both) : Spree.t(shipping_method.display_on) %>--><td class="align-center" id="__pogen_581"><%= shipping_method.display_on.blank? ? Spree.t(:both) : Spree.t(shipping_method.display_on) %></td>
+          <!--POGEN,__pogen_582,link_to_edit_shipping_method___no_text____true_,<%= link_to_edit shipping_method, :no_text => true %>--><!--POGEN,__pogen_582,link_to_delete_shipping_method___no_text____true_,<%= link_to_delete shipping_method, :no_text => true %>--><td data-hook="admin_shipping_methods_index_row_actions" class="actions" id="__pogen_582">
             <%= link_to_edit shipping_method, :no_text => true %>
             <%= link_to_delete shipping_method, :no_text => true %>
           </td>
@@ -44,7 +44,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_583,link_to_Spree_dot_t__add_one___spree_dot_new_admin_shipping_method_path_,<%= link_to Spree.t(:add_one), spree.new_admin_shipping_method_path %>--><!--POGEN,__pogen_583,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_shipping_method____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/shipping_method')) %>--><div class="alpha twelve columns no-objects-found" id="__pogen_583">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/shipping_method')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_shipping_method_path %>!
   </div>

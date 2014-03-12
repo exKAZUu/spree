@@ -1,16 +1,16 @@
 <% if @prototype.option_types.present? %>
-  <h2><%= Spree.t(:variants) %></h2>
+  <!--POGEN,__pogen_440,Spree_dot_t__variants__,<%= Spree.t(:variants) %>--><h2 id="__pogen_440"><%= Spree.t(:variants) %></h2>
 
   <ul class="product-prototype-options">
     <% @prototype.option_types.each do |ot| %>
       <li class="option-type-field">
-        <b>
+        <!--POGEN,__pogen_441,check_box_tag__option_types_____ot_dot_id___params__option_types_________dot_include__ot_dot_id_dot_to_s____id_____option_type___ot_dot_id_____class_____option_minus_type__,<%= check_box_tag "option_types[]", ot.id, (params[:option_types] || []).include?(ot.id.to_s), :id => "option_type_#{ot.id}", :class => "option-type" %>--><!--POGEN,__pogen_441,label_tag__option_type___ot_dot_id____ot_dot_presentation_,<%= label_tag "option_type_#{ot.id}", ot.presentation %>--><b id="__pogen_441">
           <%= check_box_tag "option_types[]", ot.id, (params[:option_types] || []).include?(ot.id.to_s), :id => "option_type_#{ot.id}", :class => "option-type" %>
           <%= label_tag "option_type_#{ot.id}", ot.presentation %>
         </b>      
         <ul class="option-type-values">
         <% ot.option_values.each do |ov| %>
-          <li>
+          <!--POGEN,__pogen_442,check_box_tag__product_option_values_hash___ot_dot_id________ov_dot_id__params__product______params__product___option_values_hash_________dot_values_dot_flatten_dot_include__ov_dot_id_dot_to_s____id_____option_value___ov_dot_id_____class_____option_minus_value__,<%= check_box_tag "product[option_values_hash[#{ot.id}]][]", ov.id, params[:product] && (params[:product][:option_values_hash] || {}).values.flatten.include?(ov.id.to_s), :id => "option_value_#{ov.id}", :class => "option-value" %>--><!--POGEN,__pogen_442,label_tag__option_value___ov_dot_id____ov_dot_presentation_,<%= label_tag "option_value_#{ov.id}", ov.presentation %>--><li id="__pogen_442">
             <%= check_box_tag "product[option_values_hash[#{ot.id}]][]", ov.id, params[:product] && (params[:product][:option_values_hash] || {}).values.flatten.include?(ov.id.to_s), :id => "option_value_#{ov.id}", :class => "option-value" %>
             <%= label_tag "option_value_#{ov.id}", ov.presentation %>
           </li>

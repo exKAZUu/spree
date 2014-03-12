@@ -1,17 +1,17 @@
 <table class="index adjustments" data-hook="adjustments">
   <thead data-hook="adjustmment_head">
     <tr>
-      <th><%= Spree.t(:adjustable) %></th>
-      <th><%= Spree.t(:description) %></th>
-      <th><%= Spree.t(:amount) %></th>
-      <th><%= Spree.t(:state) %></th>
+      <!--POGEN,__pogen_7,Spree_dot_t__adjustable__,<%= Spree.t(:adjustable) %>--><th id="__pogen_7"><%= Spree.t(:adjustable) %></th>
+      <!--POGEN,__pogen_8,Spree_dot_t__description__,<%= Spree.t(:description) %>--><th id="__pogen_8"><%= Spree.t(:description) %></th>
+      <!--POGEN,__pogen_9,Spree_dot_t__amount__,<%= Spree.t(:amount) %>--><th id="__pogen_9"><%= Spree.t(:amount) %></th>
+      <!--POGEN,__pogen_10,Spree_dot_t__state__,<%= Spree.t(:state) %>--><th id="__pogen_10"><%= Spree.t(:state) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
-  <tbody>
+  <!--POGEN,__pogen_11,render__partial_____adjustment____collection_____adjustments_,<%= render :partial => "adjustment", :collection => @adjustments %>--><tbody id="__pogen_11">
     <%= render :partial => "adjustment", :collection => @adjustments %>
     <tr>
-      <td class="align-center" colspan='4'>
+      <!--POGEN,__pogen_12,button_to_Spree_dot_t__open_all_adjustments___open_adjustments_admin_order_path__order____method_____get_,<%= button_to Spree.t(:open_all_adjustments), open_adjustments_admin_order_path(@order), :method => :get %>--><!--POGEN,__pogen_12,button_to_Spree_dot_t__close_all_adjustments___close_adjustments_admin_order_path__order____method_____get_,<%= button_to Spree.t(:close_all_adjustments), close_adjustments_admin_order_path(@order), :method => :get %>--><td class="align-center" colspan='4' id="__pogen_12">
         <%= button_to Spree.t(:open_all_adjustments), open_adjustments_admin_order_path(@order), :method => :get %>&nbsp;
         <%= button_to Spree.t(:close_all_adjustments), close_adjustments_admin_order_path(@order), :method => :get %>
       </td>

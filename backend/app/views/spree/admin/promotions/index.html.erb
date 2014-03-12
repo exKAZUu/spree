@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_388,button_link_to_Spree_dot_t__new_promotion___spree_dot_new_admin_promotion_path___icon_____icon_minus_plus__,<%= button_link_to Spree.t(:new_promotion), spree.new_admin_promotion_path, :icon => 'icon-plus' %>--><li id="__pogen_388">
     <%= button_link_to Spree.t(:new_promotion), spree.new_admin_promotion_path, :icon => 'icon-plus' %>
   </li>
 <% end %>
@@ -21,25 +21,25 @@
     </colgroup>
     <thead>
       <tr>
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:code) %></th>
-        <th><%= Spree.t(:description) %></th>
-        <th><%= Spree.t(:usage_limit) %></th>
-        <th><%= Spree.t(:promotion_uses) %></th>
-        <th><%= Spree.t(:expiration) %></th>
+        <!--POGEN,__pogen_389,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_389"><%= Spree.t(:name) %></th>
+        <!--POGEN,__pogen_390,Spree_dot_t__code__,<%= Spree.t(:code) %>--><th id="__pogen_390"><%= Spree.t(:code) %></th>
+        <!--POGEN,__pogen_391,Spree_dot_t__description__,<%= Spree.t(:description) %>--><th id="__pogen_391"><%= Spree.t(:description) %></th>
+        <!--POGEN,__pogen_392,Spree_dot_t__usage_limit__,<%= Spree.t(:usage_limit) %>--><th id="__pogen_392"><%= Spree.t(:usage_limit) %></th>
+        <!--POGEN,__pogen_393,Spree_dot_t__promotion_uses__,<%= Spree.t(:promotion_uses) %>--><th id="__pogen_393"><%= Spree.t(:promotion_uses) %></th>
+        <!--POGEN,__pogen_394,Spree_dot_t__expiration__,<%= Spree.t(:expiration) %>--><th id="__pogen_394"><%= Spree.t(:expiration) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
     <tbody>
       <% @promotions.each do |promotion| %>
-        <tr id="<%= spree_dom_id promotion %>" class="<%= cycle('odd', 'even')%>">
-          <td><%= promotion.name %></td>
-          <td class="align-center"><%= promotion.code %></td>
-          <td><%= promotion.description %></td>
-          <td class="align-center"><%= promotion.usage_limit.nil? ? "∞" : promotion.usage_limit  %></td>
-          <td class="align-center"><%= Spree.t(:current_promotion_usage, :count => promotion.credits_count) %></td>
-          <td class="align-center"><%= promotion.expires_at.to_date.to_s(:short_date) if promotion.expires_at %></td>
-          <td class="actions">
+        <!--POGEN,<%= spree_dom_id promotion %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id promotion %>,spree_dom_id_promotion_,<%= spree_dom_id promotion %>--><tr id="<%= spree_dom_id promotion %>" class="<%= cycle('odd', 'even')%>">
+          <!--POGEN,__pogen_395,promotion_dot_name_,<%= promotion.name %>--><td id="__pogen_395"><%= promotion.name %></td>
+          <!--POGEN,__pogen_396,promotion_dot_code_,<%= promotion.code %>--><td class="align-center" id="__pogen_396"><%= promotion.code %></td>
+          <!--POGEN,__pogen_397,promotion_dot_description_,<%= promotion.description %>--><td id="__pogen_397"><%= promotion.description %></td>
+          <!--POGEN,__pogen_398,promotion_dot_usage_limit_dot_nil__________promotion_dot_usage_limit__,<%= promotion.usage_limit.nil? ? "∞" : promotion.usage_limit  %>--><td class="align-center" id="__pogen_398"><%= promotion.usage_limit.nil? ? "∞" : promotion.usage_limit  %></td>
+          <!--POGEN,__pogen_399,Spree_dot_t__current_promotion_usage___count____promotion_dot_credits_count__,<%= Spree.t(:current_promotion_usage, :count => promotion.credits_count) %>--><td class="align-center" id="__pogen_399"><%= Spree.t(:current_promotion_usage, :count => promotion.credits_count) %></td>
+          <!--POGEN,__pogen_400,promotion_dot_expires_at_dot_to_date_dot_to_s__short_date__if_promotion_dot_expires_at_,<%= promotion.expires_at.to_date.to_s(:short_date) if promotion.expires_at %>--><td class="align-center" id="__pogen_400"><%= promotion.expires_at.to_date.to_s(:short_date) if promotion.expires_at %></td>
+          <!--POGEN,__pogen_401,link_to_delete_promotion___no_text____true_,<%= link_to_delete promotion, :no_text => true %>--><!--POGEN,__pogen_401,link_to_edit_promotion___no_text____true_,<%= link_to_edit promotion, :no_text => true %>--><td class="actions" id="__pogen_401">
             <%= link_to_edit promotion, :no_text => true %>
             <%= link_to_delete promotion, :no_text => true %>
           </td>
@@ -48,7 +48,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_402,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_promotion____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/promotion')) %>--><!--POGEN,__pogen_402,link_to_Spree_dot_t__add_one___spree_dot_new_admin_promotion_path_,<%= link_to Spree.t(:add_one), spree.new_admin_promotion_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_402">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/promotion')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_promotion_path %>!
   </div>

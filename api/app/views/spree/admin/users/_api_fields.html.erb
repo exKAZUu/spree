@@ -1,17 +1,17 @@
 <fieldset data-hook="admin_user_api_key" class="omega six columns">
-  <legend><%= Spree.t('access', :scope => 'api') %></legend>
+  <!--POGEN,__pogen_0,Spree_dot_t__access____scope_____api___,<%= Spree.t('access', :scope => 'api') %>--><legend id="__pogen_0"><%= Spree.t('access', :scope => 'api') %></legend>
 
   <% if @user.spree_api_key.present? %>
-    <div class="field">
+    <!--POGEN,__pogen_1,label_tag_Spree_dot_t__key____scope_____api___,<%= label_tag Spree.t('key', :scope => 'api') %>--><!--POGEN,__pogen_1,_user_dot_spree_api_key_,<%= @user.spree_api_key %>--><div class="field" id="__pogen_1">
       <%= label_tag Spree.t('key', :scope => 'api') %>:
       <%= @user.spree_api_key %>
     </div>
-    <div class="filter-actions actions">
+    <!--POGEN,__pogen_2,form_tag_spree_dot_generate_api_key_admin_user_path__user____method_____put_do_,<%= form_tag spree.generate_api_key_admin_user_path(@user), :method => :put do %>--><!--POGEN,__pogen_2,button_Spree_dot_t__regenerate_key____scope_____api_____icon_minus_refresh__,<%= button Spree.t('regenerate_key', :scope => 'api'), 'icon-refresh' %>--><!--POGEN,__pogen_2,form_tag_spree_dot_clear_api_key_admin_user_path__user____method_____put_do_,<%= form_tag spree.clear_api_key_admin_user_path(@user), :method => :put do %>--><!--POGEN,__pogen_2,button_Spree_dot_t__clear_key____scope_____api_____icon_minus_trash__,<%= button Spree.t('clear_key', :scope => 'api'), 'icon-trash' %>--><div class="filter-actions actions" id="__pogen_2">
       <%= form_tag spree.clear_api_key_admin_user_path(@user), :method => :put do %>
         <%= button Spree.t('clear_key', :scope => 'api'), 'icon-trash' %>
       <% end %>
 
-      <span class="or"><%= Spree.t(:or)%></span>
+      <!--POGEN,__pogen_3,Spree_dot_t__or_,<%= Spree.t(:or)%>--><span class="or" id="__pogen_3"><%= Spree.t(:or)%></span>
 
       <%= form_tag spree.generate_api_key_admin_user_path(@user), :method => :put do %>
         <%= button Spree.t('regenerate_key', :scope => 'api'), 'icon-refresh' %>
@@ -20,9 +20,9 @@
 
   <% else %>
 
-    <div class="no-objects-found"><%= Spree.t('no_key', :scope => 'api') %></div>
+    <!--POGEN,__pogen_4,Spree_dot_t__no_key____scope_____api___,<%= Spree.t('no_key', :scope => 'api') %>--><div class="no-objects-found" id="__pogen_4"><%= Spree.t('no_key', :scope => 'api') %></div>
 
-    <div class="filter-actions actions">
+    <!--POGEN,__pogen_5,form_tag_spree_dot_generate_api_key_admin_user_path__user____method_____put_do_,<%= form_tag spree.generate_api_key_admin_user_path(@user), :method => :put do %>--><!--POGEN,__pogen_5,button_Spree_dot_t__generate_key____scope_____api_____icon_minus_key__,<%= button Spree.t('generate_key', :scope => 'api'), 'icon-key' %>--><div class="filter-actions actions" id="__pogen_5">
       <%= form_tag spree.generate_api_key_admin_user_path(@user), :method => :put do %>
         <%= button Spree.t('generate_key', :scope => 'api'), 'icon-key' %>
       <% end %>

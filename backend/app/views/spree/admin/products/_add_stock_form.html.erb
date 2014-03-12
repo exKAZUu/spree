@@ -1,15 +1,15 @@
 <%= form_for [:admin, Spree::StockMovement.new], url: admin_stock_items_path do |f| %>
   <fieldset>
-    <legend align="center"><%= Spree.t(:add_stock_management) %></legend>
+    <!--POGEN,__pogen_313,Spree_dot_t__add_stock_management__,<%= Spree.t(:add_stock_management) %>--><legend align="center" id="__pogen_313"><%= Spree.t(:add_stock_management) %></legend>
 
     <div data-hook="admin_stock_movements_form_fields" class="row">
-      <div class="alpha two columns">
+      <!--POGEN,__pogen_314,f_dot_label__quantity__Spree_dot_t__quantity__,<%= f.label :quantity, Spree.t(:quantity) %>--><!--POGEN,__pogen_314,f_dot_number_field__quantity__class___fullwidth___value__1_,<%= f.number_field :quantity, class: 'fullwidth', value: 1 %>--><!--POGEN,__pogen_314,f_dot_field_container__quantity_do_,<%= f.field_container :quantity do %>--><div class="alpha two columns" id="__pogen_314">
         <%= f.field_container :quantity do %>
           <%= f.label :quantity, Spree.t(:quantity) %>
           <%= f.number_field :quantity, class: 'fullwidth', value: 1 %>
         <% end %>
       </div>
-      <div class="five columns">
+      <!--POGEN,__pogen_315,f_dot_field_container__stock_location_do_,<%= f.field_container :stock_location do %>--><!--POGEN,__pogen_315,label_tag__stock_location_id__Spree_dot_t__stock_location__,<%= label_tag :stock_location_id, Spree.t(:stock_location) %>--><div class="five columns" id="__pogen_315">
         <%= f.field_container :stock_location do %>
           <%= label_tag :stock_location_id, Spree.t(:stock_location) %>
           <%= select_tag 'stock_location_id', options_from_collection_for_select(@stock_locations, :id, :name),
@@ -17,7 +17,7 @@
         <% end %>
       </div>
 
-      <div class="five columns omega">
+      <!--POGEN,__pogen_316,f_dot_field_container__variant_id_do_,<%= f.field_container :variant_id do %>--><!--POGEN,__pogen_316,label_tag__variant_id___Spree_dot_t__variant__,<%= label_tag 'variant_id', Spree.t(:variant) %>--><div class="five columns omega" id="__pogen_316">
         <%= f.field_container :variant_id do %>
           <%= label_tag 'variant_id', Spree.t(:variant) %>
           <%= select_tag 'variant_id', options_from_collection_for_select(@variants, :id, :sku_and_options_text),
@@ -26,9 +26,9 @@
       </div>
     </div>
 
-    <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <!--POGEN,__pogen_317,link_to_with_icon__icon_minus_remove___Spree_dot_t__actions_dot_cancel____collection_url___class_____button__,<%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), collection_url, :class => 'button' %>--><!--POGEN,__pogen_317,button_Spree_dot_t__add_stock____icon_minus_plus__,<%= button Spree.t(:add_stock), 'icon-plus' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_317">
       <%= button Spree.t(:add_stock), 'icon-plus' %>
-      <span class="or"><%= Spree.t(:or) %></span>
+      <!--POGEN,__pogen_318,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_318"><%= Spree.t(:or) %></span>
       <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), collection_url, :class => 'button' %>
     </div>
   </fieldset>

@@ -7,7 +7,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_742,button_link_to_Spree_dot_t__back_to_taxonomies_list___spree_dot_admin_taxonomies_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_taxonomies_list), spree.admin_taxonomies_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_742">
     <%= button_link_to Spree.t(:back_to_taxonomies_list), spree.admin_taxonomies_path, :icon => 'icon-arrow-left' %>
   </li>
 <% end %>
@@ -15,28 +15,28 @@
 <div id="ajax_error" class="errorExplanation" style="display:none;"></div>
 
 <%= form_for [:admin, @taxonomy] do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_743,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset class="no-border-top" id="__pogen_743">
     <%= render :partial => 'form', :locals => { :f => f } %>
-    <div>
+    <!--POGEN,__pogen_744,label_tag_nil__Spree_dot_t__tree__,<%= label_tag nil, Spree.t(:tree) %>--><div id="__pogen_744">
       <%= label_tag nil, Spree.t(:tree) %><br />
-      <script>
+      <!--POGEN,__pogen_745,stylesheet_path__jquery_dot_jstree_divide_themes_divide_apple_divide_style_dot_css___,<%= stylesheet_path("jquery.jstree/themes/apple/style.css") %>--><!--POGEN,__pogen_745,spree_dot_admin_taxonomy_taxons_path__taxonomy__,<%= spree.admin_taxonomy_taxons_path(@taxonomy) %>--><!--POGEN,__pogen_745,spree_dot_api_taxonomy_taxons_path__taxonomy__,<%= spree.api_taxonomy_taxons_path(@taxonomy) %>--><script id="__pogen_745">
         Spree.routes.taxonomy_taxons_path = "<%= spree.api_taxonomy_taxons_path(@taxonomy) %>";
         Spree.routes.admin_taxonomy_taxons_path = "<%= spree.admin_taxonomy_taxons_path(@taxonomy) %>";
         Spree.routes.jstree_theme_path = "<%= stylesheet_path("jquery.jstree/themes/apple/style.css") %>";
       </script>
       <div id="taxonomy_tree" class="tree"></div>
     </div>
-    <div id="progress" style="display:none;">
+    <!--POGEN,progress,image_tag__select2_minus_spinner_dot_gif____title_____Spinner____style_____vertical_minus_align_bottom___,<%= image_tag 'select2-spinner.gif', :title => 'Spinner', :style => "vertical-align:bottom;" %>--><!--POGEN,progress,Spree_dot_t__updating__,<%= Spree.t(:updating) %>--><div id="progress" style="display:none;">
       <%= image_tag 'select2-spinner.gif', :title => 'Spinner', :style => "vertical-align:bottom;" %> <%= Spree.t(:updating) %>..
     </div>
 
-    <div class="info"><%= Spree.t(:taxonomy_tree_instruction) %></div>
+    <!--POGEN,__pogen_746,Spree_dot_t__taxonomy_tree_instruction__,<%= Spree.t(:taxonomy_tree_instruction) %>--><div class="info" id="__pogen_746"><%= Spree.t(:taxonomy_tree_instruction) %></div>
 
     <br>
 
-    <div class="filter-actions actions">
+    <!--POGEN,__pogen_747,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><!--POGEN,__pogen_747,button_link_to_Spree_dot_t__actions_dot_cancel____admin_taxonomies_path___icon_____icon_minus_remove__,<%= button_link_to Spree.t('actions.cancel'), admin_taxonomies_path, :icon => 'icon-remove' %>--><div class="filter-actions actions" id="__pogen_747">
       <%= button Spree.t('actions.update'), 'icon-refresh' %>
-      <span class="or"><%= Spree.t(:or) %></span>
+      <!--POGEN,__pogen_748,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_748"><%= Spree.t(:or) %></span>
       <%= button_link_to Spree.t('actions.cancel'), admin_taxonomies_path, :icon => 'icon-remove' %>
     </div>
   </fieldset>

@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_550,button_link_to_Spree_dot_t__new_shipping_category___new_object_url___icon_____icon_minus_plus__,<%= button_link_to Spree.t(:new_shipping_category), new_object_url, :icon => 'icon-plus' %>--><li id="__pogen_550">
     <%= button_link_to Spree.t(:new_shipping_category), new_object_url, :icon => 'icon-plus' %>
   </li>
 <% end %>
@@ -18,15 +18,15 @@
   </colgroup>
   <thead>
     <tr data-hook="categories_header">
-      <th><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_551,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_551"><%= Spree.t(:name) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @shipping_categories.each do |shipping_category|%>
-    <tr id="<%= spree_dom_id shipping_category %>" data-hook="category_row" class="<%= cycle('odd', 'even')%>">
-      <td class="align-center" style="width:350px;"><%= shipping_category.name %></td>
-      <td class="actions">
+    <!--POGEN,<%= spree_dom_id shipping_category %>,spree_dom_id_shipping_category_,<%= spree_dom_id shipping_category %>--><!--POGEN,<%= spree_dom_id shipping_category %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><tr id="<%= spree_dom_id shipping_category %>" data-hook="category_row" class="<%= cycle('odd', 'even')%>">
+      <!--POGEN,__pogen_552,shipping_category_dot_name_,<%= shipping_category.name %>--><td class="align-center" style="width:350px;" id="__pogen_552"><%= shipping_category.name %></td>
+      <!--POGEN,__pogen_553,link_to_delete_shipping_category___no_text____true_,<%= link_to_delete shipping_category, :no_text => true %>--><!--POGEN,__pogen_553,link_to_edit_shipping_category___no_text____true_,<%= link_to_edit shipping_category, :no_text => true %>--><td class="actions" id="__pogen_553">
         <%= link_to_edit shipping_category, :no_text => true %>
         <%= link_to_delete shipping_category, :no_text => true %>
       </td>
@@ -35,7 +35,7 @@
   </tbody>
 </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_554,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_shipping_category____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/shipping_category')) %>--><!--POGEN,__pogen_554,link_to_Spree_dot_t__add_one___spree_dot_new_admin_shipping_category_path_,<%= link_to Spree.t(:add_one), spree.new_admin_shipping_category_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_554">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/shipping_category')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_shipping_category_path %>!
   </div>

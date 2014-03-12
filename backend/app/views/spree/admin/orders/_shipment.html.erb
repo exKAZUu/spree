@@ -1,12 +1,12 @@
-<div id="<%= "shipment_#{shipment.id}" %>">
+<!--POGEN,<%= ,render__partial_____spree_divide_admin_divide_variants_divide_split____formats_____js_,<%= render :partial => "spree/admin/variants/split", :formats => :js %>--><div id="<%= "shipment_#{shipment.id}" %>">
   <%= render :partial => "spree/admin/variants/split", :formats => :js %>
   <fieldset class="no-border-bottom">
-    <legend align="center" class="stock-location" data-hook="stock-location">
-      <span class="shipment-number"><%= shipment.number %></span>
+    <!--POGEN,__pogen_157,link_to_Spree_dot_t__ship_________class_____ship_button_icon_minus_arrow_minus_right____data______shipment_minus_number_____shipment_dot_number__,<%= link_to Spree.t(:ship), '#', :class => 'ship button icon-arrow-right', :data => {'shipment-number' => shipment.number} %>--><!--POGEN,__pogen_157,Spree_dot_t__package_from__,<%= Spree.t(:package_from) %>--><legend align="center" class="stock-location" data-hook="stock-location" id="__pogen_157">
+      <!--POGEN,__pogen_158,shipment_dot_number_,<%= shipment.number %>--><span class="shipment-number" id="__pogen_158"><%= shipment.number %></span>
       -
-      <span class="shipment-state"><%= Spree.t("shipment_states.#{shipment.state}") %></span>
+      <!--POGEN,__pogen_159,Spree_dot_t__shipment_states_dot___shipment_dot_state____,<%= Spree.t("shipment_states.#{shipment.state}") %>--><span class="shipment-state" id="__pogen_159"><%= Spree.t("shipment_states.#{shipment.state}") %></span>
       <%= Spree.t(:package_from) %>
-      <strong class="stock-location-name" data-hook="stock-location-name">'<%= shipment.stock_location.name %>'</strong>
+      <!--POGEN,__pogen_160,shipment_dot_stock_location_dot_name_,<%= shipment.stock_location.name %>--><strong class="stock-location-name" data-hook="stock-location-name" id="__pogen_160">'<%= shipment.stock_location.name %>'</strong>
       <% if shipment.ready? and can? :update, shipment %>
         -
         <%= link_to Spree.t(:ship), '#', :class => 'ship button icon-arrow-right', :data => {'shipment-number' => shipment.number} %>
@@ -25,20 +25,20 @@
     </colgroup>
 
     <thead>
-      <th colspan="2"><%= Spree.t(:item_description) %></th>
-      <th><%= Spree.t(:price) %></th>
-      <th><%= Spree.t(:quantity) %></th>
-      <th><%= Spree.t(:total) %></th>
+      <!--POGEN,__pogen_161,Spree_dot_t__item_description__,<%= Spree.t(:item_description) %>--><th colspan="2" id="__pogen_161"><%= Spree.t(:item_description) %></th>
+      <!--POGEN,__pogen_162,Spree_dot_t__price__,<%= Spree.t(:price) %>--><th id="__pogen_162"><%= Spree.t(:price) %></th>
+      <!--POGEN,__pogen_163,Spree_dot_t__quantity__,<%= Spree.t(:quantity) %>--><th id="__pogen_163"><%= Spree.t(:quantity) %></th>
+      <!--POGEN,__pogen_164,Spree_dot_t__total__,<%= Spree.t(:total) %>--><th id="__pogen_164"><%= Spree.t(:total) %></th>
       <th class="orders-actions actions" data-hook="admin_order_form_line_items_header_actions"></th>
     </thead>
 
-    <tbody data-shipment-number="<%= shipment.number %>" data-order-number="<%= order.number %>">
+    <!--POGEN,__pogen_165,order_dot_number_,<%= order.number %>--><!--POGEN,__pogen_165,shipment_dot_number_,<%= shipment.number %>--><!--POGEN,__pogen_165,render__spree_divide_admin_divide_orders_divide_shipment_manifest___order__order__shipment__shipment_,<%= render 'spree/admin/orders/shipment_manifest', order: order, shipment: shipment %>--><tbody data-shipment-number="<%= shipment.number %>" data-order-number="<%= order.number %>" id="__pogen_165">
       <%= render 'spree/admin/orders/shipment_manifest', order: order, shipment: shipment %>
 
       <% unless shipment.shipped? %>
         <tr class="edit-method hidden total">
           <td colspan="5">
-            <div class="field alpha five columns">
+            <!--POGEN,__pogen_166,label_tag__selected_shipping_rate_id___Spree_dot_t__shipping_method__,<%= label_tag 'selected_shipping_rate_id', Spree.t(:shipping_method) %>--><div class="field alpha five columns" id="__pogen_166">
               <%= label_tag 'selected_shipping_rate_id', Spree.t(:shipping_method) %>
               <%= select_tag :selected_shipping_rate_id,
                     options_for_select(shipment.shipping_rates.map {|sr| ["#{sr.name} #{sr.display_price}", sr.id] }, shipment.selected_shipping_rate_id),
@@ -58,16 +58,16 @@
         <tr class="show-method total">
           <% if shipment.shipping_method %>
             <td colspan="4">
-              <strong><%= shipment.shipping_method.name %></strong>
+              <!--POGEN,__pogen_167,shipment_dot_shipping_method_dot_name_,<%= shipment.shipping_method.name %>--><strong id="__pogen_167"><%= shipment.shipping_method.name %></strong>
             </td>
             <td class="total" align="center">
-              <span><%= shipment.display_cost %></span>
+              <!--POGEN,__pogen_168,shipment_dot_display_cost_,<%= shipment.display_cost %>--><span id="__pogen_168"><%= shipment.display_cost %></span>
             </td>
           <% else %>
-            <td colspan='5'><%= Spree.t(:no_shipping_method_selected) %></td>
+            <!--POGEN,__pogen_169,Spree_dot_t__no_shipping_method_selected__,<%= Spree.t(:no_shipping_method_selected) %>--><td colspan='5' id="__pogen_169"><%= Spree.t(:no_shipping_method_selected) %></td>
           <% end %>
 
-          <td class="actions">
+          <!--POGEN,__pogen_170,link_to___________class_____edit_minus_method_icon_link_icon_minus_edit_no_minus_text_with_minus_tip____data______action_____edit_____title____Spree_dot_t__edit___,<%= link_to '', '#', :class => 'edit-method icon_link icon-edit no-text with-tip', :data => {:action => 'edit'}, :title => Spree.t('edit') %>--><td class="actions" id="__pogen_170">
             <% if can? :update, shipment %>
               <%= link_to '', '#', :class => 'edit-method icon_link icon-edit no-text with-tip', :data => {:action => 'edit'}, :title => Spree.t('edit') %>
             <% end %>
@@ -76,11 +76,11 @@
       <% end %>
 
       <tr class="edit-tracking hidden total">
-        <td colspan="5">
-          <label><%= Spree.t(:tracking_number) %>:</label>
+        <!--POGEN,__pogen_171,text_field_tag__tracking__shipment_dot_tracking_,<%= text_field_tag :tracking, shipment.tracking %>--><td colspan="5" id="__pogen_171">
+          <!--POGEN,__pogen_172,Spree_dot_t__tracking_number__,<%= Spree.t(:tracking_number) %>--><label id="__pogen_172"><%= Spree.t(:tracking_number) %>:</label>
           <%= text_field_tag :tracking, shipment.tracking %>
         </td>
-        <td class="actions">
+        <!--POGEN,__pogen_173,link_to___________class_____cancel_minus_tracking_icon_link_icon_minus_cancel_no_minus_text_with_minus_tip____data______action_____cancel_____title____Spree_dot_t__actions_dot_cancel___,<%= link_to '', '#', :class => 'cancel-tracking icon_link icon-cancel no-text with-tip', :data => {:action => 'cancel'}, :title => Spree.t('actions.cancel') %>--><!--POGEN,__pogen_173,link_to___________class_____save_minus_tracking_icon_link_icon_minus_ok_no_minus_text_with_minus_tip____data______shipment_minus_number_____shipment_dot_number___action_____save_____title____Spree_dot_t__actions_dot_save___,<%= link_to '', '#', :class => 'save-tracking icon_link icon-ok no-text with-tip', :data => {'shipment-number' => shipment.number, :action => 'save'}, :title => Spree.t('actions.save') %>--><td class="actions" id="__pogen_173">
           <% if can? :update, shipment %>
             <%= link_to '', '#', :class => 'save-tracking icon_link icon-ok no-text with-tip', :data => {'shipment-number' => shipment.number, :action => 'save'}, :title => Spree.t('actions.save') %>
             <%= link_to '', '#', :class => 'cancel-tracking icon_link icon-cancel no-text with-tip', :data => {:action => 'cancel'}, :title => Spree.t('actions.cancel') %>
@@ -90,21 +90,21 @@
 
       <% if @order.special_instructions.present? %>
         <tr class='special_instructions'>
-          <td colspan="5">
-            <strong><%= Spree.t(:special_instructions) %>:&nbsp;</strong><%= @order.special_instructions %>
+          <!--POGEN,__pogen_174,_order_dot_special_instructions_,<%= @order.special_instructions %>--><td colspan="5" id="__pogen_174">
+            <!--POGEN,__pogen_175,Spree_dot_t__special_instructions__,<%= Spree.t(:special_instructions) %>--><strong id="__pogen_175"><%= Spree.t(:special_instructions) %>:&nbsp;</strong><%= @order.special_instructions %>
           </td>
         </tr>
       <% end %>
 
       <tr class="show-tracking total">
-        <td colspan="5">
+        <!--POGEN,__pogen_176,shipment_dot_tracking_,<%= shipment.tracking %>--><!--POGEN,__pogen_176,Spree_dot_t__no_tracking_present__,<%= Spree.t(:no_tracking_present) %>--><td colspan="5" id="__pogen_176">
           <% if shipment.tracking.present? %>
-            <strong><%= Spree.t(:tracking) %>:</strong> <%= shipment.tracking %>
+            <!--POGEN,__pogen_177,Spree_dot_t__tracking__,<%= Spree.t(:tracking) %>--><strong id="__pogen_177"><%= Spree.t(:tracking) %>:</strong> <%= shipment.tracking %>
           <% else %>
             <%= Spree.t(:no_tracking_present) %>
           <% end %>
         </td>
-        <td class="actions">
+        <!--POGEN,__pogen_178,link_to___________class_____edit_minus_tracking_icon_link_icon_minus_edit_no_minus_text_with_minus_tip____data______action_____edit_____title____Spree_dot_t__edit___,<%= link_to '', '#', :class => 'edit-tracking icon_link icon-edit no-text with-tip', :data => {:action => 'edit'}, :title => Spree.t('edit') %>--><td class="actions" id="__pogen_178">
           <% if can? :update, shipment %>
             <%= link_to '', '#', :class => 'edit-tracking icon_link icon-edit no-text with-tip', :data => {:action => 'edit'}, :title => Spree.t('edit') %>
           <% end %>

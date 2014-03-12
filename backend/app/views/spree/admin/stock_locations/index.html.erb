@@ -6,10 +6,10 @@
 
 <% content_for :page_actions do %>
   <ul class="actions inline-menu">
-    <li>
+    <!--POGEN,__pogen_620,button_link_to_Spree_dot_t__new_stock_location___new_object_url_____icon_____icon_minus_plus____id_____admin_new_stock_location____,<%= button_link_to Spree.t(:new_stock_location), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_stock_location' } %>--><li id="__pogen_620">
       <%= button_link_to Spree.t(:new_stock_location), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_stock_location' } %>
     </li>
-    <li>
+    <!--POGEN,__pogen_621,button_link_to_Spree_dot_t__new_stock_transfer___new_admin_stock_transfer_path_____icon_____icon_minus_forward____,<%= button_link_to Spree.t(:new_stock_transfer), new_admin_stock_transfer_path, { :icon => 'icon-forward' } %>--><li id="__pogen_621">
       <%= button_link_to Spree.t(:new_stock_transfer), new_admin_stock_transfer_path, { :icon => 'icon-forward' } %>
     </li>
   </ul>
@@ -25,9 +25,9 @@
     </colgroup>
     <thead>
       <tr data-hook="stock_locations_header">
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:state) %></th>
-        <th><%= Spree.t(:stock_movements) %></th>
+        <!--POGEN,__pogen_622,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_622"><%= Spree.t(:name) %></th>
+        <!--POGEN,__pogen_623,Spree_dot_t__state__,<%= Spree.t(:state) %>--><th id="__pogen_623"><%= Spree.t(:state) %></th>
+        <!--POGEN,__pogen_624,Spree_dot_t__stock_movements__,<%= Spree.t(:stock_movements) %>--><th id="__pogen_624"><%= Spree.t(:stock_movements) %></th>
         <th class="actions"></th>
       </tr>
     </thead>
@@ -36,11 +36,11 @@
            @edit_url = edit_admin_stock_location_path(stock_location)
            @delete_url = admin_stock_location_path(stock_location)
       %>
-        <tr id="<%= spree_dom_id stock_location %>" data-hook="stock_location_row" class="<%= cycle('odd', 'even')%>">
-          <td class="align-center"><%= display_name(stock_location) %></td>
-          <td class="align-center"><span class="state <%= state(stock_location) %>"><%= Spree.t(state(stock_location)) %></span></td>
-          <td class="align-center"><%= link_to Spree.t(:stock_movements), admin_stock_location_stock_movements_path(stock_location.id) %> </td>
-          <td class="actions">
+        <!--POGEN,<%= spree_dom_id stock_location %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id stock_location %>,spree_dom_id_stock_location_,<%= spree_dom_id stock_location %>--><tr id="<%= spree_dom_id stock_location %>" data-hook="stock_location_row" class="<%= cycle('odd', 'even')%>">
+          <!--POGEN,__pogen_625,display_name_stock_location__,<%= display_name(stock_location) %>--><td class="align-center" id="__pogen_625"><%= display_name(stock_location) %></td>
+          <td class="align-center"><!--POGEN,__pogen_626,Spree_dot_t_state_stock_location___,<%= Spree.t(state(stock_location)) %>--><!--POGEN,__pogen_626,state_stock_location__,<%= state(stock_location) %>--><span class="state <%= state(stock_location) %>" id="__pogen_626"><%= Spree.t(state(stock_location)) %></span></td>
+          <!--POGEN,__pogen_627,link_to_Spree_dot_t__stock_movements___admin_stock_location_stock_movements_path_stock_location_dot_id__,<%= link_to Spree.t(:stock_movements), admin_stock_location_stock_movements_path(stock_location.id) %>--><td class="align-center" id="__pogen_627"><%= link_to Spree.t(:stock_movements), admin_stock_location_stock_movements_path(stock_location.id) %> </td>
+          <!--POGEN,__pogen_628,link_to_delete_stock_location___no_text____true_,<%= link_to_delete stock_location, :no_text => true %>--><!--POGEN,__pogen_628,link_to_edit_stock_location___no_text____true_,<%= link_to_edit stock_location, :no_text => true %>--><td class="actions" id="__pogen_628">
             <%= link_to_edit stock_location, :no_text => true %>
             <%= link_to_delete stock_location, :no_text => true %>
           </td>
@@ -49,7 +49,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_629,link_to_Spree_dot_t__add_one___spree_dot_new_admin_stock_location_path_,<%= link_to Spree.t(:add_one), spree.new_admin_stock_location_path %>--><!--POGEN,__pogen_629,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_stock_location____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/stock_location')) %>--><div class="alpha twelve columns no-objects-found" id="__pogen_629">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/stock_location')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_stock_location_path %>!
   </div>

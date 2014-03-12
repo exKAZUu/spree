@@ -1,5 +1,5 @@
 <% content_for :sub_menu do %>
-  <ul id="sub_nav" data-hook="admin_product_sub_tabs" class="inline-menu">
+  <!--POGEN,sub_nav,tab__taxons_,<%= tab :taxons %>--><!--POGEN,sub_nav,tab__prototypes_,<%= tab :prototypes %>--><!--POGEN,sub_nav,tab__properties_,<%= tab :properties %>--><!--POGEN,sub_nav,tab__option_types___match_path______divide_option_types__,<%= tab :option_types, :match_path => '/option_types' %>--><!--POGEN,sub_nav,tab__taxonomies_,<%= tab :taxonomies %>--><!--POGEN,sub_nav,tab__products___match_path______divide_products__,<%= tab :products, :match_path => '/products' %>--><ul id="sub_nav" data-hook="admin_product_sub_tabs" class="inline-menu">
     <%= tab :products, :match_path => '/products' %>
     <%= tab :option_types, :match_path => '/option_types' %>
     <%= tab :properties %>

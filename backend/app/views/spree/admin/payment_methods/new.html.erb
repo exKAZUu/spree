@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_256,button_link_to_Spree_dot_t__back_to_payment_methods_list___admin_payment_methods_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_payment_methods_list), admin_payment_methods_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_256">
     <%= button_link_to Spree.t(:back_to_payment_methods_list), admin_payment_methods_path, :icon => 'icon-arrow-left' %>
   </li>  
 <% end %>
@@ -13,9 +13,9 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @payment_method } %>
 
 <%= form_for @payment_method, :url => collection_url do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_257,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset class="no-border-top" id="__pogen_257">
     <%= render :partial => 'form', :locals => { :f => f } %>
-    <div data-hook="buttons" class="filter-actions actions">
+    <!--POGEN,__pogen_258,button_Spree_dot_t__create____icon_minus_ok__,<%= button Spree.t(:create), 'icon-ok' %>--><div data-hook="buttons" class="filter-actions actions" id="__pogen_258">
       <%= button Spree.t(:create), 'icon-ok' %>
     </div>
   </fieldset>

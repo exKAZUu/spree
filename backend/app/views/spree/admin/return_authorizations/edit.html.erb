@@ -1,10 +1,10 @@
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_467,button_link_to_Spree_dot_t__receive___fire_admin_order_return_authorization_url__order___return_authorization___e_____receive_____method_____put___data_______confirm____Spree_dot_t__are_you_sure______icon_____icon_minus_download_minus_alt__,<%= button_link_to Spree.t(:receive), fire_admin_order_return_authorization_url(@order, @return_authorization, :e => 'receive'), :method => :put, :data => { :confirm => Spree.t(:are_you_sure) }, :icon => 'icon-download-alt' %>--><li id="__pogen_467">
     <% if @return_authorization.can_receive? %>
       <%= button_link_to Spree.t(:receive), fire_admin_order_return_authorization_url(@order, @return_authorization, :e => 'receive'), :method => :put, :data => { :confirm => Spree.t(:are_you_sure) }, :icon => 'icon-download-alt' %>
     <% end %>
   </li>
-  <li>
+  <!--POGEN,__pogen_468,button_link_to_Spree_dot_t__actions_dot_cancel____fire_admin_order_return_authorization_url__order___return_authorization___e_____cancel_____method_____put___data_______confirm____Spree_dot_t__are_you_sure______icon_____icon_minus_remove__,<%= button_link_to Spree.t('actions.cancel'), fire_admin_order_return_authorization_url(@order, @return_authorization, :e => 'cancel'), :method => :put, :data => { :confirm => Spree.t(:are_you_sure) }, :icon => 'icon-remove' %>--><li id="__pogen_468">
     <% if @return_authorization.can_cancel? %>
       <%= button_link_to Spree.t('actions.cancel'), fire_admin_order_return_authorization_url(@order, @return_authorization, :e => 'cancel'), :method => :put, :data => { :confirm => Spree.t(:are_you_sure) }, :icon => 'icon-remove' %>
     <% end %>
@@ -20,12 +20,12 @@
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @return_authorization } %>
 <%= form_for [:admin, @order, @return_authorization] do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_469,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset class="no-border-top" id="__pogen_469">
     <%= render :partial => 'form', :locals => { :f => f } %>
 
-    <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <!--POGEN,__pogen_470,button_link_to_Spree_dot_t__actions_dot_cancel____admin_order_return_authorizations_url__order____icon_____icon_minus_remove__,<%= button_link_to Spree.t('actions.cancel'), admin_order_return_authorizations_url(@order), :icon => 'icon-remove' %>--><!--POGEN,__pogen_470,button_Spree_dot_t__actions_dot_update_____icon_minus_repeat__,<%= button Spree.t('actions.update'), 'icon-repeat' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_470">
       <%= button Spree.t('actions.update'), 'icon-repeat' %>
-      <span class="or"><%= Spree.t(:or) %></span>
+      <!--POGEN,__pogen_471,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_471"><%= Spree.t(:or) %></span>
       <%= button_link_to Spree.t('actions.cancel'), admin_order_return_authorizations_url(@order), :icon => 'icon-remove' %>
     </div>
   </fieldset>

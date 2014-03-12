@@ -1,16 +1,16 @@
 <%= render :partial => 'spree/admin/shared/product_sub_menu' %>
 
 <% content_for :page_title do %>
-  <%= Spree.t(:editing_option_type) %> <span class="green">"<%= @option_type.name %>"</span>
+  <%= Spree.t(:editing_option_type) %> <!--POGEN,__pogen_111,_option_type_dot_name_,<%= @option_type.name %>--><span class="green" id="__pogen_111">"<%= @option_type.name %>"</span>
 <% end %>
 
 <% content_for :page_actions do %>
   <li>
-    <span id="new_add_option_value" data-hook>
+    <!--POGEN,new_add_option_value,link_to_add_fields_Spree_dot_t__add_option_value____tbody_option_values____class_____button_icon_minus_plus__,<%= link_to_add_fields Spree.t(:add_option_value), "tbody#option_values", :class => 'button icon-plus' %>--><span id="new_add_option_value" data-hook>
       <%= link_to_add_fields Spree.t(:add_option_value), "tbody#option_values", :class => 'button icon-plus' %>
     </span>      
   </li>
-  <li>
+  <!--POGEN,__pogen_112,button_link_to_Spree_dot_t__back_to_option_types_list___spree_dot_admin_option_types_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_option_types_list), spree.admin_option_types_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_112">
     <%= button_link_to Spree.t(:back_to_option_types_list), spree.admin_option_types_path, :icon => 'icon-arrow-left' %>
   </li>
 <% end %>
@@ -18,23 +18,23 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @option_type } %>
 
 <%= form_for [:admin, @option_type] do |f| %>
-  <fieldset>
-    <legend align="center"><%= Spree.t(:option_values) %></legend>
+  <!--POGEN,__pogen_113,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><!--POGEN,__pogen_113,render__partial_____spree_divide_admin_divide_shared_divide_edit_resource_links__,<%= render :partial => 'spree/admin/shared/edit_resource_links' %>--><fieldset id="__pogen_113">
+    <!--POGEN,__pogen_114,Spree_dot_t__option_values__,<%= Spree.t(:option_values) %>--><legend align="center" id="__pogen_114"><%= Spree.t(:option_values) %></legend>
     
     <%= render :partial => 'form', :locals => { :f => f } %>
 
-    <table class="index sortable" data-hook data-sortable-link="<%= update_values_positions_admin_option_types_url %>">
+    <!--POGEN,__pogen_115,update_values_positions_admin_option_types_url_,<%= update_values_positions_admin_option_types_url %>--><table class="index sortable" data-hook data-sortable-link="<%= update_values_positions_admin_option_types_url %>" id="__pogen_115">
       <thead data-hook="option_header">
         <tr>
-          <th colspan="2"><%= Spree.t(:name) %></th>
-          <th><%= Spree.t(:display) %></th>
+          <!--POGEN,__pogen_116,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th colspan="2" id="__pogen_116"><%= Spree.t(:name) %></th>
+          <!--POGEN,__pogen_117,Spree_dot_t__display__,<%= Spree.t(:display) %>--><th id="__pogen_117"><%= Spree.t(:display) %></th>
           <th class="actions"></th>
         </tr>
       </thead>
-      <tbody id="option_values">
+      <!--POGEN,option_values,render__partial_____option_value_fields____locals_______f____option_value_form___,<%= render :partial => 'option_value_fields', :locals => { :f => option_value_form } %>--><!--POGEN,option_values,f_dot_fields_for__option_values_do__option_value_form__,<%= f.fields_for :option_values do |option_value_form| %>--><tbody id="option_values">
         <% if @option_type.option_values.empty? %>
-          <tr id="none" data-hook="option_none" class="<%= cycle('odd', 'even')%>">
-            <td colspan="2"><%= Spree.t(:none) %></td>
+          <!--POGEN,none,cycle__odd____even__,<%= cycle('odd', 'even')%>--><tr id="none" data-hook="option_none" class="<%= cycle('odd', 'even')%>">
+            <!--POGEN,__pogen_118,Spree_dot_t__none__,<%= Spree.t(:none) %>--><td colspan="2" id="__pogen_118"><%= Spree.t(:none) %></td>
             <td class="actions"></td>
           </tr>
         <% else %>

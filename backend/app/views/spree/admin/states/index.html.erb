@@ -5,20 +5,20 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li id="new_state_link">
+  <!--POGEN,new_state_link,button_link_to_Spree_dot_t__new_state___new_admin_country_state_url__country______remote____true___icon_____icon_minus_plus____id_____new_state_link____,<%= button_link_to Spree.t(:new_state), new_admin_country_state_url(@country), { :remote => true, :icon => 'icon-plus', :id => 'new_state_link' } %>--><li id="new_state_link">
     <%= button_link_to Spree.t(:new_state), new_admin_country_state_url(@country), { :remote => true, :icon => 'icon-plus', :id => 'new_state_link' } %>
   </li>
 <% end %>
 
-<div data-hook="country" class="field row">
+<!--POGEN,__pogen_599,label_tag__country__Spree_dot_t__country__,<%= label_tag :country, Spree.t(:country) %>--><div data-hook="country" class="field row" id="__pogen_599">
   <%= label_tag :country, Spree.t(:country) %>
-  <select id="country" class='observe_field select2 fullwidth' data-base-url="<%=admin_states_path(:format => :js) %>?country_id=" data-update="#state-list">
+  <!--POGEN,country,options_from_collection_for_select__countries___id___name___country_dot_id__,<%= options_from_collection_for_select(@countries, :id, :name, @country.id) %>--><!--POGEN,country,admin_states_path__format_____js__,<%=admin_states_path(:format => :js) %>--><select id="country" class='observe_field select2 fullwidth' data-base-url="<%=admin_states_path(:format => :js) %>?country_id=" data-update="#state-list">
   <%= options_from_collection_for_select(@countries, :id, :name, @country.id) %>
   </select>
 </div>
 
 <%= image_tag 'select2-spinner.gif', :plugin => 'spree', :style => 'display:none;', :id => 'busy_indicator' %>
 
-<div id="state-list" data-hook>
+<!--POGEN,state-list,render__partial_____state_list_,<%= render :partial => 'state_list'%>--><div id="state-list" data-hook>
   <%= render :partial => 'state_list'%>
 </div>

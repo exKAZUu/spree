@@ -5,15 +5,15 @@
 <table class="index">
   <thead>
     <tr data-hook="reports_header">
-      <th><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:description) %></th>
+      <!--POGEN,__pogen_443,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_443"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_444,Spree_dot_t__description__,<%= Spree.t(:description) %>--><th id="__pogen_444"><%= Spree.t(:description) %></th>
     </tr>
   </thead>
   <tbody>
     <% @reports.each do |key, value| %>
     <tr data-hook="reports_row">
-      <td class="align-center"><%= link_to value[:name], send("#{key}_admin_reports_url".to_sym) %></td>
-      <td style="padding-left:1em"><%= value[:description] %></td>
+      <!--POGEN,__pogen_445,link_to_value__name___send____key__admin_reports_url__dot_to_sym__,<%= link_to value[:name], send("#{key}_admin_reports_url".to_sym) %>--><td class="align-center" id="__pogen_445"><%= link_to value[:name], send("#{key}_admin_reports_url".to_sym) %></td>
+      <!--POGEN,__pogen_446,value__description__,<%= value[:description] %>--><td style="padding-left:1em" id="__pogen_446"><%= value[:description] %></td>
     </tr>
     <% end %>
   </tbody>

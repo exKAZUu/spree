@@ -3,7 +3,7 @@
   <div data-hook="payment_method">
 
     <div class="alpha four columns">
-      <div id="preference-settings" data-hook class="field">
+      <!--POGEN,preference-settings,f_dot_label__type__Spree_dot_t__provider__,<%= f.label :type, Spree.t(:provider) %>--><!--POGEN,preference-settings,collection_select__payment_method___type___providers___to_s___name________id_____gtwy_minus_type____class_____select2_fullwidth____,<%= collection_select(:payment_method, :type, @providers, :to_s, :name, {}, {:id => 'gtwy-type', :class => 'select2 fullwidth'}) %>--><!--POGEN,preference-settings,preference_fields__object__f__,<%= preference_fields(@object, f) %>--><div id="preference-settings" data-hook class="field">
         <%= f.label :type, Spree.t(:provider) %>
         <%= collection_select(:payment_method, :type, @providers, :to_s, :name, {}, {:id => 'gtwy-type', :class => 'select2 fullwidth'}) %>
 
@@ -11,30 +11,30 @@
           <%= preference_fields(@object, f) %>
 
           <% if @object.respond_to?(:preferences) %>
-            <div id="gateway-settings-warning" class="info warning"><%= Spree.t(:provider_settings_warning) %></div>
+            <!--POGEN,gateway-settings-warning,Spree_dot_t__provider_settings_warning__,<%= Spree.t(:provider_settings_warning) %>--><div id="gateway-settings-warning" class="info warning"><%= Spree.t(:provider_settings_warning) %></div>
           <% end %>
         <% end %>
       </div>      
-      <div data-hook="environment" class="field">
+      <!--POGEN,__pogen_232,collection_select__payment_method___environment__Rails_dot_configuration_dot_database_configuration_dot_keys_dot_sort___to_s___titleize________id_____gtwy_minus_env____class_____select2_fullwidth____,<%= collection_select(:payment_method, :environment, Rails.configuration.database_configuration.keys.sort, :to_s, :titleize, {}, {:id => 'gtwy-env', :class => 'select2 fullwidth'}) %>--><!--POGEN,__pogen_232,label_tag_nil__Spree_dot_t__environment__,<%= label_tag nil, Spree.t(:environment) %>--><div data-hook="environment" class="field" id="__pogen_232">
         <%= label_tag nil, Spree.t(:environment) %>
         <%= collection_select(:payment_method, :environment, Rails.configuration.database_configuration.keys.sort, :to_s, :titleize, {}, {:id => 'gtwy-env', :class => 'select2 fullwidth'}) %>        
       </div>
-      <div data-hook="display" class="field">
+      <!--POGEN,__pogen_233,select__payment_method___display_on__Spree__PaymentMethod__DISPLAY_dot_collect____display___Spree_dot_t_display___display_____both___nil___display_dot_to_s___________class_____select2_fullwidth____,<%= select(:payment_method, :display_on, Spree::PaymentMethod::DISPLAY.collect { |display| [Spree.t(display), display == :both ? nil : display.to_s] }, {}, {:class => 'select2 fullwidth'}) %>--><!--POGEN,__pogen_233,label_tag_nil__Spree_dot_t__display__,<%= label_tag nil, Spree.t(:display) %>--><div data-hook="display" class="field" id="__pogen_233">
         <%= label_tag nil, Spree.t(:display) %>
         <%= select(:payment_method, :display_on, Spree::PaymentMethod::DISPLAY.collect { |display| [Spree.t(display), display == :both ? nil : display.to_s] }, {}, {:class => 'select2 fullwidth'}) %>
       </div>
-      <div data-hook="auto_capture" class="field">
+      <!--POGEN,__pogen_234,label_tag_nil__Spree_dot_t__auto_capture__,<%= label_tag nil, Spree.t(:auto_capture) %>--><!--POGEN,__pogen_234,select__payment_method___auto_capture_______Spree_dot_t__use_app_default______Spree__Config__auto_capture____________Spree_dot_t__say_yes___true____Spree_dot_t__say_no___false__________class_____select2_fullwidth____,<%= select(:payment_method, :auto_capture, [["#{Spree.t(:use_app_default)} (#{Spree::Config[:auto_capture]})", ''], [Spree.t(:say_yes), true], [Spree.t(:say_no), false]], {}, {:class => 'select2 fullwidth'}) %>--><div data-hook="auto_capture" class="field" id="__pogen_234">
         <%= label_tag nil, Spree.t(:auto_capture) %>
         <%= select(:payment_method, :auto_capture, [["#{Spree.t(:use_app_default)} (#{Spree::Config[:auto_capture]})", ''], [Spree.t(:say_yes), true], [Spree.t(:say_no), false]], {}, {:class => 'select2 fullwidth'}) %>
       </div>
-      <div data-hook="active" class="field">
+      <!--POGEN,__pogen_235,label_tag_nil__Spree_dot_t__active__,<%= label_tag nil, Spree.t(:active) %>--><div data-hook="active" class="field" id="__pogen_235">
         <%= label_tag nil, Spree.t(:active) %>
         <ul>
-          <li>
+          <!--POGEN,__pogen_236,radio_button__payment_method___active__true_,<%= radio_button :payment_method, :active, true %>--><!--POGEN,__pogen_236,label_tag_nil__Spree_dot_t__say_yes__,<%= label_tag nil, Spree.t(:say_yes) %>--><li id="__pogen_236">
             <%= radio_button :payment_method, :active, true %>
             <%= label_tag nil, Spree.t(:say_yes) %>
           </li>        
-          <li>
+          <!--POGEN,__pogen_237,label_tag_nil__Spree_dot_t__say_no__,<%= label_tag nil, Spree.t(:say_no) %>--><!--POGEN,__pogen_237,radio_button__payment_method___active__false_,<%= radio_button :payment_method, :active, false %>--><li id="__pogen_237">
             <%= radio_button :payment_method, :active, false %>
             <%= label_tag nil, Spree.t(:say_no) %>
           </li>
@@ -43,11 +43,11 @@
     </div>
     
     <div class="omega eight columns">
-      <div data-hook="name" class="field">
+      <!--POGEN,__pogen_238,label_tag_nil__Spree_dot_t__name__,<%= label_tag nil, Spree.t(:name) %>--><!--POGEN,__pogen_238,text_field__payment_method___name___class_____fullwidth__,<%= text_field :payment_method, :name, :class => 'fullwidth' %>--><div data-hook="name" class="field" id="__pogen_238">
         <%= label_tag nil, Spree.t(:name) %>
         <%= text_field :payment_method, :name, :class => 'fullwidth' %>
       </div>
-      <div data-hook="description" class="field">
+      <!--POGEN,__pogen_239,label_tag_nil__Spree_dot_t__description__,<%= label_tag nil, Spree.t(:description) %>--><!--POGEN,__pogen_239,text_area__payment_method___description____cols____60___rows____6___class_____fullwidth___,<%= text_area :payment_method, :description, {:cols => 60, :rows => 6, :class => 'fullwidth'} %>--><div data-hook="description" class="field" id="__pogen_239">
         <%= label_tag nil, Spree.t(:description) %>
         <%= text_area :payment_method, :description, {:cols => 60, :rows => 6, :class => 'fullwidth'} %>
       </div>  

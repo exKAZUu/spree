@@ -5,13 +5,13 @@
 <% end %>
 
 <%= form_tag do %>
-  <h3><%= Spree.t(:refund) %></h3>
+  <!--POGEN,__pogen_277,Spree_dot_t__refund__,<%= Spree.t(:refund) %>--><h3 id="__pogen_277"><%= Spree.t(:refund) %></h3>
   <fieldset data-hook="credit">
-    <p>
+    <!--POGEN,__pogen_278,label_tag__amount__Spree_dot_t__amount__,<%= label_tag :amount, Spree.t(:amount) %>--><!--POGEN,__pogen_278,text_field_tag__amount___payment_dot_amount_,<%= text_field_tag :amount, @payment.amount %>--><p id="__pogen_278">
       <%= label_tag :amount, Spree.t(:amount) %>
       <%= text_field_tag :amount, @payment.amount %>
     </p>
-    <p class="form-buttons">
+    <!--POGEN,__pogen_279,button_Spree_dot_t__make_refund__,<%= button Spree.t(:make_refund) %>--><p class="form-buttons" id="__pogen_279">
       <%= button Spree.t(:make_refund) %>
     </p>
   </fieldset>

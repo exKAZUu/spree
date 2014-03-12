@@ -3,9 +3,9 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @product } %>
 
 <%= form_for [:admin, @product], :html => { :multipart => true } do |f| %>
-  <fieldset data-hook="new_product">
+  <!--POGEN,__pogen_343,f_dot_error_message_on__name_,<%= f.error_message_on :name %>--><!--POGEN,__pogen_343,f_dot_label__name__Spree_dot_t__name__,<%= f.label :name, Spree.t(:name) %>--><!--POGEN,__pogen_343,render__partial_____spree_divide_admin_divide_shared_divide_new_resource_links__,<%= render :partial => 'spree/admin/shared/new_resource_links' %>--><!--POGEN,__pogen_343,f_dot_text_field__name___class_____fullwidth_title__,<%= f.text_field :name, :class => 'fullwidth title' %>--><!--POGEN,__pogen_343,f_dot_field_container__name_do_,<%= f.field_container :name do %>--><fieldset data-hook="new_product" id="__pogen_343">
 
-    <legend align="center"><%= Spree.t(:new_product) %></legend>
+    <!--POGEN,__pogen_344,Spree_dot_t__new_product__,<%= Spree.t(:new_product) %>--><legend align="center" id="__pogen_344"><%= Spree.t(:new_product) %></legend>
 
     <%= f.field_container :name do %>
       <%= f.label :name, Spree.t(:name) %> <span class="required">*</span><br />
@@ -15,7 +15,7 @@
 
     <div data-hook="new_product_attrs" class="row">
       <% unless @product.has_variants? %>
-        <div class="alpha four columns">
+        <!--POGEN,__pogen_345,f_dot_text_field__sku___size____16___class_____fullwidth__,<%= f.text_field :sku, :size => 16, :class => 'fullwidth' %>--><!--POGEN,__pogen_345,f_dot_field_container__sku_do_,<%= f.field_container :sku do %>--><!--POGEN,__pogen_345,f_dot_label__sku__Spree_dot_t__sku__,<%= f.label :sku, Spree.t(:sku) %>--><!--POGEN,__pogen_345,f_dot_error_message_on__sku_,<%= f.error_message_on :sku %>--><div class="alpha four columns" id="__pogen_345">
           <%= f.field_container :sku do %>
             <%= f.label :sku, Spree.t(:sku) %><br />
             <%= f.text_field :sku, :size => 16, :class => 'fullwidth' %>
@@ -24,14 +24,14 @@
         </div>
       <% end %>
 
-      <div class="four columns">
+      <!--POGEN,__pogen_346,f_dot_label__prototype_id__Spree_dot_t__prototype__,<%= f.label :prototype_id, Spree.t(:prototype) %>--><!--POGEN,__pogen_346,f_dot_field_container__prototype_do_,<%= f.field_container :prototype do %>--><!--POGEN,__pogen_346,f_dot_collection_select__prototype_id__Spree__Prototype_dot_all___id___name____include_blank____true_____class_____select2_fullwidth___,<%= f.collection_select :prototype_id, Spree::Prototype.all, :id, :name, {:include_blank => true}, {:class => 'select2 fullwidth'} %>--><div class="four columns" id="__pogen_346">
         <%= f.field_container :prototype do %>
           <%= f.label :prototype_id, Spree.t(:prototype) %><br />
           <%= f.collection_select :prototype_id, Spree::Prototype.all, :id, :name, {:include_blank => true}, {:class => 'select2 fullwidth'} %>
         <% end %>
       </div>
 
-      <div class="four columns">
+      <!--POGEN,__pogen_347,f_dot_field_container__price_do_,<%= f.field_container :price do %>--><!--POGEN,__pogen_347,f_dot_label__price__Spree_dot_t__master_price__,<%= f.label :price, Spree.t(:master_price) %>--><!--POGEN,__pogen_347,f_dot_error_message_on__price_,<%= f.error_message_on :price %>--><!--POGEN,__pogen_347,f_dot_text_field__price___value____number_to_currency__product_dot_price___unit__________class_____fullwidth__,<%= f.text_field :price, :value => number_to_currency(@product.price, :unit => ''), :class => 'fullwidth' %>--><div class="four columns" id="__pogen_347">
         <%= f.field_container :price do %>
           <%= f.label :price, Spree.t(:master_price) %> <span class="required">*</span><br />
           <%= f.text_field :price, :value => number_to_currency(@product.price, :unit => ''), :class => 'fullwidth' %>
@@ -39,7 +39,7 @@
         <% end %>
       </div>
 
-      <div class="omega four columns">
+      <!--POGEN,__pogen_348,f_dot_field_container__available_on_do_,<%= f.field_container :available_on do %>--><!--POGEN,__pogen_348,f_dot_label__available_on__Spree_dot_t__available_on__,<%= f.label :available_on, Spree.t(:available_on) %>--><!--POGEN,__pogen_348,f_dot_text_field__available_on___class_____datepicker_fullwidth__,<%= f.text_field :available_on, :class => 'datepicker fullwidth' %>--><!--POGEN,__pogen_348,f_dot_error_message_on__available_on_,<%= f.error_message_on :available_on %>--><div class="omega four columns" id="__pogen_348">
         <%= f.field_container :available_on do %>
           <%= f.label :available_on, Spree.t(:available_on) %>
           <%= f.error_message_on :available_on %>
@@ -50,7 +50,7 @@
     </div>
 
     <div class='row'>
-      <div class="alpha four columns">
+      <!--POGEN,__pogen_349,f_dot_collection_select__shipping_category_id___shipping_categories___id___name_____include_blank____Spree_dot_t__match_choices_dot_none_________class_____select2_fullwidth_____,<%= f.collection_select(:shipping_category_id, @shipping_categories, :id, :name, { :include_blank => Spree.t('match_choices.none') }, { :class => 'select2 fullwidth' }) %>--><!--POGEN,__pogen_349,f_dot_error_message_on__shipping_category_id_,<%= f.error_message_on :shipping_category_id %>--><!--POGEN,__pogen_349,f_dot_field_container__shipping_category_do_,<%= f.field_container :shipping_category do %>--><!--POGEN,__pogen_349,f_dot_label__shipping_category_id__Spree_dot_t__shipping_categories__,<%= f.label :shipping_category_id, Spree.t(:shipping_categories) %>--><div class="alpha four columns" id="__pogen_349">
         <%= f.field_container :shipping_category do %>
           <%= f.label :shipping_category_id, Spree.t(:shipping_categories) %><span class="required">*</span><br />
           <%= f.collection_select(:shipping_category_id, @shipping_categories, :id, :name, { :include_blank => Spree.t('match_choices.none') }, { :class => 'select2 fullwidth' }) %>
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="clearfix" data-hook="product-from-prototype" id="product-from-prototype">
+    <!--POGEN,product-from-prototype,render__file_____spree_divide_admin_divide_prototypes_divide_show__if__prototype_,<%= render :file => 'spree/admin/prototypes/show' if @prototype %>--><div class="clearfix" data-hook="product-from-prototype" id="product-from-prototype">
       <%= render :file => 'spree/admin/prototypes/show' if @prototype %>
     </div>
 
@@ -68,7 +68,7 @@
   </fieldset>
 <% end %>
 
-<script type="text/javascript">
+<!--POGEN,__pogen_350,admin_prototypes_url_,<%= admin_prototypes_url %>--><script type="text/javascript" id="__pogen_350">
 //<![CDATA[
   (function($){
     var base_url = "<%= admin_prototypes_url %>";

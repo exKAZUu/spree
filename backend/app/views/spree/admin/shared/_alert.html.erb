@@ -1,4 +1,4 @@
-<div class="alert <%= alert['severity'].downcase %>">
+<!--POGEN,__pogen_499,alert__severity___dot_downcase_,<%= alert['severity'].downcase %>--><!--POGEN,__pogen_499,link_to_alert__url_name____alert__url___if_alert__url___,<%= link_to alert['url_name'], alert['url'] if alert['url'] %>--><!--POGEN,__pogen_499,alert__message___,<%= alert['message'] %>--><div class="alert <%= alert['severity'].downcase %>" id="__pogen_499">
   <%= alert['message'] %> <%= link_to alert['url_name'], alert['url'] if alert['url'] %>
   <%= link_to 'X', spree.dismiss_alert_admin_general_settings_path(:alert_id => alert['id']),
               :remote => true, :method => :post, :class => 'dismiss' %>

@@ -3,10 +3,10 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @property } %>
 
 <%= form_for [:admin, @property] do |f| %>
-<fieldset data-hook="new_property">
-  <legend align="center"><%= Spree.t(:new_property) %></legend>
+<!--POGEN,__pogen_424,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset data-hook="new_property" id="__pogen_424">
+  <!--POGEN,__pogen_425,Spree_dot_t__new_property__,<%= Spree.t(:new_property) %>--><legend align="center" id="__pogen_425"><%= Spree.t(:new_property) %></legend>
   <%= render :partial => 'form', :locals => { :f => f } %>
-  <div class="filter-actions">
+  <!--POGEN,__pogen_426,render__partial_____spree_divide_admin_divide_shared_divide_new_resource_links__,<%= render :partial => 'spree/admin/shared/new_resource_links' %>--><div class="filter-actions" id="__pogen_426">
     <%= render :partial => 'spree/admin/shared/new_resource_links' %>
   </div>
 </fieldset>

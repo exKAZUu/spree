@@ -8,19 +8,19 @@
   </colgroup>
   <thead data-hook="bulk_variants_header">
     <tr>
-      <th><%= Spree.t('variant') %></th>
-      <th><%= Spree.t('sku') %></th>
-      <th><%= Spree.t('quantity') %></th>
-      <th><%= Spree.t('count_on_hand') %></th>
+      <!--POGEN,__pogen_646,Spree_dot_t__variant___,<%= Spree.t('variant') %>--><th id="__pogen_646"><%= Spree.t('variant') %></th>
+      <!--POGEN,__pogen_647,Spree_dot_t__sku___,<%= Spree.t('sku') %>--><th id="__pogen_647"><%= Spree.t('sku') %></th>
+      <!--POGEN,__pogen_648,Spree_dot_t__quantity___,<%= Spree.t('quantity') %>--><th id="__pogen_648"><%= Spree.t('quantity') %></th>
+      <!--POGEN,__pogen_649,Spree_dot_t__count_on_hand___,<%= Spree.t('count_on_hand') %>--><th id="__pogen_649"><%= Spree.t('count_on_hand') %></th>
     </tr>
   </thead>
   <tbody id="bulk_variants_tbody">
     <% stock_movements.each do |movement| %>
     <tr>
-      <td><%= movement.stock_item.variant.name %></td>
-      <td class='align-center'><%= movement.stock_item.variant.sku %></td>
-      <td class='align-center'><%= movement.quantity %></td>
-      <td class='align-center'><%= movement.stock_item.count_on_hand %></td>
+      <!--POGEN,__pogen_650,movement_dot_stock_item_dot_variant_dot_name_,<%= movement.stock_item.variant.name %>--><td id="__pogen_650"><%= movement.stock_item.variant.name %></td>
+      <!--POGEN,__pogen_651,movement_dot_stock_item_dot_variant_dot_sku_,<%= movement.stock_item.variant.sku %>--><td class='align-center' id="__pogen_651"><%= movement.stock_item.variant.sku %></td>
+      <!--POGEN,__pogen_652,movement_dot_quantity_,<%= movement.quantity %>--><td class='align-center' id="__pogen_652"><%= movement.quantity %></td>
+      <!--POGEN,__pogen_653,movement_dot_stock_item_dot_count_on_hand_,<%= movement.stock_item.count_on_hand %>--><td class='align-center' id="__pogen_653"><%= movement.stock_item.count_on_hand %></td>
       <% end %>
     </tbody>
   </table>

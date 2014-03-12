@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_749,button_link_to_Spree_dot_t__new_taxonomy___spree_dot_new_admin_taxonomy_url___icon_____icon_minus_plus____id_____admin_new_taxonomy_link__,<%= button_link_to Spree.t(:new_taxonomy), spree.new_admin_taxonomy_url, :icon => 'icon-plus', :id => 'admin_new_taxonomy_link' %>--><li id="__pogen_749">
     <%= button_link_to Spree.t(:new_taxonomy), spree.new_admin_taxonomy_url, :icon => 'icon-plus', :id => 'admin_new_taxonomy_link' %>
   </li>
 <% end %>
@@ -13,11 +13,11 @@
 <%= render 'spree/admin/shared/product_sub_menu' %>
 
 <% if @taxonomies.any? %>
-<div id="list-taxonomies" data-hook>
+<!--POGEN,list-taxonomies,render__list__,<%= render 'list' %>--><div id="list-taxonomies" data-hook>
   <%= render 'list' %>
 </div>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_750,link_to_Spree_dot_t__add_one___spree_dot_new_admin_taxonomy_path_,<%= link_to Spree.t(:add_one), spree.new_admin_taxonomy_path %>--><!--POGEN,__pogen_750,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_taxonomy____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/taxonomy')) %>--><div class="alpha twelve columns no-objects-found" id="__pogen_750">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/taxonomy')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_taxonomy_path %>!
   </div>

@@ -3,36 +3,36 @@
 
     <div class="alpha six columns" data-hook="general">
       <fieldset class="no-border-bottom">
-        <legend align="center"><%= Spree.t(:general) %></legend>
+        <!--POGEN,__pogen_91,Spree_dot_t__general__,<%= Spree.t(:general) %>--><legend align="center" id="__pogen_91"><%= Spree.t(:general) %></legend>
 
-        <div class="field">
+        <!--POGEN,__pogen_92,preference_field_tag__enable_mail_delivery___Spree__Config__enable_mail_delivery____type_____boolean__,<%= preference_field_tag("enable_mail_delivery", Spree::Config[:enable_mail_delivery], :type => :boolean) %>--><!--POGEN,__pogen_92,label_tag__enable_mail_delivery__Spree_dot_t__enable_mail_delivery__,<%= label_tag :enable_mail_delivery, Spree.t(:enable_mail_delivery) %>--><div class="field" id="__pogen_92">
           <%= preference_field_tag("enable_mail_delivery", Spree::Config[:enable_mail_delivery], :type => :boolean) %>
           <%= label_tag :enable_mail_delivery, Spree.t(:enable_mail_delivery) %>
         </div>
 
-        <div class="field">
+        <!--POGEN,__pogen_93,text_field_tag__mails_from__Spree__Config__mails_from____maxlength____256___class_____fullwidth__,<%= text_field_tag :mails_from, Spree::Config[:mails_from], :maxlength => 256, :class => 'fullwidth' %>--><!--POGEN,__pogen_93,label_tag__mails_from__Spree_dot_t__send_mails_as__,<%= label_tag :mails_from, Spree.t(:send_mails_as) %>--><div class="field" id="__pogen_93">
           <%= label_tag :mails_from, Spree.t(:send_mails_as) %><br />
           <%= text_field_tag :mails_from, Spree::Config[:mails_from], :maxlength => 256, :class => 'fullwidth' %>
           <br />
-          <span class="info">
+          <!--POGEN,__pogen_94,Spree_dot_t__smtp_send_all_emails_as_from_following_address__,<%= Spree.t(:smtp_send_all_emails_as_from_following_address) %>--><span class="info" id="__pogen_94">
             <%= Spree.t(:smtp_send_all_emails_as_from_following_address) %>
           </span>
         </div>
 
-        <div class="field">
+        <!--POGEN,__pogen_95,label_tag__mail_bcc__Spree_dot_t__send_copy_of_all_mails_to__,<%= label_tag :mail_bcc, Spree.t(:send_copy_of_all_mails_to) %>--><!--POGEN,__pogen_95,text_field_tag__mail_bcc__Spree__Config__mail_bcc____maxlength____256___class_____fullwidth__,<%= text_field_tag :mail_bcc, Spree::Config[:mail_bcc], :maxlength => 256, :class => 'fullwidth' %>--><div class="field" id="__pogen_95">
           <%= label_tag :mail_bcc, Spree.t(:send_copy_of_all_mails_to) %><br />
           <%= text_field_tag :mail_bcc, Spree::Config[:mail_bcc], :maxlength => 256, :class => 'fullwidth' %>
           <br />
-          <span class="info">
+          <!--POGEN,__pogen_96,Spree_dot_t__smtp_send_copy_to_this_addresses__,<%= Spree.t(:smtp_send_copy_to_this_addresses) %>--><span class="info" id="__pogen_96">
             <%= Spree.t(:smtp_send_copy_to_this_addresses) %>
           </span>
         </div>
 
-        <div class="field">
+        <!--POGEN,__pogen_97,text_field_tag__intercept_email__Spree__Config__intercept_email____maxlength____256___class_____fullwidth__,<%= text_field_tag :intercept_email, Spree::Config[:intercept_email], :maxlength => 256, :class => 'fullwidth' %>--><!--POGEN,__pogen_97,label_tag__intercept_email__Spree_dot_t__intercept_email_address__,<%= label_tag :intercept_email, Spree.t(:intercept_email_address) %>--><div class="field" id="__pogen_97">
           <%= label_tag :intercept_email, Spree.t(:intercept_email_address) %><br />
           <%= text_field_tag :intercept_email, Spree::Config[:intercept_email], :maxlength => 256, :class => 'fullwidth' %>
           <br />
-          <span class="info">
+          <!--POGEN,__pogen_98,Spree_dot_t__intercept_email_instructions__,<%= Spree.t(:intercept_email_instructions) %>--><span class="info" id="__pogen_98">
             <%= Spree.t(:intercept_email_instructions) %>
           </span>
         </div>
@@ -41,36 +41,36 @@
 
     <div class="six columns omega" data-hook="smtp">
       <fieldset class="no-border-bottom">
-        <legend align="center"><%= Spree.t(:smtp) %></legend>
-        <div class="field">
+        <!--POGEN,__pogen_99,Spree_dot_t__smtp__,<%= Spree.t(:smtp) %>--><legend align="center" id="__pogen_99"><%= Spree.t(:smtp) %></legend>
+        <!--POGEN,__pogen_100,text_field_tag__mail_domain__Spree__Config__mail_domain____class_____fullwidth__,<%= text_field_tag :mail_domain, Spree::Config[:mail_domain], :class => 'fullwidth' %>--><!--POGEN,__pogen_100,label_tag__mail_domain__Spree_dot_t__smtp_domain__,<%= label_tag :mail_domain, Spree.t(:smtp_domain) %>--><div class="field" id="__pogen_100">
           <%= label_tag :mail_domain, Spree.t(:smtp_domain) %><br />
           <%= text_field_tag :mail_domain, Spree::Config[:mail_domain], :class => 'fullwidth' %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_101,label_tag__mail_host__Spree_dot_t__smtp_mail_host__,<%= label_tag :mail_host, Spree.t(:smtp_mail_host) %>--><!--POGEN,__pogen_101,text_field_tag__mail_host__Spree__Config__mail_host____class_____fullwidth__,<%= text_field_tag :mail_host, Spree::Config[:mail_host], :class => 'fullwidth' %>--><div class="field" id="__pogen_101">
           <%= label_tag :mail_host, Spree.t(:smtp_mail_host) %><br />
           <%= text_field_tag :mail_host, Spree::Config[:mail_host], :class => 'fullwidth' %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_102,label_tag__mail_port__Spree_dot_t__smtp_port__,<%= label_tag :mail_port, Spree.t(:smtp_port) %>--><!--POGEN,__pogen_102,text_field_tag__mail_port__Spree__Config__mail_port____class_____fullwidth__,<%= text_field_tag :mail_port, Spree::Config[:mail_port], :class => 'fullwidth' %>--><div class="field" id="__pogen_102">
           <%= label_tag :mail_port, Spree.t(:smtp_port) %><br />
           <%= text_field_tag :mail_port, Spree::Config[:mail_port], :class => 'fullwidth' %>
         </div>  
-        <div class="field">
+        <!--POGEN,__pogen_103,label_tag__secure_connection_type__Spree_dot_t__secure_connection_type__,<%= label_tag :secure_connection_type, Spree.t(:secure_connection_type) %>--><div class="field" id="__pogen_103">
           <%= label_tag :secure_connection_type, Spree.t(:secure_connection_type) %><br />
           <%= select_tag(:secure_connection_type,
                          options_from_collection_for_select(Spree::Core::MailSettings::SECURE_CONNECTION_TYPES, :to_s, :to_s, Spree::Config[:secure_connection_type]),
                          :class => 'select2 fullwidth') %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_104,label_tag__mail_auth_type__Spree_dot_t__smtp_authentication_type__,<%= label_tag :mail_auth_type, Spree.t(:smtp_authentication_type) %>--><div class="field" id="__pogen_104">
           <%= label_tag :mail_auth_type, Spree.t(:smtp_authentication_type) %><br />
           <%= select_tag(:mail_auth_type,
                          options_from_collection_for_select(Spree::Core::MailSettings::MAIL_AUTH, :to_s, :to_s, Spree::Config[:mail_auth_type]),
                          :class => 'select2 fullwidth') %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_105,label_tag__smtp_username__Spree_dot_t__smtp_username__,<%= label_tag :smtp_username, Spree.t(:smtp_username) %>--><!--POGEN,__pogen_105,text_field_tag__smtp_username__Spree__Config__smtp_username____class_____fullwidth____autocomplete_____off__,<%= text_field_tag :smtp_username, Spree::Config[:smtp_username], :class => 'fullwidth', :autocomplete => 'off' %>--><div class="field" id="__pogen_105">
           <%= label_tag :smtp_username, Spree.t(:smtp_username) %><br />
           <%= text_field_tag :smtp_username, Spree::Config[:smtp_username], :class => 'fullwidth', :autocomplete => 'off' %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_106,password_field_tag__smtp_password__Spree__Config__smtp_password____class_____fullwidth____autocomplete_____off__,<%= password_field_tag :smtp_password, Spree::Config[:smtp_password], :class => 'fullwidth', :autocomplete => 'off' %>--><!--POGEN,__pogen_106,label_tag__preferred_smtp_password__Spree_dot_t__smtp_password__,<%= label_tag :preferred_smtp_password, Spree.t(:smtp_password) %>--><div class="field" id="__pogen_106">
           <%= label_tag :preferred_smtp_password, Spree.t(:smtp_password) %><br />
           <%= password_field_tag :smtp_password, Spree::Config[:smtp_password], :class => 'fullwidth', :autocomplete => 'off' %>
         </div>

@@ -5,23 +5,23 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @image } %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:back_to_images_list), admin_product_images_url(@product), :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_57,button_link_to_Spree_dot_t__back_to_images_list___admin_product_images_url__product____icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_images_list), admin_product_images_url(@product), :icon => 'icon-arrow-left' %>--><li id="__pogen_57"><%= button_link_to Spree.t(:back_to_images_list), admin_product_images_url(@product), :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <%= form_for [:admin, @product, @image], :html => { :multipart => true } do |f| %>
   <fieldset data-hook="edit_image">
-    <legend align="center"><%= @image.attachment_file_name%></legend>
-    <div data-hook="thumbnail" class="field alpha three columns align-center">
+    <!--POGEN,__pogen_58,_image_dot_attachment_file_name,<%= @image.attachment_file_name%>--><legend align="center" id="__pogen_58"><%= @image.attachment_file_name%></legend>
+    <!--POGEN,__pogen_59,link_to_image_tag__image_dot_attachment_dot_url__small_____image_dot_attachment_dot_url__product__,<%= link_to image_tag(@image.attachment.url(:small)), @image.attachment.url(:product) %>--><!--POGEN,__pogen_59,f_dot_label_Spree_dot_t__thumbnail__,<%= f.label Spree.t(:thumbnail) %>--><div data-hook="thumbnail" class="field alpha three columns align-center" id="__pogen_59">
       <%= f.label Spree.t(:thumbnail) %><br>
       <%= link_to image_tag(@image.attachment.url(:small)), @image.attachment.url(:product) %>
     </div>
-    <div class="nine columns omega">
+    <!--POGEN,__pogen_60,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><div class="nine columns omega" id="__pogen_60">
       <%= render :partial => 'form', :locals => { :f => f } %>  
     </div>
     <div class="clear"></div>
-    <div class="form-buttons filter-actions actions" data-hook="buttons">
+    <!--POGEN,__pogen_61,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><!--POGEN,__pogen_61,link_to_Spree_dot_t__actions_dot_cancel____admin_product_images_url__product____id_____cancel_link____class_____button_icon_minus_remove__,<%= link_to Spree.t('actions.cancel'), admin_product_images_url(@product), :id => 'cancel_link', :class => 'button icon-remove' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_61">
       <%= button Spree.t('actions.update'), 'icon-refresh' %>
-      <span class="or"><%= Spree.t(:or) %></span>
+      <!--POGEN,__pogen_62,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_62"><%= Spree.t(:or) %></span>
       <%= link_to Spree.t('actions.cancel'), admin_product_images_url(@product), :id => 'cancel_link', :class => 'button icon-remove' %>
     </div>
   </fieldset>

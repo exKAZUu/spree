@@ -10,7 +10,7 @@
     <fieldset class="general no-border-top">
       <% @preferences_general.each do |key|
           type = Spree::Config.preference_type(key) %>
-          <div class="field">
+          <!--POGEN,__pogen_41,label_tag_key__Spree_dot_t_key____plus__tag__br__if_type_____boolean_,<%= label_tag(key, Spree.t(key)) + tag(:br) if type == :boolean %>--><!--POGEN,__pogen_41,label_tag_key__Spree_dot_t_key____plus__tag__br__if_type_____boolean_,<%= label_tag(key, Spree.t(key)) + tag(:br) if type != :boolean %>--><!--POGEN,__pogen_41,preference_field_tag_key__Spree__Config_key____type____type__,<%= preference_field_tag(key, Spree::Config[key], :type => type) %>--><div class="field" id="__pogen_41">
             <%= label_tag(key, Spree.t(key)) + tag(:br) if type != :boolean %>
             <%= preference_field_tag(key, Spree::Config[key], :type => type) %>
             <%= label_tag(key, Spree.t(key)) + tag(:br) if type == :boolean %>
@@ -21,10 +21,10 @@
       <div class="row">
         <div class="alpha six columns">
           <fieldset class="security no-border-bottom">
-            <legend align="center"><%= Spree.t(:security_settings)%></legend>
+            <!--POGEN,__pogen_42,Spree_dot_t__security_settings_,<%= Spree.t(:security_settings)%>--><legend align="center" id="__pogen_42"><%= Spree.t(:security_settings)%></legend>
             <% @preferences_security.each do |key|
                 type = Spree::Config.preference_type(key) %>
-                <div class="field">
+                <!--POGEN,__pogen_43,label_tag_key__Spree_dot_t_key____plus__tag__br__if_type_____boolean_,<%= label_tag(key, Spree.t(key)) + tag(:br) if type == :boolean %>--><!--POGEN,__pogen_43,label_tag_key__Spree_dot_t_key____plus__tag__br__if_type_____boolean_,<%= label_tag(key, Spree.t(key)) + tag(:br) if type != :boolean %>--><!--POGEN,__pogen_43,preference_field_tag_key__Spree__Config_key____type____type__,<%= preference_field_tag(key, Spree::Config[key], :type => type) %>--><div class="field" id="__pogen_43">
                   <%= label_tag(key, Spree.t(key)) + tag(:br) if type != :boolean %>
                   <%= preference_field_tag(key, Spree::Config[key], :type => type) %>
                   <%= label_tag(key, Spree.t(key)) + tag(:br) if type == :boolean %>
@@ -34,39 +34,39 @@
         </div>
         <div class="omega six columns">
           <fieldset class="currency no-border-bottom">
-            <legend align="center"><%= Spree.t(:currency_settings)%></legend>
+            <!--POGEN,__pogen_44,Spree_dot_t__currency_settings_,<%= Spree.t(:currency_settings)%>--><legend align="center" id="__pogen_44"><%= Spree.t(:currency_settings)%></legend>
             <% @preferences_currency.each do |key|
                 type = Spree::Config.preference_type(key) %>
-                <div class="field">
+                <!--POGEN,__pogen_45,label_tag_key__Spree_dot_t_key____plus__tag__br__if_type_____boolean_,<%= label_tag(key, Spree.t(key)) + tag(:br) if type == :boolean %>--><!--POGEN,__pogen_45,label_tag_key__Spree_dot_t_key____plus__tag__br__if_type_____boolean_,<%= label_tag(key, Spree.t(key)) + tag(:br) if type != :boolean %>--><!--POGEN,__pogen_45,preference_field_tag_key__Spree__Config_key____type____type__,<%= preference_field_tag(key, Spree::Config[key], :type => type) %>--><div class="field" id="__pogen_45">
                   <%= label_tag(key, Spree.t(key)) + tag(:br) if type != :boolean %>
                   <%= preference_field_tag(key, Spree::Config[key], :type => type) %>
                   <%= label_tag(key, Spree.t(key)) + tag(:br) if type == :boolean %>
                 </div>
             <% end %>
-            <div class="field">
+            <!--POGEN,__pogen_46,label_tag__currency__Spree_dot_t__choose_currency__,<%= label_tag :currency, Spree.t(:choose_currency) %>--><!--POGEN,__pogen_46,select_tag__currency__currency_options___class_____fullwidth__,<%= select_tag :currency, currency_options, :class => 'fullwidth' %>--><div class="field" id="__pogen_46">
               <%= label_tag :currency, Spree.t(:choose_currency) %><br>
               <%= select_tag :currency, currency_options, :class => 'fullwidth' %>
             </div>
-            <div class="field">
+            <!--POGEN,__pogen_47,label_tag_Spree_dot_t__currency_symbol_position__,<%= label_tag Spree.t(:currency_symbol_position) %>--><div class="field" id="__pogen_47">
               <%= label_tag Spree.t(:currency_symbol_position) %><br>
               <div class="choices">
                 <ul>
-                  <li>
+                  <!--POGEN,__pogen_48,label_tag__currency_symbol_position_before__Spree__Money_dot_new_10___symbol_position_____before___,<%= label_tag :currency_symbol_position_before, Spree::Money.new(10, :symbol_position => "before") %>--><!--POGEN,__pogen_48,radio_button_tag__currency_symbol_position___before___Spree__Config__currency_symbol_position______before__,<%= radio_button_tag :currency_symbol_position, "before", Spree::Config[:currency_symbol_position] == "before" %>--><li id="__pogen_48">
                     <%= radio_button_tag :currency_symbol_position, "before", Spree::Config[:currency_symbol_position] == "before" %>
                     <%= label_tag :currency_symbol_position_before, Spree::Money.new(10, :symbol_position => "before") %>
                   </li>
-                  <li class="white-space-nowrap">
+                  <!--POGEN,__pogen_49,label_tag__currency_symbol_position_after__Spree__Money_dot_new_10___symbol_position_____after___,<%= label_tag :currency_symbol_position_after, Spree::Money.new(10, :symbol_position => "after") %>--><!--POGEN,__pogen_49,radio_button_tag__currency_symbol_position___after___Spree__Config__currency_symbol_position______after__,<%= radio_button_tag :currency_symbol_position, "after", Spree::Config[:currency_symbol_position] == "after" %>--><li class="white-space-nowrap" id="__pogen_49">
                     <%= radio_button_tag :currency_symbol_position, "after", Spree::Config[:currency_symbol_position] == "after" %>
                     <%= label_tag :currency_symbol_position_after, Spree::Money.new(10, :symbol_position => "after") %>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="field">
+            <!--POGEN,__pogen_50,text_field_tag__currency_decimal_mark__Spree__Config__currency_decimal_mark____size____3_,<%= text_field_tag :currency_decimal_mark, Spree::Config[:currency_decimal_mark], :size => 3 %>--><!--POGEN,__pogen_50,label_tag__currency_decimal_mark__Spree_dot_t__currency_decimal_mark__,<%= label_tag :currency_decimal_mark, Spree.t(:currency_decimal_mark) %>--><div class="field" id="__pogen_50">
               <%= label_tag :currency_decimal_mark, Spree.t(:currency_decimal_mark) %><br>
               <%= text_field_tag :currency_decimal_mark, Spree::Config[:currency_decimal_mark], :size => 3 %>
             </div>
-            <div class="field">
+            <!--POGEN,__pogen_51,label_tag__currency_thousands_separator__Spree_dot_t__currency_thousands_separator__,<%= label_tag :currency_thousands_separator, Spree.t(:currency_thousands_separator) %>--><!--POGEN,__pogen_51,text_field_tag__currency_thousands_separator__Spree__Config__currency_thousands_separator____size____3_,<%= text_field_tag :currency_thousands_separator, Spree::Config[:currency_thousands_separator], :size => 3 %>--><div class="field" id="__pogen_51">
               <%= label_tag :currency_thousands_separator, Spree.t(:currency_thousands_separator) %><br>
               <%= text_field_tag :currency_thousands_separator, Spree::Config[:currency_thousands_separator], :size => 3 %>
             </div>
@@ -74,9 +74,9 @@
         </div>
       </div>
 
-      <div class="form-buttons filter-actions actions" data-hook="buttons">
+      <!--POGEN,__pogen_52,link_to_with_icon__icon_minus_remove___Spree_dot_t__actions_dot_cancel____edit_admin_general_settings_url___class_____button__,<%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), edit_admin_general_settings_url, :class => 'button' %>--><!--POGEN,__pogen_52,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_52">
         <%= button Spree.t('actions.update'), 'icon-refresh' %>
-        <span class="or"><%= Spree.t(:or) %></span>
+        <!--POGEN,__pogen_53,Spree_dot_t__or__,<%= Spree.t(:or) %>--><span class="or" id="__pogen_53"><%= Spree.t(:or) %></span>
         <%= link_to_with_icon 'icon-remove', Spree.t('actions.cancel'), edit_admin_general_settings_url, :class => 'button' %>
       </div>
 

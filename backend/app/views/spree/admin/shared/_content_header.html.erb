@@ -5,13 +5,13 @@
         <div class="block-table">
           <% if content_for?(:page_title) %>
             <div class="table-cell">
-              <h1 class="page-title <%= yield :page_title_classes %>"><%= yield :page_title %></h1>
+              <!--POGEN,__pogen_505,yield__page_title_,<%= yield :page_title %>--><!--POGEN,__pogen_505,yield__page_title_classes_,<%= yield :page_title_classes %>--><h1 class="page-title <%= yield :page_title_classes %>" id="__pogen_505"><%= yield :page_title %></h1>
             </div>
           <% end %>
 
           <% if content_for?(:page_actions) %>
             <div class="page-actions table-cell toolbar" data-hook="toolbar">
-              <ul class="inline-menu">
+              <!--POGEN,__pogen_506,yield__page_actions_,<%= yield :page_actions %>--><ul class="inline-menu" id="__pogen_506">
                 <%= yield :page_actions %>
               </ul>
             </div>

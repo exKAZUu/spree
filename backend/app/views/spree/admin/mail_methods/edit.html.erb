@@ -14,8 +14,8 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @mail_method } %>
 
 <%= form_tag admin_mail_method_path, :method => :put do |f| %>
-  <fieldset class="no-border-top">
+  <!--POGEN,__pogen_107,render__partial_____form____locals_______f____f___,<%= render :partial => 'form', :locals => { :f => f } %>--><fieldset class="no-border-top" id="__pogen_107">
     <%= render :partial => 'form', :locals => { :f => f } %>
-    <div class="form-buttons filter-actions actions" data-hook="buttons"><%= button Spree.t('actions.update'), 'icon-refresh' %></div>
+    <!--POGEN,__pogen_108,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_108"><%= button Spree.t('actions.update'), 'icon-refresh' %></div>
   </fieldset>
 <% end %>

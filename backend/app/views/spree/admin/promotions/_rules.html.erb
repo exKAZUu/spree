@@ -1,14 +1,14 @@
-<fieldset id="rule_fields" class ="alpha eight columns no-border-bottom no-border-top">
+<!--POGEN,rule_fields,form_tag_spree_dot_admin_promotion_promotion_rules_path__promotion____remote____true___id_____new_product_rule_form__do_,<%= form_tag spree.admin_promotion_promotion_rules_path(@promotion), :remote => true, :id => 'new_product_rule_form' do %>--><!--POGEN,rule_fields,form_for__promotion___url____object_url___method_____put_do__f__,<%= form_for @promotion, :url => object_url, :method => :put do |f| %>--><fieldset id="rule_fields" class ="alpha eight columns no-border-bottom no-border-top">
 
   <%= form_tag spree.admin_promotion_promotion_rules_path(@promotion), :remote => true, :id => 'new_product_rule_form' do %>
     <fieldset>
-      <legend align="center"><%= Spree.t(:rules) %></legend>
+      <!--POGEN,__pogen_371,Spree_dot_t__rules__,<%= Spree.t(:rules) %>--><legend align="center" id="__pogen_371"><%= Spree.t(:rules) %></legend>
 
-      <div class="field">
+      <!--POGEN,__pogen_372,select_tag__promotion_rule_type____options_for_promotion_rule_types__promotion____class_____select2_fullwidth___,<%= select_tag('promotion_rule[type]', options_for_promotion_rule_types(@promotion), :class => 'select2 fullwidth') %>--><!--POGEN,__pogen_372,label_tag__promotion_rule_type__Spree_dot_t__add_rule_of_type__,<%= label_tag :promotion_rule_type, Spree.t(:add_rule_of_type) %>--><div class="field" id="__pogen_372">
         <%= label_tag :promotion_rule_type, Spree.t(:add_rule_of_type) %>  
         <%= select_tag('promotion_rule[type]', options_for_promotion_rule_types(@promotion), :class => 'select2 fullwidth') %>
       </div>
-      <div class="filter-actions actions">
+      <!--POGEN,__pogen_373,button_Spree_dot_t__add____icon_minus_plus__,<%= button Spree.t(:add), 'icon-plus' %>--><div class="filter-actions actions" id="__pogen_373">
         <%= button Spree.t(:add), 'icon-plus' %>
       </div>
     </fieldset>
@@ -20,22 +20,22 @@
         <div id="promotion-pilicy-select" class="align-center row">
           <% Spree::Promotion::MATCH_POLICIES.each do |policy| %>
             <div class="alpha four columns">
-              <label><%= f.radio_button :match_policy, policy %> <%= Spree.t "promotion_form.match_policies.#{policy}" %></label>  
+              <!--POGEN,__pogen_374,Spree_dot_t__promotion_form_dot_match_policies_dot___policy___,<%= Spree.t "promotion_form.match_policies.#{policy}" %>--><!--POGEN,__pogen_374,f_dot_radio_button__match_policy__policy_,<%= f.radio_button :match_policy, policy %>--><label id="__pogen_374"><%= f.radio_button :match_policy, policy %> <%= Spree.t "promotion_form.match_policies.#{policy}" %></label>  
             </div>
           <% end %>
         </div>
         
-        <div id="rules" class="filter_list row">
+        <!--POGEN,rules,render__partial_____promotion_rule____collection_____promotion_dot_rules___locals_______,<%= render :partial => 'promotion_rule', :collection => @promotion.rules, :locals => {} %>--><div id="rules" class="filter_list row">
           <% if @promotion.rules.any? %>
             <%= render :partial => 'promotion_rule', :collection => @promotion.rules, :locals => {} %>
           <% else %>
-            <div class="no-objects-found">
+            <!--POGEN,__pogen_375,Spree_dot_t__no_rules_added__,<%= Spree.t(:no_rules_added) %>--><div class="no-objects-found" id="__pogen_375">
               <%= Spree.t(:no_rules_added) %>
             </div>
           <% end %>
         </div>
 
-        <div class="promotion-update filter-actions actions">
+        <!--POGEN,__pogen_376,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="promotion-update filter-actions actions" id="__pogen_376">
           <%= button Spree.t('actions.update'), 'icon-refresh' %>
         </div>
       </fieldset>

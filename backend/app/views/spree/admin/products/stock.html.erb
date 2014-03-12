@@ -1,12 +1,12 @@
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:back_to_products_list), session[:return_to] || admin_products_url, :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_351,button_link_to_Spree_dot_t__back_to_products_list___session__return_to_____admin_products_url___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_products_list), session[:return_to] || admin_products_url, :icon => 'icon-arrow-left' %>--><li id="__pogen_351"><%= button_link_to Spree.t(:back_to_products_list), session[:return_to] || admin_products_url, :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <%= render :partial => 'spree/admin/shared/product_sub_menu' %>
 <%= render :partial => 'spree/admin/shared/product_tabs', :locals => { :current => 'Stock Management' } %>
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @product } %>
 
-<div id="add_stock_form">
+<!--POGEN,add_stock_form,render__add_stock_form__,<%= render 'add_stock_form' %>--><div id="add_stock_form">
   <%= render 'add_stock_form' %>
 </div>
 
@@ -19,15 +19,15 @@
   </colgroup>
   <thead>
     <tr data-hook="admin_product_stock_management_index_headers">
-      <th><%= Spree.t(:variant) %></th>
-      <th colspan="4"><%= Spree.t(:stock_location_info) %></th>
+      <!--POGEN,__pogen_352,Spree_dot_t__variant__,<%= Spree.t(:variant) %>--><th id="__pogen_352"><%= Spree.t(:variant) %></th>
+      <!--POGEN,__pogen_353,Spree_dot_t__stock_location_info__,<%= Spree.t(:stock_location_info) %>--><th colspan="4" id="__pogen_353"><%= Spree.t(:stock_location_info) %></th>
     </tr>
   </thead>
   <tbody>
     <% @variants.each do |variant| %>
       <% if variant.stock_items.present? %>
-        <tr id="<%= spree_dom_id variant %>" data-hook="admin_product_stock_management_index_rows" class="<%= cycle('odd', 'even') %>">
-          <td class="align-center">
+        <!--POGEN,<%= spree_dom_id variant %>,cycle__odd____even___,<%= cycle('odd', 'even') %>--><!--POGEN,<%= spree_dom_id variant %>,spree_dom_id_variant_,<%= spree_dom_id variant %>--><tr id="<%= spree_dom_id variant %>" data-hook="admin_product_stock_management_index_rows" class="<%= cycle('odd', 'even') %>">
+          <!--POGEN,__pogen_354,variant_dot_sku_and_options_text_,<%= variant.sku_and_options_text %>--><!--POGEN,__pogen_354,Spree_dot_t__track_inventory__,<%= Spree.t(:track_inventory) %>--><!--POGEN,__pogen_354,image_tag_variant_dot_images_dot_first_dot_attachment_dot_url__mini__,<%= image_tag variant.images.first.attachment.url(:mini) %>--><!--POGEN,__pogen_354,form_tag_admin_product_variants_including_master_path__product__variant__format___js___method___put__class___toggle_variant_track_inventory__do_,<%= form_tag admin_product_variants_including_master_path(@product, variant, format: :js), method: :put, class: 'toggle_variant_track_inventory' do %>--><td class="align-center" id="__pogen_354">
             <%= variant.sku_and_options_text %>
             <br>
             <% if variant.images.present? %>
@@ -52,19 +52,19 @@
                 <col style="width: 15%" />
               </colgroup>
               <thead>
-                <th><%= Spree.t(:stock_location) %></th>
-                <th><%= Spree.t(:count_on_hand) %></th>
-                <th><%= Spree.t(:backorderable) %></th>
+                <!--POGEN,__pogen_355,Spree_dot_t__stock_location__,<%= Spree.t(:stock_location) %>--><th id="__pogen_355"><%= Spree.t(:stock_location) %></th>
+                <!--POGEN,__pogen_356,Spree_dot_t__count_on_hand__,<%= Spree.t(:count_on_hand) %>--><th id="__pogen_356"><%= Spree.t(:count_on_hand) %></th>
+                <!--POGEN,__pogen_357,Spree_dot_t__backorderable__,<%= Spree.t(:backorderable) %>--><th id="__pogen_357"><%= Spree.t(:backorderable) %></th>
                 <th class="actions"></th>
               </thead>
               <tbody>
                 <% variant.stock_items.each do |item| %>
                   <% next unless @stock_locations.include?(item.stock_location) %>
 
-                  <tr id="stock-item-<%= item.id %>" class="<%= cycle('odd', 'even', :name => 'stock_locations')%>">
-                    <td class="align-center"><%= item.stock_location.name %></td>
-                    <td class="align-center"><%= item.count_on_hand %></td>
-                    <td class="align-center">
+                  <!--POGEN,stock-item-<%= item.id %>,cycle__odd____even____name_____stock_locations__,<%= cycle('odd', 'even', :name => 'stock_locations')%>--><!--POGEN,stock-item-<%= item.id %>,item_dot_id_,<%= item.id %>--><tr id="stock-item-<%= item.id %>" class="<%= cycle('odd', 'even', :name => 'stock_locations')%>">
+                    <!--POGEN,__pogen_358,item_dot_stock_location_dot_name_,<%= item.stock_location.name %>--><td class="align-center" id="__pogen_358"><%= item.stock_location.name %></td>
+                    <!--POGEN,__pogen_359,item_dot_count_on_hand_,<%= item.count_on_hand %>--><td class="align-center" id="__pogen_359"><%= item.count_on_hand %></td>
+                    <!--POGEN,__pogen_360,form_tag_admin_stock_item_path_item___method___put__class___toggle_stock_item_backorderable__do_,<%= form_tag admin_stock_item_path(item), method: :put, class: 'toggle_stock_item_backorderable' do %>--><td class="align-center" id="__pogen_360">
                       <%= form_tag admin_stock_item_path(item), method: :put, class: 'toggle_stock_item_backorderable' do %>
                         <%= check_box_tag 'stock_item[backorderable]', true,
                               item.backorderable?,

@@ -1,32 +1,32 @@
 <nav class="menu">
   <ul data-hook="admin_order_tabs">
     <% if can? :update, @order %>
-      <li<%== ' class="active"' if current == 'Order Details' %>>
+      <!--POGEN,__pogen_515,link_to_with_icon__icon_minus_edit___Spree_dot_t__order_details___edit_admin_order_url__order__,<%= link_to_with_icon 'icon-edit', Spree.t(:order_details), edit_admin_order_url(@order) %>--><!--POGEN,__pogen_515,____class__active___if_current_____Order_Details__,<%== ' class="active"' if current == 'Order Details' %>--><l id="__pogen_515"><%== ' class="active"' if current == 'Order Details' %>>
         <%= link_to_with_icon 'icon-edit', Spree.t(:order_details), edit_admin_order_url(@order) %>
       </li>
     <% end %>
 
     <% if can?(:update, @order) && checkout_steps.include?("address") %>
-      <li<%== ' class="active"' if current == 'Customer Details' %>>
+      <!--POGEN,__pogen_516,____class__active___if_current_____Customer_Details__,<%== ' class="active"' if current == 'Customer Details' %>--><!--POGEN,__pogen_516,link_to_with_icon__icon_minus_user___Spree_dot_t__customer_details___admin_order_customer_url__order__,<%= link_to_with_icon 'icon-user', Spree.t(:customer_details), admin_order_customer_url(@order) %>--><l id="__pogen_516"><%== ' class="active"' if current == 'Customer Details' %>>
         <%= link_to_with_icon 'icon-user', Spree.t(:customer_details), admin_order_customer_url(@order) %>
       </li>
     <% end %>
 
     <% if can? :index, Spree::Adjustment %>
-      <li<%== ' class="active"' if current == 'Adjustments' %>>
+      <!--POGEN,__pogen_517,____class__active___if_current_____Adjustments__,<%== ' class="active"' if current == 'Adjustments' %>--><!--POGEN,__pogen_517,link_to_with_icon__icon_minus_cogs___Spree_dot_t__adjustments___admin_order_adjustments_url__order__,<%= link_to_with_icon 'icon-cogs', Spree.t(:adjustments), admin_order_adjustments_url(@order) %>--><l id="__pogen_517"><%== ' class="active"' if current == 'Adjustments' %>>
         <%= link_to_with_icon 'icon-cogs', Spree.t(:adjustments), admin_order_adjustments_url(@order) %>
       </li>
     <% end %>
 
     <% if can?(:index, Spree::Payment) %>
-      <li<%== ' class="active"' if current == 'Payments' %>>
+      <!--POGEN,__pogen_518,link_to_with_icon__icon_minus_credit_minus_card___Spree_dot_t__payments___admin_order_payments_url__order__,<%= link_to_with_icon 'icon-credit-card', Spree.t(:payments), admin_order_payments_url(@order) %>--><!--POGEN,__pogen_518,____class__active___if_current_____Payments__,<%== ' class="active"' if current == 'Payments' %>--><l id="__pogen_518"><%== ' class="active"' if current == 'Payments' %>>
         <%= link_to_with_icon 'icon-credit-card', Spree.t(:payments), admin_order_payments_url(@order) %>
       </li>
     <% end %>
 
     <% if can? :index, Spree::ReturnAuthorization %>
       <% if @order.completed? %>
-        <li<%== ' class="active"' if current == 'Return Authorizations' %>>
+        <!--POGEN,__pogen_519,link_to_with_icon__icon_minus_share_minus_alt___Spree_dot_t__return_authorizations___admin_order_return_authorizations_url__order__,<%= link_to_with_icon 'icon-share-alt', Spree.t(:return_authorizations), admin_order_return_authorizations_url(@order) %>--><!--POGEN,__pogen_519,____class__active___if_current_____Return_Authorizations__,<%== ' class="active"' if current == 'Return Authorizations' %>--><l id="__pogen_519"><%== ' class="active"' if current == 'Return Authorizations' %>>
           <%= link_to_with_icon 'icon-share-alt', Spree.t(:return_authorizations), admin_order_return_authorizations_url(@order) %>
         </li>
       <% end %>

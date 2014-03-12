@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li id="new_ot_link">
+  <!--POGEN,new_ot_link,button_link_to_Spree_dot_t__new_option_type___new_admin_option_type_url_____remote____true___icon_____icon_minus_plus____id_____new_option_type_link____,<%= button_link_to Spree.t(:new_option_type), new_admin_option_type_url, { :remote => true, :icon => 'icon-plus', :id => 'new_option_type_link' } %>--><li id="new_ot_link">
     <%= button_link_to Spree.t(:new_option_type), new_admin_option_type_url, { :remote => true, :icon => 'icon-plus', :id => 'new_option_type_link' } %>
   </li>
 <% end %>
@@ -13,7 +13,7 @@
 <div id="new_option_type"></div>
 
 <% if @option_types.any? %>
-<table class="index sortable" id="listing_option_types" data-hook data-sortable-link="<%= update_positions_admin_option_types_url %>">
+<!--POGEN,listing_option_types,update_positions_admin_option_types_url_,<%= update_positions_admin_option_types_url %>--><table class="index sortable" id="listing_option_types" data-hook data-sortable-link="<%= update_positions_admin_option_types_url %>">
   <colgroup>
     <col style="width: 10%">
     <col style="width: 35%">
@@ -23,18 +23,18 @@
   <thead>
     <tr data-hook="option_header">
       <th class="no-border"></th>
-      <th><%= Spree.t(:name) %></th>
-      <th><%= Spree.t(:presentation) %></th>
+      <!--POGEN,__pogen_119,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_119"><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_120,Spree_dot_t__presentation__,<%= Spree.t(:presentation) %>--><th id="__pogen_120"><%= Spree.t(:presentation) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @option_types.each do |option_type| %>
-      <tr class="spree_option_type <%= cycle('odd', 'even')%>" id="<%= spree_dom_id option_type %>" data-hook="option_row">
+      <!--POGEN,<%= spree_dom_id option_type %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id option_type %>,spree_dom_id_option_type_,<%= spree_dom_id option_type %>--><tr class="spree_option_type <%= cycle('odd', 'even')%>" id="<%= spree_dom_id option_type %>" data-hook="option_row">
         <td class="no-border"><span class="handle"></span></td>
-        <td class="align-center"><%= option_type.name %></td>
-        <td class="align-center presentation"><%= option_type.presentation %></td>
-        <td class="actions">
+        <!--POGEN,__pogen_121,option_type_dot_name_,<%= option_type.name %>--><td class="align-center" id="__pogen_121"><%= option_type.name %></td>
+        <!--POGEN,__pogen_122,option_type_dot_presentation_,<%= option_type.presentation %>--><td class="align-center presentation" id="__pogen_122"><%= option_type.presentation %></td>
+        <!--POGEN,__pogen_123,link_to_edit_option_type___class_____admin_edit_option_type____no_text____true__,<%= link_to_edit(option_type, :class => 'admin_edit_option_type', :no_text => true) %>--><!--POGEN,__pogen_123,link_to_delete_option_type___no_text____true__,<%= link_to_delete(option_type, :no_text => true) %>--><td class="actions" id="__pogen_123">
           <%= link_to_edit(option_type, :class => 'admin_edit_option_type', :no_text => true) %>
           <%= link_to_delete(option_type, :no_text => true) %>
         </td>
@@ -43,7 +43,7 @@
   </tbody>
 </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_124,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_option_type____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/option_type')) %>--><!--POGEN,__pogen_124,link_to_Spree_dot_t__add_one___spree_dot_new_admin_option_type_path_,<%= link_to Spree.t(:add_one), spree.new_admin_option_type_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_124">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/option_type')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_option_type_path %>!
   </div>

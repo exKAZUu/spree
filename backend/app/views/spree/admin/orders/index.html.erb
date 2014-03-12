@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li>
+  <!--POGEN,__pogen_202,button_link_to_Spree_dot_t__new_order___new_admin_order_url___icon_____icon_minus_plus____id_____admin_new_order__,<%= button_link_to Spree.t(:new_order), new_admin_order_url, :icon => 'icon-plus', :id => 'admin_new_order' %>--><li id="__pogen_202">
     <%= button_link_to Spree.t(:new_order), new_admin_order_url, :icon => 'icon-plus', :id => 'admin_new_order' %>
   </li>
 <% end if can? :edit, Spree::Order.new %>
@@ -13,12 +13,12 @@
 <% end %>
 
 <% content_for :table_filter do %>
-  <div data-hook="admin_orders_index_search">
+  <!--POGEN,__pogen_203,search_form_for___admin___search__do__f__,<%= search_form_for [:admin, @search] do |f| %>--><div data-hook="admin_orders_index_search" id="__pogen_203">
     <%= search_form_for [:admin, @search] do |f| %>
       <div class="field-block alpha four columns">
-        <div class="date-range-filter field">
+        <!--POGEN,__pogen_204,label_tag_nil__Spree_dot_t__date_range__,<%= label_tag nil, Spree.t(:date_range) %>--><div class="date-range-filter field" id="__pogen_204">
           <%= label_tag nil, Spree.t(:date_range) %>
-          <div class="date-range-fields">
+          <!--POGEN,__pogen_205,f_dot_text_field__created_at_gt___class_____datepicker_datepicker_minus_from____value____params__q___created_at_gt____placeholder____Spree_dot_t__start__,<%= f.text_field :created_at_gt, :class => 'datepicker datepicker-from', :value => params[:q][:created_at_gt], :placeholder => Spree.t(:start) %>--><!--POGEN,__pogen_205,f_dot_text_field__created_at_lt___class_____datepicker_datepicker_minus_to____value____params__q___created_at_lt____placeholder____Spree_dot_t__stop__,<%= f.text_field :created_at_lt, :class => 'datepicker datepicker-to', :value => params[:q][:created_at_lt], :placeholder => Spree.t(:stop) %>--><div class="date-range-fields" id="__pogen_205">
             <%= f.text_field :created_at_gt, :class => 'datepicker datepicker-from', :value => params[:q][:created_at_gt], :placeholder => Spree.t(:start) %>
 
             <span class="range-divider">
@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="field">
+        <!--POGEN,__pogen_206,f_dot_select__state_eq__Spree__Order_dot_state_machines__state__dot_states_dot_collect___s___Spree_dot_t__order_state_dot___s_dot_name_____s_dot_value______include_blank____true____class_____select2__,<%= f.select :state_eq, Spree::Order.state_machines[:state].states.collect {|s| [Spree.t("order_state.#{s.name}"), s.value]}, {:include_blank => true}, :class => 'select2' %>--><!--POGEN,__pogen_206,label_tag_nil__Spree_dot_t__status__,<%= label_tag nil, Spree.t(:status) %>--><div class="field" id="__pogen_206">
           <%= label_tag nil, Spree.t(:status) %>
           <%= f.select :state_eq, Spree::Order.state_machines[:state].states.collect {|s| [Spree.t("order_state.#{s.name}"), s.value]}, {:include_blank => true}, :class => 'select2' %>
         </div>
@@ -37,22 +37,22 @@
       </div>
 
       <div class="four columns">
-        <div class="field">
+        <!--POGEN,__pogen_207,label_tag_nil__Spree_dot_t__order_number___number________,<%= label_tag nil, Spree.t(:order_number, :number => '') %>--><!--POGEN,__pogen_207,f_dot_text_field__number_cont_,<%= f.text_field :number_cont %>--><div class="field" id="__pogen_207">
           <%= label_tag nil, Spree.t(:order_number, :number => '') %>
           <%= f.text_field :number_cont %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_208,label_tag_nil__Spree_dot_t__email__,<%= label_tag nil, Spree.t(:email) %>--><!--POGEN,__pogen_208,f_dot_email_field__email_cont_,<%= f.email_field :email_cont %>--><div class="field" id="__pogen_208">
           <%= label_tag nil, Spree.t(:email) %>
           <%= f.email_field :email_cont %>
         </div>
       </div>
 
       <div class="four columns">
-        <div class="field">
+        <!--POGEN,__pogen_209,label_tag_nil__Spree_dot_t__first_name_begins_with__,<%= label_tag nil, Spree.t(:first_name_begins_with) %>--><!--POGEN,__pogen_209,f_dot_text_field__bill_address_firstname_start___size____25_,<%= f.text_field :bill_address_firstname_start, :size => 25 %>--><div class="field" id="__pogen_209">
           <%= label_tag nil, Spree.t(:first_name_begins_with) %>
           <%= f.text_field :bill_address_firstname_start, :size => 25 %>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_210,label_tag_nil__Spree_dot_t__last_name_begins_with__,<%= label_tag nil, Spree.t(:last_name_begins_with) %>--><!--POGEN,__pogen_210,f_dot_text_field__bill_address_lastname_start___size____25,<%= f.text_field :bill_address_lastname_start, :size => 25%>--><div class="field" id="__pogen_210">
           <%= label_tag nil, Spree.t(:last_name_begins_with) %>
           <%= f.text_field :bill_address_lastname_start, :size => 25%>
         </div>
@@ -60,12 +60,12 @@
 
       <div class="omega four columns">
         <div class="field checkbox">
-          <label>
+          <!--POGEN,__pogen_211,Spree_dot_t__show_only_complete_orders__,<%= Spree.t(:show_only_complete_orders) %>--><!--POGEN,__pogen_211,f_dot_check_box__completed_at_not_null____checked_____show_only_completed____1____0__,<%= f.check_box :completed_at_not_null, {:checked => @show_only_completed}, '1', '0' %>--><label id="__pogen_211">
             <%= f.check_box :completed_at_not_null, {:checked => @show_only_completed}, '1', '0' %>
             <%= Spree.t(:show_only_complete_orders) %>
           </label>
         </div>
-        <div class="field">
+        <!--POGEN,__pogen_212,label_tag_nil__Spree_dot_t__promotion__,<%= label_tag nil, Spree.t(:promotion) %>--><!--POGEN,__pogen_212,f_dot_select__promotions_id_in__Spree__Promotion_dot_all_dot_collect___p___p_dot_name__p_dot_id______include_blank____true____class_____select2__,<%= f.select :promotions_id_in, Spree::Promotion.all.collect {|p| [p.name, p.id]}, {:include_blank => true}, :class => 'select2' %>--><div class="field" id="__pogen_212">
           <%= label_tag nil, Spree.t(:promotion) %>
           <%= f.select :promotions_id_in, Spree::Promotion.all.collect {|p| [p.name, p.id]}, {:include_blank => true}, :class => 'select2' %>
         </div>
@@ -74,7 +74,7 @@
       <div class="clearfix"></div>
 
       <div class="actions filter-actions">
-        <div data-hook="admin_orders_index_search_buttons">
+        <!--POGEN,__pogen_213,button_Spree_dot_t__filter_results____icon_minus_search__,<%= button Spree.t(:filter_results), 'icon-search' %>--><div data-hook="admin_orders_index_search_buttons" id="__pogen_213">
           <%= button Spree.t(:filter_results), 'icon-search' %>
         </div>
       </div>
@@ -101,34 +101,34 @@
     <thead>
       <tr data-hook="admin_orders_index_headers">
         <% if @show_only_completed %>
-          <th><%= sort_link @search, :completed_at, I18n.t(:completed_at, :scope => 'activerecord.attributes.spree/order') %></th>
+          <!--POGEN,__pogen_214,sort_link__search___completed_at__I18n_dot_t__completed_at___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :completed_at, I18n.t(:completed_at, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_214"><%= sort_link @search, :completed_at, I18n.t(:completed_at, :scope => 'activerecord.attributes.spree/order') %></th>
         <% else %>
-          <th><%= sort_link @search, :created_at,   I18n.t(:created_at, :scope => 'activerecord.attributes.spree/order') %></th>
+          <!--POGEN,__pogen_215,sort_link__search___created_at____I18n_dot_t__created_at___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :created_at,   I18n.t(:created_at, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_215"><%= sort_link @search, :created_at,   I18n.t(:created_at, :scope => 'activerecord.attributes.spree/order') %></th>
         <% end %>
-        <th><%= sort_link @search, :number,         I18n.t(:number, :scope => 'activerecord.attributes.spree/order') %></th>
-        <th><%= sort_link @search, :state,          I18n.t(:state, :scope => 'activerecord.attributes.spree/order') %></th>
-        <th><%= sort_link @search, :payment_state,  I18n.t(:payment_state, :scope => 'activerecord.attributes.spree/order') %></th>
+        <!--POGEN,__pogen_216,sort_link__search___number__________I18n_dot_t__number___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :number,         I18n.t(:number, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_216"><%= sort_link @search, :number,         I18n.t(:number, :scope => 'activerecord.attributes.spree/order') %></th>
+        <!--POGEN,__pogen_217,sort_link__search___state___________I18n_dot_t__state___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :state,          I18n.t(:state, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_217"><%= sort_link @search, :state,          I18n.t(:state, :scope => 'activerecord.attributes.spree/order') %></th>
+        <!--POGEN,__pogen_218,sort_link__search___payment_state___I18n_dot_t__payment_state___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :payment_state,  I18n.t(:payment_state, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_218"><%= sort_link @search, :payment_state,  I18n.t(:payment_state, :scope => 'activerecord.attributes.spree/order') %></th>
          <% if Spree::Order.checkout_step_names.include?(:delivery) %>
-          <th><%= sort_link @search, :shipment_state, I18n.t(:shipment_state, :scope => 'activerecord.attributes.spree/order') %></th>
+          <!--POGEN,__pogen_219,sort_link__search___shipment_state__I18n_dot_t__shipment_state___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :shipment_state, I18n.t(:shipment_state, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_219"><%= sort_link @search, :shipment_state, I18n.t(:shipment_state, :scope => 'activerecord.attributes.spree/order') %></th>
          <% end %>
-        <th><%= sort_link @search, :email,          I18n.t(:email, :scope => 'activerecord.attributes.spree/order') %></th>
-        <th><%= sort_link @search, :total,          I18n.t(:total, :scope => 'activerecord.attributes.spree/order') %></th>
+        <!--POGEN,__pogen_220,sort_link__search___email___________I18n_dot_t__email___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :email,          I18n.t(:email, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_220"><%= sort_link @search, :email,          I18n.t(:email, :scope => 'activerecord.attributes.spree/order') %></th>
+        <!--POGEN,__pogen_221,sort_link__search___total___________I18n_dot_t__total___scope_____activerecord_dot_attributes_dot_spree_divide_order___,<%= sort_link @search, :total,          I18n.t(:total, :scope => 'activerecord.attributes.spree/order') %>--><th id="__pogen_221"><%= sort_link @search, :total,          I18n.t(:total, :scope => 'activerecord.attributes.spree/order') %></th>
         <th data-hook="admin_orders_index_header_actions" class="actions"></th>
       </tr>
     </thead>
     <tbody>
     <% @orders.each do |order| %>
-      <tr data-hook="admin_orders_index_rows" class="state-<%= order.state.downcase %> <%= cycle('odd', 'even') %>">
-        <td class="align-center"><%= l (@show_only_completed ? order.completed_at : order.created_at).to_date %></td>
-        <td class="align-center"><%= link_to order.number, edit_admin_order_path(order) %></td>
-        <td class="align-center"><span class="state <%= order.state.downcase %>"><%= Spree.t("order_state.#{order.state.downcase}") %></span></td>
-        <td class="align-center"><span class="state <%= order.payment_state %>"><%= link_to Spree.t("payment_states.#{order.payment_state}"), admin_order_payments_path(order) if order.payment_state %></span></td>
+      <!--POGEN,__pogen_222,cycle__odd____even___,<%= cycle('odd', 'even') %>--><!--POGEN,__pogen_222,order_dot_state_dot_downcase_,<%= order.state.downcase %>--><tr data-hook="admin_orders_index_rows" class="state-<%= order.state.downcase %> <%= cycle('odd', 'even') %>" id="__pogen_222">
+        <!--POGEN,__pogen_223,l___show_only_completed___order_dot_completed_at___order_dot_created_at__dot_to_date_,<%= l (@show_only_completed ? order.completed_at : order.created_at).to_date %>--><td class="align-center" id="__pogen_223"><%= l (@show_only_completed ? order.completed_at : order.created_at).to_date %></td>
+        <!--POGEN,__pogen_224,link_to_order_dot_number__edit_admin_order_path_order__,<%= link_to order.number, edit_admin_order_path(order) %>--><td class="align-center" id="__pogen_224"><%= link_to order.number, edit_admin_order_path(order) %></td>
+        <td class="align-center"><!--POGEN,__pogen_225,order_dot_state_dot_downcase_,<%= order.state.downcase %>--><!--POGEN,__pogen_225,Spree_dot_t__order_state_dot___order_dot_state_dot_downcase____,<%= Spree.t("order_state.#{order.state.downcase}") %>--><span class="state <%= order.state.downcase %>" id="__pogen_225"><%= Spree.t("order_state.#{order.state.downcase}") %></span></td>
+        <td class="align-center"><!--POGEN,__pogen_226,order_dot_payment_state_,<%= order.payment_state %>--><!--POGEN,__pogen_226,link_to_Spree_dot_t__payment_states_dot___order_dot_payment_state_____admin_order_payments_path_order__if_order_dot_payment_state_,<%= link_to Spree.t("payment_states.#{order.payment_state}"), admin_order_payments_path(order) if order.payment_state %>--><span class="state <%= order.payment_state %>" id="__pogen_226"><%= link_to Spree.t("payment_states.#{order.payment_state}"), admin_order_payments_path(order) if order.payment_state %></span></td>
           <% if Spree::Order.checkout_step_names.include?(:delivery) %>
-            <td class="align-center"><span class="state <%= order.shipment_state %>"><%= Spree.t("shipment_states.#{order.shipment_state}") if order.shipment_state %></span></td>
+            <td class="align-center"><!--POGEN,__pogen_227,order_dot_shipment_state_,<%= order.shipment_state %>--><!--POGEN,__pogen_227,Spree_dot_t__shipment_states_dot___order_dot_shipment_state____if_order_dot_shipment_state_,<%= Spree.t("shipment_states.#{order.shipment_state}") if order.shipment_state %>--><span class="state <%= order.shipment_state %>" id="__pogen_227"><%= Spree.t("shipment_states.#{order.shipment_state}") if order.shipment_state %></span></td>
           <% end %>
-        <td><%= mail_to order.email %></td>
-        <td class="align-center"><%= order.display_total.to_html %></td>
-        <td class='actions align-center' data-hook="admin_orders_index_row_actions">
+        <!--POGEN,__pogen_228,mail_to_order_dot_email_,<%= mail_to order.email %>--><td id="__pogen_228"><%= mail_to order.email %></td>
+        <!--POGEN,__pogen_229,order_dot_display_total_dot_to_html_,<%= order.display_total.to_html %>--><td class="align-center" id="__pogen_229"><%= order.display_total.to_html %></td>
+        <!--POGEN,__pogen_230,link_to_edit_url_edit_admin_order_path_order____title_____admin_edit___dom_id_order______no_text____true_,<%= link_to_edit_url edit_admin_order_path(order), :title => "admin_edit_#{dom_id(order)}", :no_text => true %>--><td class='actions align-center' data-hook="admin_orders_index_row_actions" id="__pogen_230">
           <%= link_to_edit_url edit_admin_order_path(order), :title => "admin_edit_#{dom_id(order)}", :no_text => true %>
         </td>
       </tr>
@@ -136,7 +136,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alpha twelve columns no-objects-found">
+  <!--POGEN,__pogen_231,Spree_dot_t__no_resource_found__resource__I18n_dot_t__other__scope___activerecord_dot_models_dot_spree_divide_order____,<%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/order')) %>--><!--POGEN,__pogen_231,link_to_Spree_dot_t__add_one___spree_dot_new_admin_order_path_,<%= link_to Spree.t(:add_one), spree.new_admin_order_path %>--><div class="alpha twelve columns no-objects-found" id="__pogen_231">
     <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/order')) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_order_path %>!
   </div>

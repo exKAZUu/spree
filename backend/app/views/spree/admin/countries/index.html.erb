@@ -6,7 +6,7 @@
 
 <% content_for :page_actions do %>
   <ul class="actions inline-menu">
-    <li>
+    <!--POGEN,__pogen_31,button_link_to_Spree_dot_t__new_country___new_object_url_____icon_____icon_minus_plus____id_____admin_new_country____,<%= button_link_to Spree.t(:new_country), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_country' } %>--><li id="__pogen_31">
       <%= button_link_to Spree.t(:new_country), new_object_url, { :icon => 'icon-plus', :id => 'admin_new_country' } %>
     </li>
   </ul>
@@ -21,19 +21,19 @@
   </colgroup>
   <thead>
     <tr data-hook="tax_header">
-      <th><%= Spree.t(:country_name) %></th>
-      <th><%= Spree.t(:iso_name) %></th>
-      <th><%= Spree.t(:states_required) %></th>
+      <!--POGEN,__pogen_32,Spree_dot_t__country_name__,<%= Spree.t(:country_name) %>--><th id="__pogen_32"><%= Spree.t(:country_name) %></th>
+      <!--POGEN,__pogen_33,Spree_dot_t__iso_name__,<%= Spree.t(:iso_name) %>--><th id="__pogen_33"><%= Spree.t(:iso_name) %></th>
+      <!--POGEN,__pogen_34,Spree_dot_t__states_required__,<%= Spree.t(:states_required) %>--><th id="__pogen_34"><%= Spree.t(:states_required) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @countries.each do |country| %>
-      <tr id="<%= spree_dom_id country %>" data-hook="country_row" class="<%= cycle('odd', 'even')%>">
-        <td><%= country.name %></td>
-        <td><%= country.iso_name %></td>
-        <td class="align-center"><%= country.states_required? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-        <td class="actions">
+      <!--POGEN,<%= spree_dom_id country %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id country %>,spree_dom_id_country_,<%= spree_dom_id country %>--><tr id="<%= spree_dom_id country %>" data-hook="country_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_35,country_dot_name_,<%= country.name %>--><td id="__pogen_35"><%= country.name %></td>
+        <!--POGEN,__pogen_36,country_dot_iso_name_,<%= country.iso_name %>--><td id="__pogen_36"><%= country.iso_name %></td>
+        <!--POGEN,__pogen_37,country_dot_states_required____Spree_dot_t__say_yes____Spree_dot_t__say_no__,<%= country.states_required? ? Spree.t(:say_yes) : Spree.t(:say_no) %>--><td class="align-center" id="__pogen_37"><%= country.states_required? ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+        <!--POGEN,__pogen_38,link_to_delete_country___no_text____true_,<%= link_to_delete country, :no_text => true %>--><!--POGEN,__pogen_38,link_to_edit_country___no_text____true_,<%= link_to_edit country, :no_text => true %>--><td class="actions" id="__pogen_38">
           <%= link_to_edit country, :no_text => true %>
           <%= link_to_delete country, :no_text => true %>
         </td>

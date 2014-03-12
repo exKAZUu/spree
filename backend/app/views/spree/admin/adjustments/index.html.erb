@@ -5,14 +5,14 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:new_adjustment), new_admin_order_adjustment_url(@order), :icon => 'icon-plus' %></li>
-  <li><%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_19,button_link_to_Spree_dot_t__new_adjustment___new_admin_order_adjustment_url__order____icon_____icon_minus_plus__,<%= button_link_to Spree.t(:new_adjustment), new_admin_order_adjustment_url(@order), :icon => 'icon-plus' %>--><li id="__pogen_19"><%= button_link_to Spree.t(:new_adjustment), new_admin_order_adjustment_url(@order), :icon => 'icon-plus' %></li>
+  <!--POGEN,__pogen_20,button_link_to_Spree_dot_t__back_to_orders_list___admin_orders_path___icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %>--><li id="__pogen_20"><%= button_link_to Spree.t(:back_to_orders_list), admin_orders_path, :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <%= render :partial => 'adjustments_table' %>
 
 <% if @order.can_add_coupon? %>
-  <div data-hook="adjustments_new_coupon_code">
+  <!--POGEN,__pogen_21,button_Spree_dot_t__add_coupon_code____icon_minus_plus____submit____id_____add_coupon_code__,<%= button Spree.t(:add_coupon_code), 'icon-plus', 'submit', :id => "add_coupon_code" %>--><!--POGEN,__pogen_21,text_field_tag__coupon_code________placeholder____Spree_dot_t__coupon_code__,<%= text_field_tag "coupon_code", "", :placeholder => Spree.t(:coupon_code) %>--><div data-hook="adjustments_new_coupon_code" id="__pogen_21">
     <%= text_field_tag "coupon_code", "", :placeholder => Spree.t(:coupon_code) %>
     <%= button Spree.t(:add_coupon_code), 'icon-plus', 'submit', :id => "add_coupon_code" %>
   </div>

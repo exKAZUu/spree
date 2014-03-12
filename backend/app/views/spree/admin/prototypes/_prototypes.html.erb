@@ -5,15 +5,15 @@
   </colgroup>
   <thead>
     <tr data-hook="avilable_header">
-      <th><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_429,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_429"><%= Spree.t(:name) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @prototypes.each do |prototype| %>
-      <tr id="row_<%= prototype.id %>" data-hook="available_row" class="<%= cycle('odd', 'even')%>">
-        <td><%= prototype.name %></td>
-        <td class="actions">
+      <!--POGEN,row_<%= prototype.id %>,prototype_dot_id_,<%= prototype.id %>--><!--POGEN,row_<%= prototype.id %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><tr id="row_<%= prototype.id %>" data-hook="available_row" class="<%= cycle('odd', 'even')%>">
+        <!--POGEN,__pogen_430,prototype_dot_name_,<%= prototype.name %>--><td id="__pogen_430"><%= prototype.name %></td>
+        <!--POGEN,__pogen_431,link_to_Spree_dot_t__select___select_admin_prototype_url_prototype____class_____ajax_button_select_properties_from_prototype_icon_minus_ok__,<%= link_to Spree.t(:select), select_admin_prototype_url(prototype), :class => 'ajax button select_properties_from_prototype icon-ok' %>--><td class="actions" id="__pogen_431">
           <%= link_to Spree.t(:select), select_admin_prototype_url(prototype), :class => 'ajax button select_properties_from_prototype icon-ok' %>
         </td>
       </tr>

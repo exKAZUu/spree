@@ -3,12 +3,12 @@
 <% end %>
 
 <% content_for :sidebar_title do %>
-  <span class="sku"><%= @product.sku %></span>
+  <!--POGEN,__pogen_535,_product_dot_sku_,<%= @product.sku %>--><span class="sku" id="__pogen_535"><%= @product.sku %></span>
 <% end %>
 
 <% content_for :sidebar do %>
   <nav class="menu">
-    <ul data-hook="admin_product_tabs">
+    <!--POGEN,__pogen_536,content_tag__li___class______active__if_current_____Stock_Management___do_,<%= content_tag :li, :class => ('active' if current == 'Stock Management') do %>--><!--POGEN,__pogen_536,content_tag__li___class______active__if_current_____Product_Properties___do_,<%= content_tag :li, :class => ('active' if current == 'Product Properties') do %>--><!--POGEN,__pogen_536,content_tag__li___class______active__if_current_____Variants___do_,<%= content_tag :li, :class => ('active' if current == 'Variants') do %>--><!--POGEN,__pogen_536,content_tag__li___class______active__if_current_____Images___do_,<%= content_tag :li, :class => ('active' if current == 'Images') do %>--><!--POGEN,__pogen_536,link_to_with_icon__icon_minus_edit___Spree_dot_t__product_details___edit_admin_product_url__product__,<%= link_to_with_icon 'icon-edit', Spree.t(:product_details), edit_admin_product_url(@product) %>--><!--POGEN,__pogen_536,content_tag__li___class______active__if_current_____Product_Details___do_,<%= content_tag :li, :class => ('active' if current == 'Product Details') do %>--><!--POGEN,__pogen_536,link_to_with_icon__icon_minus_picture___Spree_dot_t__images___admin_product_images_url__product__,<%= link_to_with_icon 'icon-picture', Spree.t(:images), admin_product_images_url(@product) %>--><!--POGEN,__pogen_536,link_to_with_icon__icon_minus_th_minus_large___Spree_dot_t__variants____admin_product_variants_url__product__,<%= link_to_with_icon 'icon-th-large', Spree.t(:variants),  admin_product_variants_url(@product) %>--><!--POGEN,__pogen_536,link_to_with_icon__icon_minus_tasks___Spree_dot_t__stock_management___stock_admin_product_url__product__,<%= link_to_with_icon 'icon-tasks', Spree.t(:stock_management), stock_admin_product_url(@product) %>--><!--POGEN,__pogen_536,link_to_with_icon__icon_minus_tasks___Spree_dot_t__product_properties___admin_product_product_properties_url__product__,<%= link_to_with_icon 'icon-tasks', Spree.t(:product_properties), admin_product_product_properties_url(@product) %>--><ul data-hook="admin_product_tabs" id="__pogen_536">
       <%= content_tag :li, :class => ('active' if current == 'Product Details') do %>
         <%= link_to_with_icon 'icon-edit', Spree.t(:product_details), edit_admin_product_url(@product) %>
       <% end if can?(:admin, Spree::Product) %>

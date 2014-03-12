@@ -1,4 +1,4 @@
-<table class="index sortable" id='listing_taxonomies' data-hook data-sortable-link="<%= update_positions_admin_taxonomies_url %>">
+<!--POGEN,listing_taxonomies,update_positions_admin_taxonomies_url_,<%= update_positions_admin_taxonomies_url %>--><table class="index sortable" id='listing_taxonomies' data-hook data-sortable-link="<%= update_positions_admin_taxonomies_url %>">
   <colgroup>
     <col style="width: 10%">
     <col style="width: 75%">
@@ -7,16 +7,16 @@
   <thead>
     <tr data-hook="taxonomies_header">
       <th class="no-border"></th>
-      <th><%= Spree.t(:name) %></th>
+      <!--POGEN,__pogen_738,Spree_dot_t__name__,<%= Spree.t(:name) %>--><th id="__pogen_738"><%= Spree.t(:name) %></th>
       <th class="actions"></th>
     </tr>
   </thead>
   <tbody>
     <% @taxonomies.each do |taxonomy| %>
-      <tr id="<%= spree_dom_id taxonomy %>" data-hook="taxonomies_row" class="<%= cycle('odd', 'even')%>">
+      <!--POGEN,<%= spree_dom_id taxonomy %>,cycle__odd____even__,<%= cycle('odd', 'even')%>--><!--POGEN,<%= spree_dom_id taxonomy %>,spree_dom_id_taxonomy_,<%= spree_dom_id taxonomy %>--><tr id="<%= spree_dom_id taxonomy %>" data-hook="taxonomies_row" class="<%= cycle('odd', 'even')%>">
         <td class="no-border"><span class="handle"></span></td>
-        <td class="align-center"><%= taxonomy.name %></td>
-        <td class="actions">
+        <!--POGEN,__pogen_739,taxonomy_dot_name_,<%= taxonomy.name %>--><td class="align-center" id="__pogen_739"><%= taxonomy.name %></td>
+        <!--POGEN,__pogen_740,link_to_edit_taxonomy_dot_id___no_text____true_,<%= link_to_edit taxonomy.id, :no_text => true %>--><!--POGEN,__pogen_740,link_to_delete_taxonomy___no_text____true_,<%= link_to_delete taxonomy, :no_text => true %>--><td class="actions" id="__pogen_740">
           <%= link_to_edit taxonomy.id, :no_text => true %>
           <%= link_to_delete taxonomy, :no_text => true %>
         </td>

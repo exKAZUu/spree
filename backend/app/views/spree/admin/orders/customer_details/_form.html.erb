@@ -1,30 +1,30 @@
-<fieldset data-hook="admin_customer_detail_form_fields" class="no-border-top">
+<!--POGEN,__pogen_180,javascript_include_tag__spree_divide_backend_divide_address_states_dot_js__,<%= javascript_include_tag 'spree/backend/address_states.js' %>--><fieldset data-hook="admin_customer_detail_form_fields" class="no-border-top" id="__pogen_180">
 
   <fieldset class="index no-border-bottom" data-hook="customer_guest">
-    <legend align="center"><%= Spree.t(:account) %></legend>
+    <!--POGEN,__pogen_181,Spree_dot_t__account__,<%= Spree.t(:account) %>--><legend align="center" id="__pogen_181"><%= Spree.t(:account) %></legend>
 
     <div data-hook="customer_fields" class="row">
       <div class="alpha eight columns">
-        <div class="field">
+        <!--POGEN,__pogen_182,f_dot_email_field__email___class_____fullwidth__,<%= f.email_field :email, :class => 'fullwidth' %>--><!--POGEN,__pogen_182,f_dot_label__email__Spree_dot_t__email__,<%= f.label :email, Spree.t(:email) %>--><div class="field" id="__pogen_182">
           <%= f.label :email, Spree.t(:email) %>
           <%= f.email_field :email, :class => 'fullwidth' %>
         </div>
       </div>
       <div class="omega four columns">
-        <div class="field">
+        <!--POGEN,__pogen_183,label_tag_nil__Spree_dot_t__guest_checkout__,<%= label_tag nil, Spree.t(:guest_checkout) %>--><div class="field" id="__pogen_183">
           <%= label_tag nil, Spree.t(:guest_checkout) %>
-          <ul>
+          <!--POGEN,__pogen_184,hidden_field_tag__user_id___order_dot_user_id_,<%= hidden_field_tag :user_id, @order.user_id %>--><ul id="__pogen_184">
             <% if @order.completed? %>
-              <li>
+              <!--POGEN,__pogen_185,_order_dot_user_dot_nil____Spree_dot_t__say_yes____Spree_dot_t__say_no__,<%= @order.user.nil? ? Spree.t(:say_yes) : Spree.t(:say_no) %>--><li id="__pogen_185">
                 <%= @order.user.nil? ? Spree.t(:say_yes) : Spree.t(:say_no) %>
               </li>
             <% else %>
               <% guest = @order.user.nil? %>
-              <li>
+              <!--POGEN,__pogen_186,label_tag__guest_checkout_true__Spree_dot_t__say_yes__,<%= label_tag :guest_checkout_true, Spree.t(:say_yes) %>--><!--POGEN,__pogen_186,radio_button_tag__guest_checkout__true__guest_,<%= radio_button_tag :guest_checkout, true, guest %>--><li id="__pogen_186">
                 <%= radio_button_tag :guest_checkout, true, guest %>
                 <%= label_tag :guest_checkout_true, Spree.t(:say_yes) %>
               </li>
-              <li>
+              <!--POGEN,__pogen_187,radio_button_tag__guest_checkout__false___guest___disabled_____order_dot_cart__,<%= radio_button_tag :guest_checkout, false, !guest, :disabled => @order.cart? %>--><!--POGEN,__pogen_187,label_tag__guest_checkout_false__Spree_dot_t__say_no__,<%= label_tag :guest_checkout_false, Spree.t(:say_no) %>--><li id="__pogen_187">
                 <%= radio_button_tag :guest_checkout, false, !guest, :disabled => @order.cart? %>
                 <%= label_tag :guest_checkout_false, Spree.t(:say_no) %>
               </li>
@@ -37,8 +37,8 @@
   </fieldset>
 
   <div data-hook="bill_address_wrapper" class="alpha six columns">
-    <fieldset class="no-border-bottom">
-      <legend align="center"><%= Spree.t(:billing_address) %></legend>
+    <!--POGEN,__pogen_188,render__partial_____spree_divide_admin_divide_shared_divide_address_form____locals_______f____ba_form___type_____billing____,<%= render :partial => 'spree/admin/shared/address_form', :locals => { :f => ba_form, :type => "billing" } %>--><!--POGEN,__pogen_188,f_dot_fields_for__bill_address_do__ba_form__,<%= f.fields_for :bill_address do |ba_form| %>--><fieldset class="no-border-bottom" id="__pogen_188">
+      <!--POGEN,__pogen_189,Spree_dot_t__billing_address__,<%= Spree.t(:billing_address) %>--><legend align="center" id="__pogen_189"><%= Spree.t(:billing_address) %></legend>
       <%= f.fields_for :bill_address do |ba_form| %>
         <%= render :partial => 'spree/admin/shared/address_form', :locals => { :f => ba_form, :type => "billing" } %>
       <% end %>
@@ -46,11 +46,11 @@
   </div>
 
   <div class="omega six columns" data-hook="ship_address_wrapper">
-    <fieldset class="no-border-bottom">
-      <legend align="center"><%= Spree.t(:shipping_address) %></legend>
+    <!--POGEN,__pogen_190,f_dot_fields_for__ship_address_do__sa_form__,<%= f.fields_for :ship_address do |sa_form| %>--><!--POGEN,__pogen_190,render__partial_____spree_divide_admin_divide_shared_divide_address_form____locals_______f____sa_form___type_____shipping____,<%= render :partial => 'spree/admin/shared/address_form', :locals => { :f => sa_form, :type => 'shipping' } %>--><fieldset class="no-border-bottom" id="__pogen_190">
+      <!--POGEN,__pogen_191,Spree_dot_t__shipping_address__,<%= Spree.t(:shipping_address) %>--><legend align="center" id="__pogen_191"><%= Spree.t(:shipping_address) %></legend>
       <%= f.fields_for :ship_address do |sa_form| %>
         <div class="field" style="position: absolute;margin-top: -15px;right: 0;">
-          <span data-hook="use_billing">
+          <!--POGEN,__pogen_192,label_tag__order_use_billing____Spree_dot_t__use_billing_address__,<%= label_tag 'order[use_billing]', Spree.t(:use_billing_address) %>--><!--POGEN,__pogen_192,check_box_tag__order_use_billing_____1_______order_dot_bill_address_dot_empty______order_dot_ship_address_dot_empty_______order_dot_bill_address_dot_same_as___order_dot_ship_address___,<%= check_box_tag 'order[use_billing]', '1', (!(@order.bill_address.empty? && @order.ship_address.empty?) && @order.bill_address.same_as?(@order.ship_address)) %>--><span data-hook="use_billing" id="__pogen_192">
             <%= check_box_tag 'order[use_billing]', '1', (!(@order.bill_address.empty? && @order.ship_address.empty?) && @order.bill_address.same_as?(@order.ship_address)) %>
             <%= label_tag 'order[use_billing]', Spree.t(:use_billing_address) %>
           </span>
@@ -63,7 +63,7 @@
 
   <div class="clear"></div>
 
-  <div class="form-buttons filter-actions actions" data-hook="buttons">
+  <!--POGEN,__pogen_193,button_Spree_dot_t__actions_dot_update_____icon_minus_refresh__,<%= button Spree.t('actions.update'), 'icon-refresh' %>--><div class="form-buttons filter-actions actions" data-hook="buttons" id="__pogen_193">
     <%= button Spree.t('actions.update'), 'icon-refresh' %>
   </div>
 

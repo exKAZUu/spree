@@ -6,20 +6,20 @@
   <i class="icon-arrow-right"></i>
   <%= payment_method_name(@payment) %>
   &nbsp;
-  <span class="state <%= @payment.state %>">
+  <!--POGEN,__pogen_287,_payment_dot_state_,<%= @payment.state %>--><!--POGEN,__pogen_287,Spree_dot_t__payment_dot_state___scope_____payment_states___default_____payment_dot_state_dot_capitalize__,<%= Spree.t(@payment.state, :scope => :payment_states, :default => @payment.state.capitalize) %>--><span class="state <%= @payment.state %>" id="__pogen_287">
     <%= Spree.t(@payment.state, :scope => :payment_states, :default => @payment.state.capitalize) %>
   </span>
 <% end %>
 
 <% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t(:logs), spree.admin_order_payment_log_entries_url(@order, @payment), :icon => 'icon-archive' %></li>
-  <li><%= button_link_to Spree.t(:back_to_payments_list), spree.admin_order_payments_url(@order), :icon => 'icon-arrow-left' %></li>
+  <!--POGEN,__pogen_288,button_link_to_Spree_dot_t__logs___spree_dot_admin_order_payment_log_entries_url__order___payment____icon_____icon_minus_archive__,<%= button_link_to Spree.t(:logs), spree.admin_order_payment_log_entries_url(@order, @payment), :icon => 'icon-archive' %>--><li id="__pogen_288"><%= button_link_to Spree.t(:logs), spree.admin_order_payment_log_entries_url(@order, @payment), :icon => 'icon-archive' %></li>
+  <!--POGEN,__pogen_289,button_link_to_Spree_dot_t__back_to_payments_list___spree_dot_admin_order_payments_url__order____icon_____icon_minus_arrow_minus_left__,<%= button_link_to Spree.t(:back_to_payments_list), spree.admin_order_payments_url(@order), :icon => 'icon-arrow-left' %>--><li id="__pogen_289"><%= button_link_to Spree.t(:back_to_payments_list), spree.admin_order_payments_url(@order), :icon => 'icon-arrow-left' %></li>
 <% end %>
 
 <%= render :partial => "spree/admin/payments/source_views/#{@payment.payment_method.method_type}", :locals => { :payment => @payment.source.is_a?(Spree::Payment) ? @payment.source : @payment } %>
 
 <div data-hook="amount" class="align-center">
-  <h5><%= label_tag nil, Spree.t(:amount) %>: <span class="green"><%= @payment.display_amount.to_html %></span> </h5>
+  <!--POGEN,__pogen_290,label_tag_nil__Spree_dot_t__amount__,<%= label_tag nil, Spree.t(:amount) %>--><h5 id="__pogen_290"><%= label_tag nil, Spree.t(:amount) %>: <!--POGEN,__pogen_291,_payment_dot_display_amount_dot_to_html_,<%= @payment.display_amount.to_html %>--><span class="green" id="__pogen_291"><%= @payment.display_amount.to_html %></span> </h5>
 </div>
 
 <%= render 'spree/admin/payments/capture_events' %>

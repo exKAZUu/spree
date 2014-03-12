@@ -1,5 +1,5 @@
 <div data-hook="admin_inside_taxon_form" class="row">
-  <div class="alpha five columns">
+  <!--POGEN,__pogen_753,text_field__taxon___name___class_____fullwidth__,<%= text_field :taxon, :name, :class => 'fullwidth' %>--><!--POGEN,__pogen_753,f_dot_file_field__icon_,<%= f.file_field :icon %>--><!--POGEN,__pogen_753,f_dot_label__name__Spree_dot_t__name__,<%= f.label :name, Spree.t(:name) %>--><!--POGEN,__pogen_753,f_dot_label__icon__Spree_dot_t__icon__,<%= f.label :icon, Spree.t(:icon) %>--><!--POGEN,__pogen_753,f_dot_label__permalink_part__Spree_dot_t__permalink__,<%= f.label :permalink_part, Spree.t(:permalink) %>--><!--POGEN,__pogen_753,error_message_on__taxon___name___class_____fullwidth_title__,<%= error_message_on :taxon, :name, :class => 'fullwidth title' %>--><!--POGEN,__pogen_753,f_dot_field_container__icon_do_,<%= f.field_container :icon do %>--><!--POGEN,__pogen_753,text_field_tag__permalink_part___permalink_part___class_____fullwidth__,<%= text_field_tag :permalink_part, @permalink_part, :class => 'fullwidth' %>--><!--POGEN,__pogen_753,f_dot_field_container__permalink_part_do_,<%= f.field_container :permalink_part do %>--><!--POGEN,__pogen_753,f_dot_field_container__name_do_,<%= f.field_container :name do %>--><div class="alpha five columns" id="__pogen_753">
     <%= f.field_container :name do %>
       <%= f.label :name, Spree.t(:name) %> <span class="required">*</span><br />
       <%= text_field :taxon, :name, :class => 'fullwidth' %>
@@ -9,7 +9,7 @@
     <%= f.field_container :permalink_part do %>
       <%= f.label :permalink_part, Spree.t(:permalink) %> <span class="required">*</span><br />
       <%= text_field_tag :permalink_part, @permalink_part, :class => 'fullwidth' %><br />
-      <span class="info" id="permalink_part_display">
+      <!--POGEN,permalink_part_display,_taxon_dot_permalink_dot_split___divide____0_dot__dot__dot__minus_1__dot_join___divide_____plus____divide___,<%= @taxon.permalink.split('/')[0...-1].join('/') + '/' %>--><span class="info" id="permalink_part_display">
         <%= @taxon.permalink.split('/')[0...-1].join('/') + '/' %>
       </span>
     <% end %>
@@ -20,14 +20,14 @@
     <% end %>
   </div>
 
-  <div class="omega seven columns">
+  <!--POGEN,__pogen_754,f_dot_label__description__Spree_dot_t__description__,<%= f.label :description, Spree.t(:description) %>--><!--POGEN,__pogen_754,f_dot_text_area__description___class_____fullwidth____rows____6_,<%= f.text_area :description, :class => 'fullwidth', :rows => 6 %>--><!--POGEN,__pogen_754,f_dot_field_container__description_do_,<%= f.field_container :description do %>--><div class="omega seven columns" id="__pogen_754">
     <%= f.field_container :description do %>
       <%= f.label :description, Spree.t(:description) %><br />
       <%= f.text_area :description, :class => 'fullwidth', :rows => 6 %>
     <% end %>
   </div>
 
-  <div class="twelve columns alpha omega">
+  <!--POGEN,__pogen_755,f_dot_field_container__meta_title_do_,<%= f.field_container :meta_title do %>--><!--POGEN,__pogen_755,f_dot_field_container__meta_description_do_,<%= f.field_container :meta_description do %>--><!--POGEN,__pogen_755,f_dot_label__meta_description__Spree_dot_t__meta_description__,<%= f.label :meta_description, Spree.t(:meta_description) %>--><!--POGEN,__pogen_755,f_dot_label__meta_title__Spree_dot_t__meta_title__,<%= f.label :meta_title, Spree.t(:meta_title) %>--><!--POGEN,__pogen_755,f_dot_text_field__meta_keywords___class_____fullwidth____rows____6_,<%= f.text_field :meta_keywords, :class => 'fullwidth', :rows => 6 %>--><!--POGEN,__pogen_755,f_dot_label__meta_keywords__Spree_dot_t__meta_keywords__,<%= f.label :meta_keywords, Spree.t(:meta_keywords) %>--><!--POGEN,__pogen_755,f_dot_text_field__meta_title___class_____fullwidth____rows____6_,<%= f.text_field :meta_title, :class => 'fullwidth', :rows => 6 %>--><!--POGEN,__pogen_755,f_dot_text_field__meta_description___class_____fullwidth____rows____6_,<%= f.text_field :meta_description, :class => 'fullwidth', :rows => 6 %>--><div class="twelve columns alpha omega" id="__pogen_755">
     <%= f.field_container :meta_title do %>
       <%= f.label :meta_title, Spree.t(:meta_title) %><br />
       <%= f.text_field :meta_title, :class => 'fullwidth', :rows => 6 %>
